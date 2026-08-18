@@ -3,9 +3,9 @@ name: John Doe
 title: Product manager
 image: /images/opai-avatar-img-04.png
 heroImage: /images/opai-avatar-img-04.png
-email: hello@pixels71.com
+email: john@example.com
 phone: +1 (368) 567 89 54
-bio: John translates customer feedback into product decisions, aligning roadmap priorities with the automation outcomes teams need most.
+bio: John translates customer feedback into product decisions, aligning roadmap priorities with the messaging and CRM outcomes teams need most.
 order: 7
 ---
 
@@ -21,7 +21,7 @@ B.S. in Business Administration with concentration in product management and ana
 
 2017 - 2019
 
-#### Zendesk
+#### A customer support software company
 
 Managed features for workflow and routing products, partnering with CS and sales on enterprise rollout plans.
 
@@ -29,9 +29,9 @@ Managed features for workflow and routing products, partnering with CS and sales
 
 2020 - Present
 
-#### Nexsas
+#### Xepter
 
-Owns product planning for automation adoption, pricing packaging inputs, and cross-functional release coordination.
+Owns product planning for channel adoption, pricing packaging inputs, and cross-functional release coordination.
 
 ### Key responsibilities
 

@@ -1,6 +1,6 @@
-import avatarImgOne from '@/public/images/ns-avatar-11.jpg';
+import avatarImgOne from '@/public/images/ns-avatar-11.webp';
 import avatarImgTwo from '@/public/images/ns-avatar-12.jpg';
-import avatarImgThree from '@/public/images/ns-avatar-13.jpg';
+import avatarImgThree from '@/public/images/ns-avatar-13.webp';
 import featureImg from '@/public/images/opai-img-5.jpg';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
@@ -13,7 +13,7 @@ const WhyChoose = () => {
     <section className="pt-20 md:pt-25 lg:pt-39">
       <div className="main-container space-y-10 md:space-y-14">
         <TextReveal delay={0.1}>
-          <h2 className="text-center">Why Nexsas?</h2>
+          <h2 className="text-center">Why Xepter?</h2>
         </TextReveal>
 
         <RevealAnimation
@@ -25,7 +25,7 @@ const WhyChoose = () => {
             <figure>
               <Image
                 src={avatarImgOne}
-                alt="Why choose Nexsas"
+                alt="Why choose Xepter"
                 className="size-full object-cover"
               />
             </figure>
@@ -35,7 +35,7 @@ const WhyChoose = () => {
             <figure>
               <Image
                 src={avatarImgTwo}
-                alt="Why choose Nexsas"
+                alt="Why choose Xepter"
                 className="size-full object-cover"
               />
             </figure>
@@ -48,7 +48,7 @@ const WhyChoose = () => {
           >
             <TextReveal delay={0.2}>
               <h3 className="text-heading-5 text-secondary/90">
-                Ship reliable automation across teams and tools
+                One number for SMS, MMS, voice & WhatsApp
               </h3>
             </TextReveal>
           </RevealAnimation>
@@ -60,7 +60,7 @@ const WhyChoose = () => {
           >
             <TextReveal delay={0.3}>
               <h3 className="text-heading-5 text-secondary/90">
-                Standardize workflows without slowing teams down
+                Native GoHighLevel & HubSpot integration
               </h3>
             </TextReveal>
           </RevealAnimation>
@@ -72,7 +72,7 @@ const WhyChoose = () => {
           >
             <TextReveal delay={0.4}>
               <h3 className="text-heading-5 text-secondary/90">
-                Reduce manual ops work and repetitive handoffs
+                10DLC compliance handled for you
               </h3>
             </TextReveal>
           </RevealAnimation>
@@ -84,14 +84,14 @@ const WhyChoose = () => {
           >
             <TextReveal delay={0.5}>
               <h3 className="text-heading-5 text-secondary/90">
-                Improve visibility with logs, alerts, and run analytics
+                Delivery tracking and webhooks for every message
               </h3>
             </TextReveal>
           </RevealAnimation>
 
           <RevealAnimation delay={0.4} className="overflow-hidden rounded-xl">
             <figure>
-              <Image src={featureImg} alt="Why choose Nexsas" className="size-full object-cover" />
+              <Image src={featureImg} alt="Why choose Xepter" className="size-full object-cover" />
             </figure>
           </RevealAnimation>
 
@@ -99,7 +99,7 @@ const WhyChoose = () => {
             <figure>
               <Image
                 src={avatarImgThree}
-                alt="Why choose Nexsas"
+                alt="Why choose Xepter"
                 className="size-full object-cover"
               />
             </figure>
@@ -112,7 +112,7 @@ const WhyChoose = () => {
               className="mx-auto w-[80%]! md:w-fit!"
               textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
             >
-              Talk to our automation experts
+              Talk to our team
             </ButtonWhite>
           </Link>
         </RevealAnimation>

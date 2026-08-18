@@ -5,10 +5,7 @@ import CTA from '@/src/components/shared/cta';
 import { generateMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  ...generateMetadata(),
-  title: 'Features - Automation SaaS || Nexsas',
-};
+export const metadata: Metadata = generateMetadata('Features | Xepter', undefined, '/features');
 
 const FeaturesPage = () => {
   return (

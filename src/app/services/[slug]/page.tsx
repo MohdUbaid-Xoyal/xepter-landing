@@ -20,11 +20,9 @@ export async function generateMetadata({
   const slug = (await params).slug;
   const doc = getMarkDownContent('src/data/services/', slug);
   const data = doc.data as Partial<ServiceData>;
-  const title = data.title
-    ? `${data.title} - Automation SaaS || Nexsas`
-    : 'Service Details - Automation SaaS || Nexsas';
+  const title = data.title ? `${data.title} | Xepter` : 'Service Details | Xepter';
 
-  return buildMeta(title);
+  return buildMeta(title, data.description);
 }
 
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {

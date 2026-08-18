@@ -39,8 +39,8 @@ const WorkFlow = () => {
             </TextReveal>
             <TextReveal delay={0.2}>
               <p className="text-tagline-1 text-secondary/60">
-                Nexsas is designed to streamline your workflow and help you create content faster
-                and smarter.
+                Xepter is designed to bring every channel into one workflow, so your team can
+                reach customers faster.
               </p>
             </TextReveal>
           </div>

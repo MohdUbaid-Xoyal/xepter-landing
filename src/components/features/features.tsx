@@ -1,4 +1,4 @@
-import avatarImgOne from '@/public/images/ns-avatar-13.jpg';
+import avatarImgOne from '@/public/images/ns-avatar-13.webp';
 import avatarImgTwo from '@/public/images/ns-avatar-14.webp';
 import featureImgOne from '@/public/images/opai-img-126.jpg';
 import featureImgTwo from '@/public/images/opai-img-127.jpg';

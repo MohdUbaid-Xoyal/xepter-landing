@@ -3,9 +3,9 @@ name: Brandon Scott
 title: Security & compliance lead
 image: /images/opai-avatar-img-154.jpg
 heroImage: /images/opai-avatar-img-154.jpg
-email: hello@pixels71.com
+email: brandon@example.com
 phone: +1 (368) 567 89 54
-bio: Brandon ensures Nexsas meets security and compliance expectations, embedding governance into automation design without slowing teams down.
+bio: Brandon ensures Xepter meets security and 10DLC compliance expectations, embedding governance into messaging infrastructure without slowing teams down.
 order: 6
 ---
 
@@ -21,7 +21,7 @@ B.S. in Information Security and Policy with coursework in risk management and s
 
 2013 - 2019
 
-#### Okta
+#### An identity and access management company
 
 Led security reviews and compliance initiatives for identity and access management products used by regulated industries.
 
@@ -29,9 +29,9 @@ Led security reviews and compliance initiatives for identity and access manageme
 
 2020 - Present
 
-#### Nexsas
+#### Xepter
 
-Directs security program, audit readiness, and policy controls for automation workflows handling sensitive operational data.
+Directs the security program, 10DLC brand and campaign compliance, and access controls for organizations handling sensitive customer data.
 
 ### Key responsibilities
 

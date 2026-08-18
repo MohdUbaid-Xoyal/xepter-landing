@@ -2,7 +2,6 @@ import contactMapImg from '@/public/images/opai-img-21.png';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import ContactForm from '@/src/components/contact/contact-form';
-import { LocationIcon } from '@/src/components/shared/icon';
 import Image from 'next/image';
 
 const ContactUs = () => {
@@ -16,8 +15,8 @@ const ContactUs = () => {
             </TextReveal>
             <TextReveal delay={0.2}>
               <p className="text-tagline-1 text-secondary/60 mx-auto max-w-[460px]">
-                Let&apos;s explore how Nexsas can support your goals with automation and AI-driven
-                workflows.
+                Let&apos;s talk about how Xepter can bring SMS, MMS, voice, and WhatsApp into the
+                CRM you already run.
               </p>
             </TextReveal>
           </div>
@@ -44,14 +43,6 @@ const ContactUs = () => {
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
-
-                    <div className="bg-secondary/30 absolute top-1/2 left-1/2 flex h-12 w-[334px] -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-x-2.5 rounded-lg px-3 backdrop-blur-md">
-                      <LocationIcon className="size-6 fill-white/90" />
-
-                      <span className="text-tagline-2 font-inter-tight font-normal text-white/90">
-                        1320 Geoage St, Brisbane, QLD 4009
-                      </span>
-                    </div>
                   </figure>
                 </RevealAnimation>
               </div>

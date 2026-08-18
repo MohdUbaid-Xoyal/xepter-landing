@@ -2,11 +2,11 @@ import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 
 const benefits = [
-  'Save hours by replacing repetitive operational work',
-  'Launch reliable automation with clear ownership and control',
-  'Standardize workflows across teams and connected systems',
-  'Monitor health, detect failures early, and improve continuously',
-  'Scale execution without proportionally growing manual effort',
+  'Get a working number faster, with no downtime during the switch',
+  'Stay compliant on SMS traffic without managing 10DLC yourself',
+  'Connect natively to GoHighLevel, HubSpot, or your own stack',
+  'Standardized setup across every client or team account',
+  'Ongoing support as your number and team access needs change',
 ];
 
 const listItemClass =
@@ -20,7 +20,7 @@ const WhyUse = () => {
     >
       <div className="main-container space-y-8 md:space-y-14">
         <TextReveal delay={0.2}>
-          <h2 id="why-use-heading">Why use Nexsas for automation?</h2>
+          <h2 id="why-use-heading">Why get set up with Xepter?</h2>
         </TextReveal>
 
         <div className="grid grid-cols-12">

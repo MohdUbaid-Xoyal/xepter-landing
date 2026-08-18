@@ -13,7 +13,7 @@ const SignUp = () => {
             </TextReveal>
             <TextReveal delay={0.2}>
               <p className="text-tagline-1 text-secondary/60 mx-auto max-w-[420px]">
-                Let&apos;s explore how Nexsas can support your goals with AI-driven solutions.
+                Create your account and bring SMS, MMS, voice, and WhatsApp into one number.
               </p>
             </TextReveal>
           </div>

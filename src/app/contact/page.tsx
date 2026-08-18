@@ -3,10 +3,11 @@ import CTA from '@/src/components/shared/cta';
 import { generateMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  ...generateMetadata(),
-  title: 'Contact - Automation SaaS || Nexsas',
-};
+export const metadata: Metadata = generateMetadata(
+  'Contact | Xepter',
+  "Let's talk about how Xepter can bring SMS, MMS, voice, and WhatsApp into the CRM you already run.",
+  '/contact'
+);
 
 const ContactPage = () => {
   return (

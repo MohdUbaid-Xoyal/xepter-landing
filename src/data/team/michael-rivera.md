@@ -3,9 +3,9 @@ name: Michael Rivera
 title: Platform infrastructure lead
 image: /images/opai-avatar-img-151.jpg
 heroImage: /images/opai-avatar-img-151.jpg
-email: hello@pixels71.com
+email: michael@example.com
 phone: +1 (368) 567 89 54
-bio: Michael keeps Nexsas infrastructure stable under load, owning deployment pipelines, uptime, and the systems that power automation at scale.
+bio: Michael keeps Xepter's infrastructure stable under load, owning deployment pipelines, uptime, and the systems that power messaging and calling at scale.
 order: 3
 ---
 
@@ -21,7 +21,7 @@ B.S. in Information Systems with emphasis on cloud infrastructure and DevOps pra
 
 2012 - 2019
 
-#### Amazon Web Services
+#### A major cloud infrastructure provider
 
 Supported large-scale service operations and infrastructure automation for high-availability cloud products.
 
@@ -29,9 +29,9 @@ Supported large-scale service operations and infrastructure automation for high-
 
 2020 - Present
 
-#### Nexsas
+#### Xepter
 
-Leads platform infrastructure, monitoring, and incident response for the automation cloud and connected integration services.
+Leads platform infrastructure, monitoring, and incident response for the messaging cloud and connected CRM integrations.
 
 ### Key responsibilities
 

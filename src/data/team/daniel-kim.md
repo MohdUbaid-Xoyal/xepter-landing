@@ -1,11 +1,11 @@
 ---
 name: Daniel Kim
-title: Workflow product lead
+title: Product lead, messaging
 image: /images/opai-avatar-img-152.jpg
 heroImage: /images/opai-avatar-img-152.jpg
-email: hello@pixels71.com
+email: daniel@example.com
 phone: +1 (368) 567 89 54
-bio: Daniel shapes the workflow product experience, connecting customer problems to intuitive builder tools, templates, and rollout plans.
+bio: Daniel shapes the messaging product experience, connecting customer problems to intuitive setup flows, templates, and CRM integrations.
 order: 4
 ---
 
@@ -21,7 +21,7 @@ B.A. in Human-Centered Design and Technology with focus on product discovery and
 
 2015 - 2019
 
-#### Atlassian
+#### A workplace collaboration software company
 
 Owned roadmap items for workflow automation features used by operations and engineering teams in mid-market SaaS companies.
 
@@ -29,9 +29,9 @@ Owned roadmap items for workflow automation features used by operations and engi
 
 2020 - Present
 
-#### Nexsas
+#### Xepter
 
-Leads workflow product strategy, prioritization, and delivery for builder experiences, templates, and customer onboarding paths.
+Leads product strategy, prioritization, and delivery for messaging setup, campaign templates, and customer onboarding paths.
 
 ### Key responsibilities
 

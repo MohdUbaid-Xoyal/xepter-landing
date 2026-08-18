@@ -3,9 +3,9 @@ name: Robert Hayes
 title: Integrations specialist
 image: /images/opai-avatar-img-153.jpg
 heroImage: /images/opai-avatar-img-153.jpg
-email: hello@pixels71.com
+email: robert@example.com
 phone: +1 (368) 567 89 54
-bio: Robert connects Nexsas to the tools teams already use, building and maintaining integrations that keep data and workflows in sync.
+bio: Robert connects Xepter to GoHighLevel, HubSpot, and the tools teams already use, building and maintaining integrations that keep conversations in sync.
 order: 5
 ---
 
@@ -21,7 +21,7 @@ B.S. in Computer Science with focus on APIs, middleware, and enterprise applicat
 
 2016 - 2019
 
-#### HubSpot
+#### A CRM software company
 
 Built and maintained CRM and marketing integrations, improving connector reliability and developer documentation.
 
@@ -29,9 +29,9 @@ Built and maintained CRM and marketing integrations, improving connector reliabi
 
 2020 - Present
 
-#### Nexsas
+#### Xepter
 
-Owns integration connectors, partner APIs, and technical guidance for customers connecting complex multi-tool environments.
+Owns integration connectors, the partner API, and technical guidance for customers connecting Xepter to their CRM and internal tools.
 
 ### Key responsibilities
 

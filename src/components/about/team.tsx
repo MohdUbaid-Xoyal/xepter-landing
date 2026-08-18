@@ -1,6 +1,6 @@
-import avatar11 from '@/public/images/ns-avatar-11.jpg';
+import avatar11 from '@/public/images/ns-avatar-11.webp';
 import avatar12 from '@/public/images/ns-avatar-12.jpg';
-import avatar13 from '@/public/images/ns-avatar-13.jpg';
+import avatar13 from '@/public/images/ns-avatar-13.webp';
 import avatar4 from '@/public/images/ns-avatar-4.jpg';
 import avatar5 from '@/public/images/ns-avatar-5.webp';
 import avatar6 from '@/public/images/ns-avatar-6.webp';
@@ -21,7 +21,7 @@ const teamMembers = [
   {
     image: avatar12,
     name: 'Elijah Brooks',
-    title: 'Senior automation engineer',
+    title: 'Senior platform engineer',
     href: '/team/elijah-brooks',
   },
   {
@@ -33,7 +33,7 @@ const teamMembers = [
   {
     image: avatar4,
     name: 'Daniel Kim',
-    title: 'Workflow product lead',
+    title: 'Product lead, messaging',
     href: '/team/daniel-kim',
   },
   {
@@ -61,13 +61,14 @@ const AboutTeam = () => {
           </RevealAnimation>
 
           <TextReveal delay={0.2}>
-            <h2>The minds behind Nexsas</h2>
+            <h2>The minds behind Xepter</h2>
           </TextReveal>
 
           <TextReveal delay={0.3}>
             <p className="text-background-14/60 mx-auto max-w-[640px]">
-              Our team brings together product, design, and engineering to build automation people
-              actually use. Every release is shaped by feedback from teams like yours.
+              Our team brings together product, design, and engineering to build communication
+              tools people actually use. Every release is shaped by feedback from teams like
+              yours.
             </p>
           </TextReveal>
         </div>

@@ -44,7 +44,7 @@ const CoreValues = () => {
           >
             <h3 className="text-heading-5">Innovation</h3>
             <p className="text-tagline-2 text-background-14/60 md:mx-auto md:max-w-[260px]">
-              We ship quickly, learn from real usage, and keep raising the bar on what automation
+              We ship quickly, learn from real usage, and keep raising the bar on what messaging
               can do.
             </p>
           </RevealAnimation>

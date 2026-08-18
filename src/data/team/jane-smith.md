@@ -3,9 +3,9 @@ name: Jane Smith
 title: Software engineer
 image: /images/opai-avatar-img-05.png
 heroImage: /images/opai-avatar-img-05.png
-email: hello@pixels71.com
+email: jane@example.com
 phone: +1 (368) 567 89 54
-bio: Jane builds core product features for the Nexsas automation platform, focusing on clean APIs, test coverage, and fast iteration.
+bio: Jane builds core product features for the Xepter platform, focusing on clean APIs, test coverage, and fast iteration.
 order: 8
 ---
 
@@ -21,7 +21,7 @@ B.S. in Computer Science with focus on full-stack application development and so
 
 2018 - 2019
 
-#### Shopify
+#### An e-commerce platform company
 
 Contributed to merchant workflow tooling and internal automation services supporting commerce operations teams.
 
@@ -29,14 +29,14 @@ Contributed to merchant workflow tooling and internal automation services suppor
 
 2020 - Present
 
-#### Nexsas
+#### Xepter
 
-Develops frontend and backend features for workflow builder, run history, and team collaboration experiences.
+Develops frontend and backend features for messaging setup, conversation history, and team collaboration experiences.
 
 ### Key responsibilities
 
-- Implement product features across the automation stack
-- Write maintainable tests for critical workflow paths
+- Implement product features across the messaging platform
+- Write maintainable tests for critical delivery paths
 - Participate in code reviews and architecture discussions
 - Improve developer experience for internal tooling
 - Support on-call rotation for customer-impacting issues

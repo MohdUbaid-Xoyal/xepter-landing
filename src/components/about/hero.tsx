@@ -6,11 +6,11 @@ import { TextReveal } from '@/src/components/animation/text-reveal';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';
 import Image from 'next/image';
 
-const awards = [
-  'Automation Excellence Awards',
-  'Product Design Awards for workflow experiences',
-  'Award for clarity in onboarding',
-  'Industry recognition for reliability at scale',
+const highlights = [
+  'Native GoHighLevel & HubSpot integration',
+  'SMS, MMS, Voice & WhatsApp in one number',
+  '10DLC brand & campaign compliance handled for you',
+  'REST API & webhooks for custom integrations',
 ];
 
 const AboutHero = () => {
@@ -24,13 +24,14 @@ const AboutHero = () => {
             </RevealAnimation>
 
             <TextReveal delay={0.2}>
-              <h2>How Nexsas began</h2>
+              <h2>How Xepter began</h2>
             </TextReveal>
 
             <TextReveal delay={0.3}>
               <p className="text-background-14/60 md:mx-auto md:max-w-[480px]">
-                Nexsas was founded to turn automation into practical outcomes for real business
-                challenges — intuitive tools that save time and scale
+                Xepter was built to bring every customer conversation — SMS, MMS, voice, and
+                WhatsApp — into one number and one platform, wired directly into the CRM you
+                already use.
               </p>
             </TextReveal>
           </div>
@@ -58,13 +59,13 @@ const AboutHero = () => {
               offset={60}
               className="col-span-12 w-full space-y-6 text-left md:col-span-6 md:space-y-8 lg:col-span-4"
             >
-              <h2>Awards</h2>
+              <h2>Highlights</h2>
 
               <ul className="space-y-3">
-                {awards.map((award) => (
-                  <li key={award} className="flex items-start gap-2">
+                {highlights.map((highlight) => (
+                  <li key={highlight} className="flex items-start gap-2">
                     <span className="bg-secondary mt-2 size-1.5 shrink-0 rounded-full" />
-                    <p className="text-background-14/60">{award}</p>
+                    <p className="text-background-14/60">{highlight}</p>
                   </li>
                 ))}
               </ul>
@@ -87,10 +88,9 @@ const AboutHero = () => {
               <div className="ns-shape-47 text-[40px] text-white max-md:mb-2 md:text-[56px]" />
 
               <div className="relative z-10 space-y-2">
-                <p className="text-tagline-2 text-white/90">Customer satisfaction rate</p>
+                <p className="text-tagline-2 text-white/90">Channels, one platform</p>
                 <h3 className="text-heading-2 flex items-center text-white">
-                  <CounterNumberOnScroll value={95} duration={1.4} />
-                  <span>%</span>
+                  <CounterNumberOnScroll value={4} duration={1.4} />
                 </h3>
               </div>
             </RevealAnimation>

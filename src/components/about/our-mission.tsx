@@ -17,11 +17,11 @@ const OurMission = () => {
 
               <div className="space-y-3">
                 <TextReveal delay={0.2}>
-                  <h2>Building the future of automation</h2>
+                  <h2>Building the future of business communication</h2>
                 </TextReveal>
                 <TextReveal delay={0.3}>
                   <p className="text-background-14/60">
-                    A commitment to innovation and simplicity.
+                    A commitment to reliability and simplicity.
                   </p>
                 </TextReveal>
               </div>
@@ -35,7 +35,8 @@ const OurMission = () => {
             >
               <h3>Vision</h3>
               <p className="text-background-14/60">
-                To empower every business with tools that drive smarter, faster decisions.
+                To give every business one place to reach customers — on the channel they actually
+                check.
               </p>
             </RevealAnimation>
 
@@ -48,8 +49,8 @@ const OurMission = () => {
             >
               <h3>Mission</h3>
               <p className="text-background-14/60">
-                To develop easy-to-use automation that removes repetitive work and helps teams
-                thrive.
+                To build messaging and voice infrastructure that&apos;s easy to set up, compliant
+                by default, and native to the CRM you already run.
               </p>
             </RevealAnimation>
           </div>

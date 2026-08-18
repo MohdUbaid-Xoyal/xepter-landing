@@ -1,12 +1,12 @@
 import { generateMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  ...generateMetadata(),
-  title: 'About - Automation SaaS || Nexsas',
-};
+export const metadata: Metadata = generateMetadata(
+  'About | Xepter',
+  'Xepter was built to bring SMS, MMS, voice, and WhatsApp into one number and one platform, wired directly into the CRM you already use.',
+  '/about'
+);
 
-import AboutClients from '@/src/components/about/clients';
 import AboutHero from '@/src/components/about/hero';
 import OurMission from '@/src/components/about/our-mission';
 import AboutTeam from '@/src/components/about/team';
@@ -17,7 +17,6 @@ const AboutPage = () => {
   return (
     <>
       <AboutHero />
-      <AboutClients />
       <OurMission />
       <AboutTeam />
       <Integration />

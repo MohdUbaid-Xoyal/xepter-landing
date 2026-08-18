@@ -4,10 +4,7 @@ import CTA from '@/src/components/shared/cta';
 import { generateMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  ...generateMetadata(),
-  title: 'Blog - Automation SaaS || Nexsas',
-};
+export const metadata: Metadata = generateMetadata('Blog | Xepter', undefined, '/blog');
 
 const Page = () => {
   return (

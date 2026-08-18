@@ -11,15 +11,15 @@ const ServicesHero = () => {
           <div className="space-y-2 text-center md:space-y-3">
             <TextReveal delay={0.1}>
               <h2>
-                Transform operations with <br className="hidden md:block" />
-                automation services
+                Hands-on services to get <br className="hidden md:block" />
+                you live faster
               </h2>
             </TextReveal>
 
             <TextReveal delay={0.2}>
               <p className="text-tagline-1 text-secondary/60 mx-auto max-w-[560px]">
-                Nexsas helps teams design, launch, and scale automation systems that reduce manual
-                work and improve execution across the business.
+                From number porting and 10DLC compliance to CRM setup and custom API integrations,
+                our team helps you get Xepter running exactly the way your business needs it.
               </p>
             </TextReveal>
           </div>
@@ -30,7 +30,7 @@ const ServicesHero = () => {
                 className="w-full md:w-auto"
                 textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
               >
-                Talk to our automation experts
+                Talk to our team
               </ButtonWhite>
             </Link>
           </RevealAnimation>

@@ -1,11 +1,11 @@
 ---
 name: Elijah Brooks
-title: Senior automation engineer
+title: Senior platform engineer
 image: /images/opai-avatar-img-150.jpg
 heroImage: /images/opai-avatar-img-150.jpg
-email: hello@pixels71.com
+email: elijah@example.com
 phone: +1 (368) 567 89 54
-bio: Elijah designs and ships production automation flows, turning complex operational requirements into dependable triggers, actions, and monitoring.
+bio: Elijah designs and ships the messaging and voice systems that power SMS, MMS, and WhatsApp delivery, turning complex requirements into dependable, monitored infrastructure.
 order: 2
 ---
 
@@ -21,7 +21,7 @@ B.S. in Computer Engineering with coursework in systems design and data pipeline
 
 2014 - 2019
 
-#### Stripe
+#### A payments technology company
 
 Implemented integration workflows and internal automation tooling that reduced manual operations across support and onboarding teams.
 
@@ -29,14 +29,14 @@ Implemented integration workflows and internal automation tooling that reduced m
 
 2020 - Present
 
-#### Nexsas
+#### Xepter
 
-Builds customer-facing automation templates and custom workflow implementations with a focus on performance, error handling, and maintainability.
+Builds the delivery pipelines behind SMS, MMS, voice, and WhatsApp, with a focus on performance, error handling, and maintainability.
 
 ### Key responsibilities
 
-- Design multi-step automation for customer use cases
-- Improve workflow runtime reliability and observability
-- Collaborate with solutions teams on complex deployments
-- Document best practices for trigger and action configuration
-- Review automation designs for scalability and failure recovery
+- Design reliable delivery paths for every messaging channel
+- Improve runtime reliability and observability across the platform
+- Collaborate with solutions teams on complex customer deployments
+- Document best practices for webhook and event configuration
+- Review system designs for scalability and failure recovery

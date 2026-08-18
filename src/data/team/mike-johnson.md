@@ -3,9 +3,9 @@ name: Mike Johnson
 title: Head of marketing
 image: /images/opai-avatar-img-06.png
 heroImage: /images/opai-avatar-img-06.png
-email: hello@pixels71.com
+email: mike@example.com
 phone: +1 (368) 567 89 54
-bio: Mike leads go-to-market strategy for Nexsas, connecting product value to campaigns, content, and growth programs that reach operations teams.
+bio: Mike leads go-to-market strategy for Xepter, connecting product value to campaigns, content, and growth programs that reach agencies and CRM teams.
 order: 9
 ---
 
@@ -21,7 +21,7 @@ B.A. in Marketing and Communications with focus on B2B SaaS positioning and dema
 
 2014 - 2019
 
-#### Salesforce
+#### A CRM software company
 
 Ran regional campaigns and partner marketing programs for automation and productivity product lines.
 
@@ -29,9 +29,9 @@ Ran regional campaigns and partner marketing programs for automation and product
 
 2020 - Present
 
-#### Nexsas
+#### Xepter
 
-Leads brand, content, and growth marketing with a focus on educating teams on practical automation outcomes.
+Leads brand, content, and growth marketing with a focus on educating agencies and teams on getting the most out of every channel.
 
 ### Key responsibilities
 

@@ -20,9 +20,7 @@ export async function generateMetadata({
   const slug = (await params).slug;
   const doc = getMarkDownContent('src/data/blog/', slug);
   const data = doc.data as Partial<BlogPost>;
-  const title = data.title
-    ? `${data.title} - Blog - Automation SaaS || Nexsas`
-    : 'Blog Details - Automation SaaS || Nexsas';
+  const title = data.title ? `${data.title} | Xepter` : 'Blog | Xepter';
 
   return buildMeta(title);
 }

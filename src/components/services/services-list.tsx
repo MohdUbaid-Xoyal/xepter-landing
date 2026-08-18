@@ -13,13 +13,13 @@ const ServicesList = () => {
         <div className="space-y-3 text-center">
           <div className="space-y-2 text-center md:space-y-3">
             <TextReveal delay={0.1}>
-              <h2>What you can automate</h2>
+              <h2>How we help you get set up</h2>
             </TextReveal>
 
             <TextReveal delay={0.2}>
               <p className="text-tagline-1 text-secondary/60 mx-auto max-w-[560px]">
-                From workflow orchestration to decision support, our automation services help teams
-                move faster with fewer errors.
+                From provisioning your first number to rolling out access across an entire agency,
+                our team handles the setup work so you can focus on your customers.
               </p>
             </TextReveal>
           </div>

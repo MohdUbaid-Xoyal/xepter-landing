@@ -4,10 +4,11 @@ import CTA from '@/src/components/shared/cta';
 import { generateMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  ...generateMetadata(),
-  title: 'Team - Automation SaaS || Nexsas',
-};
+export const metadata: Metadata = generateMetadata(
+  'Team | Xepter',
+  'Meet the team behind Xepter — product, design, and engineering shipping SMS, MMS, voice, and WhatsApp for teams that talk to customers every day.',
+  '/team'
+);
 
 const Page = () => {
   return (

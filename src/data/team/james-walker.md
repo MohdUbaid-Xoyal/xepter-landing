@@ -3,9 +3,9 @@ name: James Walker
 title: Chief technology officer (CTO)
 image: /images/opai-avatar-img-149.jpg
 heroImage: /images/opai-avatar-img-149.jpg
-email: hello@pixels71.com
+email: james@example.com
 phone: +1 (368) 567 89 54
-bio: James leads platform architecture and engineering strategy, ensuring Nexsas automation stays reliable, secure, and ready to scale with customer demand.
+bio: James leads platform architecture and engineering strategy, ensuring Xepter's messaging and voice infrastructure stays reliable, secure, and ready to scale with customer demand.
 order: 1
 ---
 
@@ -21,7 +21,7 @@ B.S. in Computer Science with a focus on distributed systems and software archit
 
 2013 - 2019
 
-#### Microsoft
+#### A large cloud software company
 
 Led engineering teams building cloud productivity infrastructure. Partnered with product and security groups to ship resilient services used by enterprise customers worldwide.
 
@@ -29,9 +29,9 @@ Led engineering teams building cloud productivity infrastructure. Partnered with
 
 2020 - Present
 
-#### Nexsas
+#### Xepter
 
-Owns technical direction for the automation platform, from core workflow engine design to integration reliability and long-term scalability planning.
+Owns technical direction for the messaging platform, from core delivery infrastructure design to integration reliability and long-term scalability planning.
 
 ### Key responsibilities
 

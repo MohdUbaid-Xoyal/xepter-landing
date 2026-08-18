@@ -17,13 +17,13 @@ const OurTeam = () => {
           </RevealAnimation>
 
           <TextReveal delay={0.2}>
-            <h2>The minds behind Nexsas</h2>
+            <h2>The minds behind Xepter</h2>
           </TextReveal>
 
           <TextReveal delay={0.3}>
             <p className="text-background-14/60 mx-auto max-w-[640px]">
-              Our team brings together product, design, and engineering to ship automation people
-              rely on.
+              Our team brings together product, design, and engineering to ship communication
+              tools people rely on.
               <br className="hidden md:block" />
               Every release is shaped by feedback from teams like yours.
             </p>

@@ -21,9 +21,9 @@ export async function generateMetadata({
   const doc = getMarkDownContent('src/data/team/', slug);
   const data = doc.data as Partial<TeamMember>;
   const name = data.name ?? 'Team';
-  const title = `${name} - Team - Automation SaaS || Nexsas`;
+  const title = `${name} | Xepter`;
 
-  return buildMeta(title);
+  return buildMeta(title, data.bio);
 }
 
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {

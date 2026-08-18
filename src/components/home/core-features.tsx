@@ -1,7 +1,7 @@
 import autoRemindersImg from '@/public/images/ns-img-19.svg';
 import scaleWithoutComplexityImg from '@/public/images/ns-img-20.svg';
-import multiStepAutomationImg from '@/public/images/ns-img-21.png';
-import timezoneImg from '@/public/images/ns-img-22.png';
+import multiStepAutomationImg from '@/public/images/ns-img-21.webp';
+import timezoneImg from '@/public/images/ns-img-22.webp';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import { GradientCircleIcon } from '@/src/components/shared/icon';
@@ -23,12 +23,12 @@ const CoreFeatures = () => {
 
               <div className="space-y-3">
                 <TextReveal delay={0.2}>
-                  <h2>Visual automation made simple</h2>
+                  <h2>Built for real conversations, not just blasts</h2>
                 </TextReveal>
                 <TextReveal delay={0.3}>
                   <p className="text-background-14/60 mx-auto max-w-[400px]">
-                    Design workflows with an intuitive drag-and-drop builder and see your automation
-                    run in real time.
+                    SMS, MMS, voice, and WhatsApp — connected to your CRM and easy to manage from
+                    day one.
                   </p>
                 </TextReveal>
               </div>
@@ -38,19 +38,19 @@ const CoreFeatures = () => {
                   <li className="flex items-center justify-center gap-x-1">
                     <GradientCircleIcon />
                     <span className="text-tagline-2 text-secondary font-inter-tight font-normal italic">
-                      No code.
+                      One number.
                     </span>
                   </li>
                   <li className="flex items-center justify-center gap-x-1">
                     <GradientCircleIcon />
                     <span className="text-tagline-2 text-secondary font-inter-tight font-normal italic">
-                      No complexity.
+                      Every channel.
                     </span>
                   </li>
                   <li className="flex items-center justify-center gap-x-1">
                     <GradientCircleIcon />
                     <span className="text-tagline-2 text-secondary font-inter-tight font-normal italic">
-                      Just automation.
+                      Real conversations.
                     </span>
                   </li>
                 </ul>
@@ -75,15 +75,16 @@ const CoreFeatures = () => {
                 <figure className="h-[303px] w-full max-[376px]:h-[274px] md:h-[257px] lg:h-[272px] xl:h-[352px]">
                   <Image
                     src={autoRemindersImg}
-                    alt="auto-reminders-and-notifications"
+                    alt="reminders-and-alerts"
                     className="size-full object-cover"
                   />
                 </figure>
 
                 <div className="space-y-1">
-                  <h3 className="text-heading-5">Auto-reminders & notifications</h3>
+                  <h3 className="text-heading-5">Reminders & alerts</h3>
                   <p className="text-background-14/60 line-clamp-1">
-                    Stay on track with automated reminders and real-time notifications.
+                    Send appointment reminders and time-sensitive alerts by SMS the moment they&apos;re
+                    due.
                   </p>
                 </div>
               </div>
@@ -94,15 +95,16 @@ const CoreFeatures = () => {
                 <figure className="h-[265px] w-full max-[376px]:h-[240px] lg:h-[275px] xl:h-[382px]">
                   <Image
                     src={multiStepAutomationImg}
-                    alt="multi-step-automation-logic"
+                    alt="two-way-conversations-one-thread"
                     className="size-full object-cover"
                   />
                 </figure>
 
                 <div className="space-y-1">
-                  <h3 className="text-heading-5">Multi-step automation logic</h3>
+                  <h3 className="text-heading-5">Two-way conversations, one thread</h3>
                   <p className="text-background-14/60">
-                    Build workflows that execute multiple actions in sequence.
+                    Every reply — SMS, MMS, voice, or WhatsApp — lands in the same conversation,
+                    in order.
                   </p>
                 </div>
               </div>
@@ -121,8 +123,8 @@ const CoreFeatures = () => {
                 <div className="space-y-1">
                   <h3 className="text-heading-5">Scale without complexity</h3>
                   <p className="text-background-14/60 line-clamp-1">
-                    Streamline workflows, connect tools, and grow faster—without adding extra
-                    overhead.
+                    Add numbers, channels, and team members as you grow — without extra tools or
+                    extra overhead.
                   </p>
                 </div>
               </div>
@@ -133,15 +135,16 @@ const CoreFeatures = () => {
                 <figure className="h-[270px] w-full lg:h-[253px] xl:h-[352px]">
                   <Image
                     src={timezoneImg}
-                    alt="automatically-identifies-timezone"
+                    alt="delivers-at-the-right-local-time"
                     className="size-full object-cover"
                   />
                 </figure>
 
                 <div className="space-y-1">
-                  <h3 className="text-heading-5">Automatically identifies your timezone</h3>
+                  <h3 className="text-heading-5">Delivers at the right local time</h3>
                   <p className="text-background-14/60 line-clamp-1">
-                    Detects your location instantly and sets the correct timezone.
+                    Messages and reminders send at the right local time for every contact,
+                    automatically.
                   </p>
                 </div>
               </div>

@@ -1,3 +1,5 @@
+import { DOCS_URL } from '@/src/utils/constants';
+
 export interface FooterLinkItem {
   label: string;
   href: string;
@@ -13,9 +15,9 @@ export const footerNavColumns: FooterLinkColumn[] = [
     title: 'Company',
     links: [
       { label: 'About Us', href: '/about' },
+      { label: 'Our Team', href: '/team' },
+      { label: 'Blog', href: '/blog' },
       { label: 'Career', href: '#' },
-      { label: 'Why Choose Us', href: '#' },
-      { label: 'Our Manifesto', href: '#' },
       { label: 'Contact Us', href: '/contact' },
     ],
   },
@@ -23,7 +25,7 @@ export const footerNavColumns: FooterLinkColumn[] = [
     title: 'Support',
     links: [
       { label: 'FAQ', href: '#' },
-      { label: 'Documentation', href: '#' },
+      { label: 'Documentation', href: DOCS_URL },
       { label: 'Tutorial', href: '#' },
       { label: 'Support', href: '#' },
     ],

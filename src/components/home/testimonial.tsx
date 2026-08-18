@@ -1,12 +1,12 @@
-import slideImg8 from '@/public/images/ns-avatar-10.jpg';
-import avatar3 from '@/public/images/ns-avatar-14.jpg';
-import slideImg2 from '@/public/images/ns-avatar-4.jpg';
-import slideImg3 from '@/public/images/ns-avatar-5.jpg';
-import slideImg4 from '@/public/images/ns-avatar-6.jpg';
-import slideImg5 from '@/public/images/ns-avatar-7.jpg';
-import { default as avatar1, default as slideImg6 } from '@/public/images/ns-avatar-8.jpg';
-import { default as avatar2, default as slideImg7 } from '@/public/images/ns-avatar-9.jpg';
-import slideImg1 from '@/public/images/ns-img-2.jpg';
+import slideImg8 from '@/public/images/ns-avatar-10.webp';
+import avatar3 from '@/public/images/ns-avatar-14.webp';
+import slideImg2 from '@/public/images/ns-avatar-4.webp';
+import slideImg3 from '@/public/images/ns-avatar-5.webp';
+import slideImg4 from '@/public/images/ns-avatar-6.webp';
+import slideImg5 from '@/public/images/ns-avatar-7.webp';
+import { default as avatar1, default as slideImg6 } from '@/public/images/ns-avatar-8.webp';
+import { default as avatar2, default as slideImg7 } from '@/public/images/ns-avatar-9.webp';
+import slideImg1 from '@/public/images/ns-img-2.webp';
 import CounterNumberOnScroll from '@/src/components/animation/counter-number-on-scroll';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import {
@@ -64,8 +64,7 @@ const Testimonial = () => {
                       ))}
                     </span>
                     <p className="text-background-14/60 text-tagline-2">
-                      Happy by <CounterNumberOnScroll value={20} />
-                      k+ clients
+                      Trusted by teams on <CounterNumberOnScroll value={4} /> channels
                     </p>
                   </div>
                 </RevealAnimation>
@@ -77,9 +76,9 @@ const Testimonial = () => {
                   delay={0.4}
                   className="w-full rounded-xl bg-white p-4 text-center"
                 >
-                  <p className="text-tagline-3">Top Customer Ratings</p>
+                  <p className="text-tagline-3">Message Delivery Rate</p>
                   <div className="text-secondary font-medium">
-                    <CounterNumberOnScroll value={91} duration={1.2} />%
+                    <CounterNumberOnScroll value={99} duration={1.2} />%
                   </div>
                 </RevealAnimation>
 
@@ -89,9 +88,9 @@ const Testimonial = () => {
                     delay={0.5}
                     className="w-1/2 rounded-xl bg-white p-4 text-center"
                   >
-                    <p className="text-tagline-3">On-Time Deliveries</p>
+                    <p className="text-tagline-3">Platform Uptime</p>
                     <div className="text-secondary font-medium">
-                      <CounterNumberOnScroll value={100} duration={1.2} />%
+                      <CounterNumberOnScroll value={99} duration={1.2} />%
                     </div>
                   </RevealAnimation>
 
@@ -100,9 +99,9 @@ const Testimonial = () => {
                     delay={0.6}
                     className="w-1/2 rounded-xl bg-white p-4 text-center"
                   >
-                    <p className="text-tagline-3">Logistics Optimization</p>
+                    <p className="text-tagline-3">CRM Setup Time</p>
                     <div className="text-secondary font-medium">
-                      <CounterNumberOnScroll value={87} duration={1.2} />%
+                      &lt;<CounterNumberOnScroll value={10} duration={1.2} />m
                     </div>
                   </RevealAnimation>
                 </div>
@@ -117,11 +116,11 @@ const Testimonial = () => {
                   <SlideImg src={slideImg1} alt="testimonial one" />
                   <SlideContent>
                     <p className="text-secondary">
-                      &ldquo;Before using this platform, our team was drowning in repetitive tasks
-                      across tools and spreadsheets.
+                      &ldquo;Before Xepter, our SMS, calls, and WhatsApp all lived in different
+                      apps.
                       <span className="mt-5 inline-block">
-                        After setup, most daily updates now run automatically and our team finally
-                        has time for strategic work.&rdquo;
+                        Now every reply lands in the same conversation inside GoHighLevel, and
+                        nothing gets missed between channels.&rdquo;
                       </span>
                     </p>
                   </SlideContent>
@@ -131,11 +130,11 @@ const Testimonial = () => {
                   <SlideImg src={slideImg2} alt="testimonial two" />
                   <SlideContent>
                     <p className="text-secondary">
-                      &ldquo;Our automation SaaS turned scattered handoffs into one clear pipeline
-                      we can monitor end to end.
+                      &ldquo;We run every client account on its own number now, without
+                      juggling separate messaging tools per client.
                       <span className="mt-5 inline-block">
-                        Approvals, status updates, and owner changes now propagate automatically, so
-                        delivery stays on track without chasing people in chat.&rdquo;
+                        Campaigns, templates, and delivery tracking all live inside the CRM we
+                        already run for them.&rdquo;
                       </span>
                     </p>
                   </SlideContent>
@@ -145,11 +144,10 @@ const Testimonial = () => {
                   <SlideImg src={slideImg3} alt="testimonial three" />
                   <SlideContent>
                     <p className="text-secondary">
-                      &ldquo;We plugged our CRM, billing, and support stack into the platform in a
-                      single afternoon.
+                      &ldquo;Connecting Xepter to HubSpot took an afternoon, not a sprint.
                       <span className="mt-5 inline-block">
-                        Triggers and webhooks keep customer records and subscription events in sync,
-                        so ops and finance always see the same live automation health.&rdquo;
+                        Webhooks keep delivery status and replies in sync, so support and sales
+                        always see the same conversation history.&rdquo;
                       </span>
                     </p>
                   </SlideContent>
@@ -159,11 +157,11 @@ const Testimonial = () => {
                   <SlideImg src={slideImg4} alt="testimonial four" />
                   <SlideContent>
                     <p className="text-secondary">
-                      &ldquo;No-code paths let CS and success teams ship playbooks without waiting
-                      on engineering for every tweak.
+                      &ldquo;Our support team stopped switching tabs between a dialer, a texting
+                      app, and our CRM.
                       <span className="mt-5 inline-block">
-                        We still drop into advanced rules when we need them, but most SaaS lifecycle
-                        automation now ship in hours, not sprints.&rdquo;
+                        Calls, SMS, and WhatsApp all show up in the same place now, with full
+                        context on every contact.&rdquo;
                       </span>
                     </p>
                   </SlideContent>
@@ -173,11 +171,10 @@ const Testimonial = () => {
                   <SlideImg src={slideImg5} alt="testimonial five" />
                   <SlideContent>
                     <p className="text-secondary">
-                      &ldquo;Trial-to-paid and renewal reminders used to live in spreadsheets and
-                      side threads.
+                      &ldquo;Appointment reminders used to slip through the cracks in spreadsheets.
                       <span className="mt-5 inline-block">
-                        The product now sequences emails, in-app nudges, and Slack alerts from one
-                        automation graph, with full run history for every account.&rdquo;
+                        Now they go out by SMS automatically, and we can see delivery status for
+                        every message we send.&rdquo;
                       </span>
                     </p>
                   </SlideContent>
@@ -187,12 +184,11 @@ const Testimonial = () => {
                   <SlideImg src={slideImg6} alt="testimonial six" />
                   <SlideContent>
                     <p className="text-secondary">
-                      &ldquo;Security reviews were a blocker because we could not prove who touched
-                      which workflow or credential.
+                      &ldquo;10DLC compliance was the part we dreaded most about scaling our SMS
+                      program.
                       <span className="mt-5 inline-block">
-                        Role-based access, audit logs, and environment separation gave our buyers
-                        confidence that our SaaS automation are production-grade, not shadow
-                        IT.&rdquo;
+                        Xepter handled brand and campaign registration for us, so our traffic
+                        stayed deliverable from day one.&rdquo;
                       </span>
                     </p>
                   </SlideContent>
@@ -202,12 +198,11 @@ const Testimonial = () => {
                   <SlideImg src={slideImg7} alt="testimonial seven" />
                   <SlideContent>
                     <p className="text-secondary">
-                      &ldquo;Usage spikes used to mean overnight pager rotations whenever a batch
-                      job failed silently.
+                      &ldquo;Our sales team dials straight from the browser now, with hold,
+                      transfer, and conferencing built in.
                       <span className="mt-5 inline-block">
-                        Retries, dead-letter queues, and dashboards in the automation layer mean our
-                        SaaS backend keeps pace with growth without heroic manual
-                        babysitting.&rdquo;
+                        Every call logs back to the contact automatically, so nothing depends on
+                        someone remembering to write it down.&rdquo;
                       </span>
                     </p>
                   </SlideContent>
@@ -217,12 +212,10 @@ const Testimonial = () => {
                   <SlideImg src={slideImg8} alt="testimonial eight" />
                   <SlideContent>
                     <p className="text-secondary">
-                      &ldquo;Executive reviews finally show one automation-backed view of MRR, churn
-                      risk, and delivery commitments.
+                      &ldquo;Adding WhatsApp used to mean a whole new tool and a whole new login.
                       <span className="mt-5 inline-block">
-                        Instead of reconciling five tools the night before a board meeting, we
-                        export governed dashboards fed by the same SaaS workflows our teams run
-                        every day.&rdquo;
+                        With Xepter it just showed up as another channel in the same inbox our
+                        team already used every day.&rdquo;
                       </span>
                     </p>
                   </SlideContent>

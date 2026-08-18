@@ -1,4 +1,4 @@
-import benefitImage from '@/public/images/ns-img-24.jpg';
+import benefitImage from '@/public/images/ns-img-24.webp';
 import { cn } from '@/src/utils/cn';
 import Image from 'next/image';
 import type { HTMLAttributes } from 'react';

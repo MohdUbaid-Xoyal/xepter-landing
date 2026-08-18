@@ -6,11 +6,11 @@ import { BenefitCard, BenefitImageCard, BenefitRoiCard } from '@/src/components/
 import Link from 'next/link';
 
 const benefitCards = [
-  { title: 'Save 10–20 hours weekly', iconClass: 'ns-shape-1' },
-  { title: 'Reduce manual errors', iconClass: 'ns-shape-2' },
-  { title: 'Improve team productivity', iconClass: 'ns-shape-3' },
-  { title: 'Focus on high-value work', iconClass: 'ns-shape-4' },
-  { title: 'Scale without hiring more staff', iconClass: 'ns-shape-5' },
+  { title: 'Reply from any channel', iconClass: 'ns-shape-1' },
+  { title: 'Cut down on missed messages', iconClass: 'ns-shape-2' },
+  { title: 'Stay compliant automatically', iconClass: 'ns-shape-3' },
+  { title: 'Built into your CRM', iconClass: 'ns-shape-4' },
+  { title: 'Scale without extra tools', iconClass: 'ns-shape-5' },
 ];
 
 const Benefits = () => {
@@ -26,12 +26,12 @@ const Benefits = () => {
 
               <div className="space-y-3">
                 <TextReveal delay={0.2}>
-                  <h2>Real results teams experience</h2>
+                  <h2>Why teams choose Xepter</h2>
                 </TextReveal>
                 <TextReveal delay={0.3}>
                   <p className="text-background-14/60 mx-auto max-w-[520px]">
-                    From faster workflows to improved collaboration, every feature is designed to
-                    deliver real, trackable results that teams can rely on every day.
+                    One number, every channel, and a setup that fits inside the CRM you already
+                    use — no switching between tools to keep up with a conversation.
                   </p>
                 </TextReveal>
               </div>

@@ -1,9 +1,9 @@
 'use client';
 
 import bottomGradient from '@/public/images/bottom-gradient.svg';
-import avatar1 from '@/public/images/ns-avatar-11.jpg';
-import avatar2 from '@/public/images/ns-avatar-13.jpg';
-import avatar3 from '@/public/images/ns-avatar-14.jpg';
+import avatar1 from '@/public/images/ns-avatar-11.webp';
+import avatar2 from '@/public/images/ns-avatar-13.webp';
+import avatar3 from '@/public/images/ns-avatar-14.webp';
 import leftElement from '@/public/images/ns-img-27.svg';
 import rightElement from '@/public/images/ns-img-28.svg';
 import heroBanner from '@/public/images/ns-img-3.png';

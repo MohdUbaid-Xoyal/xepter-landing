@@ -30,13 +30,13 @@ const CTA = () => {
                 <div className="space-y-3">
                   <TextReveal delay={0.4}>
                     <h2 className="mx-auto max-w-[650px]">
-                      Stop doing manual work. Start automating everything.
+                      Ready to put every channel to work?
                     </h2>
                   </TextReveal>
                   <TextReveal delay={0.5}>
                     <p className="text-background-14/60 mx-auto max-w-[550px]">
-                      Replace repetitive tasks with smart automation that runs in the background,
-                      saving time, reducing errors, and letting you focus on real growth.
+                      Talk to a Xepter expert about SMS, MMS, voice, and WhatsApp — and see how it
+                      fits the CRM you already run.
                     </p>
                   </TextReveal>
                 </div>
@@ -48,7 +48,7 @@ const CTA = () => {
                     className="mx-auto md:mx-0 md:w-fit!"
                     textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
                   >
-                    Create automation
+                    Talk to sales
                   </ButtonPrimary>
                 </Link>
               </RevealAnimation>

@@ -1,9 +1,8 @@
-import aboutImgPrimary from '@/public/images/ns-img-6.jpg';
-import aboutImgSecondary from '@/public/images/ns-img-7.jpg';
+import aboutImgPrimary from '@/public/images/ns-img-6.webp';
+import aboutImgSecondary from '@/public/images/ns-img-7.webp';
 import CounterNumberOnScroll from '@/src/components/animation/counter-number-on-scroll';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
-import { StarIcon } from '@/src/components/shared/icon';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';
 import { ButtonWhite } from '@/src/components/shared/ui/button';
 import Image from 'next/image';
@@ -32,15 +31,15 @@ const AboutUs = () => {
                   <div className="w-full space-y-5 lg:w-1/2">
                     <BadgePrimary>About Us</BadgePrimary>
                     <TextReveal delay={0.3}>
-                      <h2>The team behind smarter automation</h2>
+                      <h2>The team behind every conversation</h2>
                     </TextReveal>
                   </div>
 
                   <div className="w-full space-y-8 lg:w-1/2 lg:space-y-14">
                     <TextReveal delay={0.4}>
                       <p>
-                        We created this platform to solve one simple problem — too much time is
-                        wasted on repetitive work.
+                        We built Xepter to solve one problem — too many channels, too many logins,
+                        too many missed replies. One number, every channel, one conversation.
                       </p>
                     </TextReveal>
 
@@ -62,31 +61,23 @@ const AboutUs = () => {
                     <div className="flex items-center justify-start gap-x-8">
                       <div className="space-y-1">
                         <h3 className="text-heading-5">
-                          <CounterNumberOnScroll value={90} />
-                          <span>%</span>
+                          <CounterNumberOnScroll value={4} />
                         </h3>
-                        <p className="text-background-14/60">Client Satisfaction</p>
+                        <p className="text-background-14/60">channels in one inbox</p>
                       </div>
                       <div className="space-y-1">
                         <h3 className="text-heading-5">
-                          <CounterNumberOnScroll value={10} />
-                          <span>M+</span>
+                          <CounterNumberOnScroll value={2} />
                         </h3>
-                        <p className="text-background-14/60">automated workflows</p>
+                        <p className="text-background-14/60">native CRM integrations</p>
                       </div>
                     </div>
 
                     <div className="space-y-1">
-                      <h3 className="text-heading-5 flex items-center gap-x-2">
-                        <CounterNumberOnScroll
-                          value={4.9}
-                          format={{ minimumFractionDigits: 1, maximumFractionDigits: 1 }}
-                        />
-                        <span className="size-5">
-                          <StarIcon className="fill-primary-500 size-4" />
-                        </span>
+                      <h3 className="text-heading-5">
+                        <CounterNumberOnScroll value={1} />
                       </h3>
-                      <p className="text-background-14/60">user rating</p>
+                      <p className="text-background-14/60">number for SMS, MMS, voice & WhatsApp</p>
                     </div>
                   </div>
 

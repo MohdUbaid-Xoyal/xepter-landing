@@ -14,40 +14,40 @@ import Link from 'next/link';
 
 const faqItems = [
   {
-    value: 'what-does-nexsas-automate',
-    question: 'What does Nexsas automate?',
+    value: 'what-does-xepter-do',
+    question: 'What does Xepter do?',
     answer:
-      'Nexsas connects your tools and automates repetitive tasks like routing requests, updating records, sending notifications, and syncing data across your stack.',
+      'Xepter is a business communications platform for SMS, MMS, Voice, and WhatsApp. Connect a number, reach customers on every channel, and see every conversation in one place inside GoHighLevel or HubSpot.',
   },
   {
     value: 'which-apps-can-i-connect',
     question: 'Which apps can I connect?',
     answer:
-      'Connect CRMs, project tools, email, forms, spreadsheets, and databases. Mix multiple integrations in one workflow to keep data synced across teams.',
+      'Xepter connects natively to GoHighLevel and HubSpot. For custom stacks, use the REST API and webhooks to send messages, place calls, and receive delivery events directly.',
   },
   {
-    value: 'multi-step-workflows',
-    question: 'Can I build multi-step workflows?',
+    value: 'can-i-port-my-number',
+    question: 'Can I use my existing number, or do I need a new one?',
     answer:
-      'Yes. Create triggers, conditions, approvals, delays, and branching logic. You can also retry failed steps and route exceptions to the right person automatically.',
+      'Either works. Port your existing local or toll-free number, or purchase a new one directly in Xepter — SMS, MMS, voice, and WhatsApp all run through the same number either way.',
   },
   {
     value: 'is-my-data-secure',
-    question: 'Is my data secure?',
+    question: 'Is my messaging data secure?',
     answer:
-      'We use encryption in transit and at rest, strict access controls, and audit-friendly logs. You decide which connections and actions each workflow is allowed to run.',
+      "Yes. Xepter uses encryption in transit and at rest, role-based access controls, and audit logs, and every organization's data is isolated from every other.",
   },
   {
-    value: 'coding-skills-required',
-    question: 'Do I need coding skills to use Nexsas?',
+    value: 'sms-compliance-10dlc',
+    question: 'Do I need to worry about SMS compliance (10DLC)?',
     answer:
-      'No. Start with templates and a visual builder. If you want advanced customization, you can add rules, webhooks, and custom fields without changing your existing tools.',
+      'No — Xepter handles brand and campaign registration for you, so your SMS traffic stays compliant and deliverable without extra paperwork on your end.',
   },
   {
-    value: 'monitor-runs-and-troubleshoot',
-    question: 'How do I monitor runs and troubleshoot failures?',
+    value: 'delivery-tracking',
+    question: 'How do I know if a message was delivered?',
     answer:
-      'Every automation stores run history with timestamps, outcomes, and step-level detail. You can filter errors, set notifications when something breaks, pause a workflow safely, and replay or fix failed steps without losing context.',
+      'Every message and call includes delivery status, and webhooks notify your system in real time when something is sent, delivered, or fails, so you always know what happened.',
   },
 ];
 
@@ -69,8 +69,8 @@ const FAQ = () => {
                   </TextReveal>
                   <TextReveal delay={0.3}>
                     <p className="text-background-14/60 mx-auto max-w-[450px] lg:mx-0">
-                      We&apos;ve gathered the most commonly asked questions to help you understand
-                      our services, workflow, pricing, and support.
+                      We&apos;ve gathered the most common questions about channels, integrations,
+                      compliance, and pricing.
                     </p>
                   </TextReveal>
                 </div>

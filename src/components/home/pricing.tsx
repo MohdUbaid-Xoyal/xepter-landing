@@ -32,45 +32,45 @@ interface Plan {
 }
 
 const pricingPlans: Plan[] = [
-  { id: 'starter', name: 'Starter', subtitle: 'For early-stage teams' },
+  { id: 'starter', name: 'Starter', subtitle: 'For solo teams & small agencies' },
   { id: 'pro', name: 'Pro', subtitle: 'For growing teams' },
-  { id: 'business', name: 'Business', subtitle: 'For established businesses' },
+  { id: 'business', name: 'Business', subtitle: 'For agencies & multi-location teams' },
 ];
 
 const pricingPlanData: Record<PlanId, PlanData> = {
   starter: {
-    monthly: 2500,
-    yearly: 25000,
+    monthly: 49,
+    yearly: 490,
     activeCount: 5,
     description:
-      'Big sound in a small package. The S1 is a sleek, portable Bluetooth speaker with rich audio and all-day battery life',
+      'Get started with two-way SMS and MMS on one dedicated number, connected to GoHighLevel or HubSpot.',
   },
   pro: {
-    monthly: 4190,
-    yearly: 41900,
+    monthly: 149,
+    yearly: 1490,
     activeCount: 7,
     description:
-      'Built for growing teams with advanced automation, priority workflows, and deeper analytics to keep everything moving.',
+      'Add voice calling and WhatsApp to the mix, with delivery tracking and reusable campaign templates.',
   },
   business: {
-    monthly: 8290,
-    yearly: 82900,
+    monthly: 399,
+    yearly: 3990,
     activeCount: 9,
     description:
-      'Enterprise-grade controls with custom workflows, team-wide governance, and dedicated support for large-scale operations.',
+      'Run every channel across every number and account, with team roles, priority support, and dedicated onboarding.',
   },
 };
 
 const includedItems: string[] = [
-  'Delaware franchise tax',
-  'State income tax',
-  'Foreign founders',
-  'Foreign subsidiary',
-  'R&D tax credits',
-  'Sales tax nexus',
-  'Employment tax nexus',
-  'Property tax nexus',
-  'Income tax nexus',
+  'SMS & MMS messaging',
+  'One phone number included',
+  'GoHighLevel & HubSpot integration',
+  'Delivery tracking & webhooks',
+  'Campaign templates',
+  'Voice dialer with hold & transfer',
+  'WhatsApp messaging',
+  'Team roles & permissions',
+  'Priority support & onboarding',
 ];
 
 const Pricing = () => {
@@ -164,8 +164,8 @@ const Pricing = () => {
                 </TextReveal>
                 <TextReveal delay={0.3}>
                   <p className="text-background-14/60 mx-auto max-w-[600px]">
-                    Upgrade anytime as your needs evolve, and stay focused on what matters most
-                    building and expanding your product with confidence.
+                    Upgrade anytime as you grow — from a single SMS number to every channel your
+                    team needs.
                   </p>
                 </TextReveal>
               </div>

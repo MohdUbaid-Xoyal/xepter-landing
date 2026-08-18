@@ -9,12 +9,17 @@ import {
   DownloadIcon,
   FeatureIcon,
   IntegrationIconV2,
+  MmsIcon,
   PressIcon,
   PricingIcon,
   ProcessICon,
+  RcsIcon,
   SecurityIcon,
+  SmsIcon,
   SupportIconV2,
   TeamIcon,
+  VoiceIcon,
+  WhatsAppIcon,
   WhitePaperIconV2,
 } from '@/src/components/shared/icon/menu-icon';
 import { InnerPagesMenuLink } from '@/src/components/shared/layout/navbar/inner-pages-menu-link';
@@ -30,6 +35,14 @@ type PlatformLink = {
   href: string;
   icon: ComponentType<{ className?: string }>;
 };
+
+const productLinks: PlatformLink[] = [
+  { label: 'SMS', href: '/products/sms', icon: SmsIcon },
+  { label: 'MMS', href: '/products/mms', icon: MmsIcon },
+  { label: 'Voice', href: '/products/voice', icon: VoiceIcon },
+  { label: 'WhatsApp', href: '/products/whatsapp', icon: WhatsAppIcon },
+  { label: 'RCS (Coming soon)', href: '#', icon: RcsIcon },
+];
 
 const overviewLinks: PlatformLink[] = [
   { label: 'Features & Capabilities', href: '#', icon: FeatureIcon },
@@ -70,7 +83,15 @@ export const PlatformMenu = ({ menuDropdownId, setMenuDropdownId }: PlatformMenu
       >
         <div className="grid grid-cols-12 items-start gap-y-6 md:gap-x-6">
           <div className="col-span-12 grid grid-cols-12 gap-x-6 lg:col-span-6">
-            <div className="col-span-12 xl:col-span-6">
+            <div className="col-span-12 xl:col-span-4">
+              <p className="text-tagline-2 text-secondary/60 p-3 font-medium">Products</p>
+              <ul>
+                {productLinks.map((link) => (
+                  <InnerPagesMenuLink key={link.label} {...link} onClose={handleClose} />
+                ))}
+              </ul>
+            </div>
+            <div className="col-span-12 xl:col-span-4">
               <p className="text-tagline-2 text-secondary/60 p-3 font-medium">Overview</p>
               <ul>
                 {overviewLinks.map((link) => (
@@ -78,7 +99,7 @@ export const PlatformMenu = ({ menuDropdownId, setMenuDropdownId }: PlatformMenu
                 ))}
               </ul>
             </div>
-            <div className="col-span-12 xl:col-span-6">
+            <div className="col-span-12 xl:col-span-4">
               <p className="text-tagline-2 text-secondary/60 p-3 font-medium">Integrations</p>
               <ul>
                 {integrationLinks.map((link) => (

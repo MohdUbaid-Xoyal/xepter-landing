@@ -1,12 +1,10 @@
-import integrationDiscord from '@/public/images/icons/integration-discord.svg';
-import integrationMocha from '@/public/images/icons/integration-mocha.svg';
-import integrationPinterest from '@/public/images/icons/integration-pinterest.svg';
-import integrationReddit from '@/public/images/icons/integration-redit.svg';
-import integrationSnapchat from '@/public/images/icons/integration-snapchat.svg';
-import integrationTwitter from '@/public/images/icons/integration-twitter.svg';
-import integrationYoutube from '@/public/images/icons/integration-youtube.svg';
-import integrationYoutubeMusic from '@/public/images/icons/integration-youtube-music.svg';
-import integrationZapier from '@/public/images/icons/integration-zapier.svg';
+import integrationApi from '@/public/images/icons/integration-api.svg';
+import integrationGhl from '@/public/images/icons/integration-ghl.svg';
+import integrationHubspot from '@/public/images/icons/integration-hubspot-crm.svg';
+import integrationMms from '@/public/images/icons/integration-mms.svg';
+import integrationSms from '@/public/images/icons/integration-sms.svg';
+import integrationVoice from '@/public/images/icons/integration-voice.svg';
+import integrationWhatsapp from '@/public/images/icons/integration-whatsapp-channel.svg';
 import { StaticImageData } from 'next/image';
 
 export interface IntegrationOrbitLogo {
@@ -14,29 +12,18 @@ export interface IntegrationOrbitLogo {
   alt: string;
 }
 
+const baseLogos: IntegrationOrbitLogo[] = [
+  { src: integrationSms, alt: 'sms' },
+  { src: integrationMms, alt: 'mms' },
+  { src: integrationVoice, alt: 'voice' },
+  { src: integrationWhatsapp, alt: 'whatsapp' },
+  { src: integrationGhl, alt: 'gohighlevel' },
+  { src: integrationHubspot, alt: 'hubspot' },
+  { src: integrationApi, alt: 'api-and-webhooks' },
+];
+
 export const integrationOrbitLogos: IntegrationOrbitLogo[] = [
-  { src: integrationDiscord, alt: 'integration-discord' },
-  { src: integrationMocha, alt: 'integration-mocha' },
-  { src: integrationPinterest, alt: 'integration-pinterest' },
-  { src: integrationReddit, alt: 'integration-redit' },
-  { src: integrationSnapchat, alt: 'integration-snapchat' },
-  { src: integrationTwitter, alt: 'integration-twitter' },
-  { src: integrationYoutubeMusic, alt: 'integration-youtube-music' },
-  { src: integrationYoutube, alt: 'integration-youtube' },
-  { src: integrationZapier, alt: 'integration-zapier' },
-  { src: integrationDiscord, alt: 'integration-discord' },
-  { src: integrationMocha, alt: 'integration-mocha' },
-  { src: integrationPinterest, alt: 'integration-pinterest' },
-  { src: integrationReddit, alt: 'integration-redit' },
-  { src: integrationSnapchat, alt: 'integration-snapchat' },
-  { src: integrationTwitter, alt: 'integration-twitter' },
-  { src: integrationYoutubeMusic, alt: 'integration-youtube-music' },
-  { src: integrationYoutube, alt: 'integration-youtube' },
-  { src: integrationZapier, alt: 'integration-zapier' },
-  { src: integrationDiscord, alt: 'integration-discord' },
-  { src: integrationMocha, alt: 'integration-mocha' },
-  { src: integrationPinterest, alt: 'integration-pinterest' },
-  { src: integrationReddit, alt: 'integration-redit' },
-  { src: integrationSnapchat, alt: 'integration-snapchat' },
-  { src: integrationTwitter, alt: 'integration-twitter' },
+  ...baseLogos,
+  ...baseLogos,
+  ...baseLogos,
 ];

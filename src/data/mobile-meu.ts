@@ -1,4 +1,5 @@
 import { MobileMenuData } from '../interface/interface';
+import { DOCS_URL } from '../utils/constants';
 
 export const mobileMenuData: MobileMenuData[] = [
   {
@@ -9,6 +10,9 @@ export const mobileMenuData: MobileMenuData[] = [
       { id: 'services', label: 'Our Services', href: '/services' },
       { id: 'features', label: 'Product Features', href: '#' },
       { id: 'blog', label: 'Blog & News', href: '/blog' },
+      { id: 'use-cases', label: 'Use Cases', href: '/solutions/use-cases' },
+      { id: 'industries', label: 'Industries', href: '/solutions/industries' },
+      { id: 'teams', label: 'Teams', href: '/solutions/teams' },
     ],
   },
   {
@@ -19,6 +23,7 @@ export const mobileMenuData: MobileMenuData[] = [
       { id: 'referral', label: 'Referral', href: '#' },
       { id: 'login', label: 'Login', href: '/login' },
       { id: 'create-account', label: 'Create Account', href: '/signup' },
+      { id: 'documentation', label: 'Documentation', href: DOCS_URL },
       { id: 'download', label: 'Download', href: '#' },
       { id: 'integration', label: 'Integration', href: '#' },
     ],
@@ -27,6 +32,11 @@ export const mobileMenuData: MobileMenuData[] = [
     id: 'inner-pages',
     title: 'Inner pages',
     submenu: [
+      { id: 'sms', label: 'SMS', href: '/products/sms' },
+      { id: 'mms', label: 'MMS', href: '/products/mms' },
+      { id: 'voice', label: 'Voice', href: '/products/voice' },
+      { id: 'whatsapp', label: 'WhatsApp', href: '/products/whatsapp' },
+      { id: 'rcs', label: 'RCS (Coming soon)', href: '#' },
       { id: 'blog', label: 'Blog', href: '/blog' },
       { id: 'integration', label: 'Integration', href: '#' },
       { id: 'case-studies', label: 'Case Studies', href: '#' },

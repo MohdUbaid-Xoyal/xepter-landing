@@ -39,7 +39,7 @@ const MobileMenu = ({ menuData }: { menuData: MobileMenuGroup[] }) => {
           <Link href="/">
             <span className="sr-only">Home</span>
             <figure className="max-w-[44px]">
-              <Image src={logo} alt="Nexsas" width={44} height={44} className="block w-full" />
+              <Image src={logo} alt="Xepter" width={44} height={44} className="block w-full" />
             </figure>
           </Link>
           <MenuCloseButton />

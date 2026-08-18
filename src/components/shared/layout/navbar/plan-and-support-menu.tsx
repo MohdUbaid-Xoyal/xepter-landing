@@ -3,6 +3,7 @@
 import {
   AffiliatePolicyIcon,
   AffiliateProgramIcon,
+  DocsIcon,
   GDPRIcon,
   LegalNoticeIcon,
   LoginIcon,
@@ -17,6 +18,7 @@ import {
   type PlanSupportMenuLinkProps,
 } from '@/src/components/shared/layout/navbar/plan-support-menu-link';
 import whatsNewImage from '@/public/images/ns-img-419.jpg';
+import { DOCS_URL } from '@/src/utils/constants';
 import { cn } from '@/src/utils/cn';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -37,6 +39,12 @@ const columnOne: PlanLink[] = [
     description: 'Create your free account',
     href: '/signup',
     icon: SignUpIcon,
+  },
+  {
+    title: 'Documentation',
+    description: 'REST APIs and webhooks for every channel',
+    href: DOCS_URL,
+    icon: DocsIcon,
   },
   {
     title: 'Referral Program',

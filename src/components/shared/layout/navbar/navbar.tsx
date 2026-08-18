@@ -52,6 +52,11 @@ const Navbar = () => {
 
             <nav className="hidden items-center xl:flex" aria-label="Main">
               <ul className="flex items-center">
+                <li className="nav-item relative py-2.5">
+                  <Link href="/" className={navLinkClass}>
+                    <span>Home</span>
+                  </Link>
+                </li>
                 <li
                   className={cn(
                     'nav-item relative cursor-pointer py-2.5',

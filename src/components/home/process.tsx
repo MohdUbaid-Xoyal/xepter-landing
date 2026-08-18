@@ -1,10 +1,10 @@
-import processCardOneImg from '@/public/images/SI-App-Messaging-Build-Layer-homepage.webp';
-import processCardTwoOverlay from '@/public/images/ns-img-13.png';
+import processCardOneImg from '@/public/images/ns-img-1.webp';
+import processCardTwoOverlay from '@/public/images/ns-img-13.webp';
 import processCardThreeOverlay from '@/public/images/ns-img-14.svg';
 import processCardFourOverlay from '@/public/images/ns-img-15.svg';
-import processCardFourImg from '@/public/images/ns-img-16.jpg';
-import processCardThreeImg from '@/public/images/ns-img-17.jpg';
-import processCardTwoImg from '@/public/images/ns-img-18.jpg';
+import processCardFourImg from '@/public/images/ns-img-16.webp';
+import processCardThreeImg from '@/public/images/ns-img-17.webp';
+import processCardTwoImg from '@/public/images/ns-img-18.webp';
 import {
   CardRevealWithProcess,
   CardsWrapper,
@@ -45,7 +45,7 @@ const processOneActions = (
       Talk to an expert
     </Link>
     <Link
-      href="/documentation"
+      href="/developers"
       className="border-secondary text-secondary hover:bg-secondary/5 text-tagline-1 rounded-full border px-6 py-3 font-medium transition-colors"
     >
       View APIs
@@ -81,62 +81,65 @@ const processCards: ProcessCardData[] = [
     actions: processOneActions,
   },
   {
-    id: 'build-flows',
+    id: 'channels',
     image: processCardTwoImg,
-    imageAlt: 'process-card-2',
+    imageAlt: 'Connect every channel',
     overlay: processCardTwoOverlay,
     overlayAlt: 'process-card-2-img',
-    title: 'Build flows',
+    eyebrow: 'Channels',
+    title: 'Bring SMS, MMS, Voice, and WhatsApp into one number',
     description:
-      'Combine your connected apps into clear, repeatable automation in a few simple steps.',
+      'Provision a number, connect it to GoHighLevel, HubSpot, or your own stack, and start sending and receiving across every channel from the same place.',
     details: [
       {
-        title: 'Drag And Drop Builder',
-        description: 'Arrange triggers and actions visually with zero coding effort.',
+        title: 'One number, every channel',
+        description: 'SMS, MMS, voice, and WhatsApp all run through the same number and conversation thread.',
       },
       {
-        title: 'Reusable Templates',
-        description: 'Start from prebuilt flows and customize them in minutes.',
+        title: 'CRM-native setup',
+        description: 'Connect in minutes inside GoHighLevel or HubSpot — no separate messaging app to manage.',
       },
     ],
   },
   {
-    id: 'test-optimize',
+    id: 'compliance',
     image: processCardThreeImg,
-    imageAlt: 'process-card-3',
+    imageAlt: 'Stay compliant and deliverable',
     overlay: processCardThreeOverlay,
     overlayAlt: 'process-card-3-img',
-    title: 'Test and optimize',
+    eyebrow: 'Compliance',
+    title: 'Built-in 10DLC compliance and delivery tracking',
     description:
-      'Validate every step, monitor results, and improve your workflow performance over time.',
+      'Brand and campaign registration, delivery receipts, and webhooks are handled for you, so your traffic stays compliant and you always know what happened.',
     details: [
       {
-        title: 'Live Status Tracking',
-        description: 'See exactly how each run performs and catch issues instantly.',
+        title: '10DLC handled for you',
+        description: 'Brand and campaign registration keeps your SMS traffic compliant by default.',
       },
       {
-        title: 'Smart Insights',
-        description: 'Use actionable analytics to refine every stage of your flow.',
+        title: 'Real-time delivery events',
+        description: 'Webhooks and receipts show exactly what was sent, delivered, or failed.',
       },
     ],
   },
   {
     id: 'scale',
     image: processCardFourImg,
-    imageAlt: 'process-card-4',
+    imageAlt: 'Scale with confidence',
     overlay: processCardFourOverlay,
     overlayAlt: 'process-card-4-img',
-    title: 'Scale with confidence',
+    eyebrow: 'Scale',
+    title: 'Grow from one number to every team and account',
     description:
-      'Launch automation across your team while keeping speed, reliability, and security under control.',
+      "Add numbers, teams, and accounts as you grow, with role-based access and usage visibility across the whole organization.",
     details: [
       {
-        title: 'Team Collaboration',
-        description: 'Share workflows and permissions with clear ownership.',
+        title: 'Team & role management',
+        description: 'Control who can send, call, and manage numbers across your organization.',
       },
       {
-        title: 'Enterprise Ready',
-        description: 'Keep every process compliant and secure as you grow.',
+        title: 'Built for growth',
+        description: "Add numbers and accounts as your business — or your agency's client list — grows.",
       },
     ],
   },
@@ -164,8 +167,8 @@ const Process = () => {
                 </p>
               </TextReveal>
               <RevealAnimation delay={0.4} className="inline-block w-full md:w-auto">
-                <Link href="/process">
-                  <ButtonWhite className="mx-auto w-[80%]! md:w-fit!">View all process</ButtonWhite>
+                <Link href="/features">
+                  <ButtonWhite className="mx-auto w-[80%]! md:w-fit!">View all features</ButtonWhite>
                 </Link>
               </RevealAnimation>
             </div>

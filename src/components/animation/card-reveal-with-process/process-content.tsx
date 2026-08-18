@@ -16,7 +16,7 @@ type ProcessContentProps = {
   description: ReactNode;
   details: { title: string; description: string }[];
   actions?: ReactNode;
-} & ComponentPropsWithoutRef<'div'>;
+} & Omit<ComponentPropsWithoutRef<'div'>, 'title'>;
 
 const ProcessContent = ({
   index,

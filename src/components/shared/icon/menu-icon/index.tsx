@@ -1062,6 +1062,104 @@ const DocsIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const SmsIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    strokeWidth={1.6}
+    className={cn('stroke-secondary size-5', className)}
+  >
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const MmsIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    strokeWidth={1.6}
+    className={cn('stroke-secondary size-5', className)}
+  >
+    <rect x="3" y="3" width="18" height="18" rx="2" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="8.5" cy="8.5" r="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M21 15l-5-5L5 21" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const VoiceIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    strokeWidth={1.6}
+    className={cn('stroke-secondary size-5', className)}
+  >
+    <path
+      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const WhatsAppIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    strokeWidth={1.6}
+    className={cn('stroke-secondary size-5', className)}
+  >
+    <path
+      d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const RcsIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    strokeWidth={1.6}
+    className={cn('stroke-secondary size-5', className)}
+  >
+    <path d="M12 2 2 7l10 5 10-5-10-5z" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M2 17l10 5 10-5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const IndustriesIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    strokeWidth={1.6}
+    className={cn('stroke-secondary size-5', className)}
+  >
+    <rect x="2" y="7" width="20" height="14" rx="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const DeveloperIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    strokeWidth={1.6}
+    className={cn('stroke-secondary size-5', className)}
+  >
+    <path d="M16 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M8 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 export {
   AboutIcon,
   AffiliateIcon,
@@ -1077,6 +1175,7 @@ export {
   ChangeLogIcon,
   ContactIcon,
   CustomersIcon,
+  DeveloperIcon,
   DocsIcon,
   DownloadIcon,
   ExploreCompanyIcon,
@@ -1087,20 +1186,24 @@ export {
   FeatureIcon,
   GDPRIcon,
   GlossaryIcon,
+  IndustriesIcon,
   IntegrationIcon,
   IntegrationIconV2,
   LegalNoticeIcon,
   LoginIcon,
   ManifestoIcon,
+  MmsIcon,
   PressIcon,
   PricingIcon,
   PrivacyIcon,
   ProcessICon,
+  RcsIcon,
   ReferralProgramIcon,
   RefundPolicyIcon,
   SecurityIcon,
   ServiceIcon,
   SignUpIcon,
+  SmsIcon,
   SuccessIcon,
   SupportIcon,
   SupportIconV2,
@@ -1109,6 +1212,8 @@ export {
   TestimonialIcon,
   TutorialIcon,
   UseCaseIcon,
+  VoiceIcon,
+  WhatsAppIcon,
   WhitePaperIcon,
   WhitePaperIconV2,
   WhyChooseUsIcon,

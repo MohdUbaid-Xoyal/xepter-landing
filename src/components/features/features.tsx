@@ -1,5 +1,5 @@
 import avatarImgOne from '@/public/images/ns-avatar-13.jpg';
-import avatarImgTwo from '@/public/images/ns-avatar-14.jpg';
+import avatarImgTwo from '@/public/images/ns-avatar-14.webp';
 import featureImgOne from '@/public/images/opai-img-126.jpg';
 import featureImgTwo from '@/public/images/opai-img-127.jpg';
 import RevealAnimation from '@/src/components/animation/reveal-animation';

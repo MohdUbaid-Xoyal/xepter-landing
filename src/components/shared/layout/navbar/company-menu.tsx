@@ -7,6 +7,7 @@ import {
   CareerIcon,
   CaseStudyICon,
   CustomersIcon,
+  IndustriesIcon,
   ManifestoIcon,
   ServiceIcon,
   TeamIcon,
@@ -29,7 +30,7 @@ type CompanyLink = Omit<CompanyMenuLinkProps, 'onClose'>;
 const aboutLinks: CompanyLink[] = [
   {
     title: 'About Us',
-    description: 'See how others are using Nexsas',
+    description: 'See how teams are using Xepter',
     href: '/about',
     icon: AboutIcon,
   },
@@ -89,9 +90,21 @@ const solutionLinks: CompanyLink[] = [
   },
   {
     title: 'Use Cases',
-    description: 'Real-world examples of our solutions',
-    href: '#',
+    description: 'Marketing, notifications, verification, and support',
+    href: '/solutions/use-cases',
     icon: UseCaseIcon,
+  },
+  {
+    title: 'Industries',
+    description: 'Built for agencies, real estate, and more',
+    href: '/solutions/industries',
+    icon: IndustriesIcon,
+  },
+  {
+    title: 'Teams',
+    description: 'For marketing, sales, support, and operations',
+    href: '/solutions/teams',
+    icon: TeamIcon,
   },
 ];
 

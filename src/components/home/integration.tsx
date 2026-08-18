@@ -18,12 +18,12 @@ const Integration = () => {
 
             <div className="space-y-3">
               <TextReveal delay={0.2}>
-                <h2 className="mx-auto max-w-[600px]">Your entire tech stack — fully connected</h2>
+                <h2 className="mx-auto max-w-[600px]">Every channel, right inside your CRM</h2>
               </TextReveal>
               <TextReveal delay={0.3}>
                 <p className="text-background-14/60 mx-auto max-w-[592px]">
-                  Integrate your favorite apps and build workflows that move data, trigger actions,
-                  and keep everything in sync — automatically.
+                  SMS, MMS, voice, and WhatsApp connect natively to GoHighLevel and HubSpot — or to
+                  your own stack through the REST API and webhooks.
                 </p>
               </TextReveal>
             </div>

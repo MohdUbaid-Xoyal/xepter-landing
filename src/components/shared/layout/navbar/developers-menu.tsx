@@ -1,33 +1,28 @@
 'use client';
 
 import {
-  AffiliatePolicyIcon,
-  AffiliateProgramIcon,
   DocsIcon,
-  GDPRIcon,
   LegalNoticeIcon,
   LoginIcon,
   PrivacyIcon,
-  ReferralProgramIcon,
-  RefundPolicyIcon,
   SignUpIcon,
   TermsConditionsIcon,
 } from '@/src/components/shared/icon/menu-icon';
 import {
-  PlanSupportMenuLink,
-  type PlanSupportMenuLinkProps,
-} from '@/src/components/shared/layout/navbar/plan-support-menu-link';
+  DevelopersMenuLink,
+  type DevelopersMenuLinkProps,
+} from '@/src/components/shared/layout/navbar/developers-menu-link';
 import whatsNewImage from '@/public/images/ns-img-419.jpg';
 import { DOCS_URL } from '@/src/utils/constants';
 import { cn } from '@/src/utils/cn';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const MENU_PLAN_SUPPORT_ID = 'product-mega-menu';
+const MENU_DEVELOPERS_ID = 'product-mega-menu';
 
-type PlanLink = Omit<PlanSupportMenuLinkProps, 'onClose'>;
+type DeveloperLink = Omit<DevelopersMenuLinkProps, 'onClose'>;
 
-const columnOne: PlanLink[] = [
+const columnOne: DeveloperLink[] = [
   {
     title: 'Login',
     description: 'Log into your dashboard',
@@ -46,27 +41,9 @@ const columnOne: PlanLink[] = [
     href: DOCS_URL,
     icon: DocsIcon,
   },
-  {
-    title: 'Referral Program',
-    description: 'Share and earn together',
-    href: '#',
-    icon: ReferralProgramIcon,
-  },
-  {
-    title: 'Affiliate Program',
-    description: 'Earn commissions as partner',
-    href: '#',
-    icon: AffiliateProgramIcon,
-  },
-  {
-    title: 'Affiliate Policy',
-    description: 'Understand our policies',
-    href: '#',
-    icon: AffiliatePolicyIcon,
-  },
 ];
 
-const columnTwo: PlanLink[] = [
+const columnTwo: DeveloperLink[] = [
   {
     title: 'Terms & Conditions',
     description: 'Understand our terms',
@@ -80,18 +57,6 @@ const columnTwo: PlanLink[] = [
     icon: PrivacyIcon,
   },
   {
-    title: 'Refund Policy',
-    description: 'Review refund terms',
-    href: '#',
-    icon: RefundPolicyIcon,
-  },
-  {
-    title: 'GDPR',
-    description: 'Review GDPR information',
-    href: '#',
-    icon: GDPRIcon,
-  },
-  {
     title: 'Legal',
     description: 'Read legal policies',
     href: '#',
@@ -99,23 +64,23 @@ const columnTwo: PlanLink[] = [
   },
 ];
 
-interface PlanAndSupportMenuProps {
+interface DevelopersMenuProps {
   menuDropdownId: string | null;
   setMenuDropdownId: (id: string | null) => void;
 }
 
-export const PlanAndSupportMenu = ({
+export const DevelopersMenu = ({
   menuDropdownId,
   setMenuDropdownId,
-}: PlanAndSupportMenuProps) => {
+}: DevelopersMenuProps) => {
   const handleClose = () => setMenuDropdownId(null);
-  const isOpen = menuDropdownId === MENU_PLAN_SUPPORT_ID;
+  const isOpen = menuDropdownId === MENU_DEVELOPERS_ID;
 
   return (
     <div>
       <div className="dropdown-menu-bridge pointer-events-none fixed top-full left-1/2 z-40 h-3 w-full min-w-[952px] -translate-x-1/2 bg-transparent transition-opacity duration-300" />
       <div
-        id={MENU_PLAN_SUPPORT_ID}
+        id={MENU_DEVELOPERS_ID}
         className={cn(
           'dropdown-menu border-stroke-1 fixed top-full left-1/2 z-50 mt-2 w-full -translate-x-1/2 space-y-6 rounded-[20px] border bg-white p-4 transition-all duration-300 md:w-[952px]',
           isOpen && 'active'
@@ -124,12 +89,12 @@ export const PlanAndSupportMenu = ({
         <div className="flex items-start gap-y-6 md:gap-x-6">
           <ul className="flex-1 space-y-2">
             {columnOne.map((item) => (
-              <PlanSupportMenuLink key={item.title} {...item} onClose={handleClose} />
+              <DevelopersMenuLink key={item.title} {...item} onClose={handleClose} />
             ))}
           </ul>
           <ul className="flex-1 space-y-2">
             {columnTwo.map((item) => (
-              <PlanSupportMenuLink key={item.title} {...item} onClose={handleClose} />
+              <DevelopersMenuLink key={item.title} {...item} onClose={handleClose} />
             ))}
           </ul>
           <figure className="w-full flex-1 space-y-3">

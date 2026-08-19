@@ -4,14 +4,14 @@ import HoverBgTransform from '@/src/components/shared/hover-bg-transform';
 import Link from 'next/link';
 import type { ComponentType } from 'react';
 
-export interface InnerPagesMenuLinkProps {
+export interface SimpleMenuLinkProps {
   label: string;
   href: string;
   icon: ComponentType<{ className?: string }>;
   onClose?: () => void;
 }
 
-export const InnerPagesMenuLink = ({ label, href, icon: Icon, onClose }: InnerPagesMenuLinkProps) => (
+export const SimpleMenuLink = ({ label, href, icon: Icon, onClose }: SimpleMenuLinkProps) => (
   <li>
     <Link href={href} onClick={onClose} className="group relative flex items-center gap-2 rounded-[10px] p-3">
       <HoverBgTransform />

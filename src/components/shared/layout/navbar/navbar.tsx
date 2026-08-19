@@ -4,11 +4,12 @@ import mainLogo from '@/public/images/logo/Xepter ORIGINAL- Logo.png';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import MobileMenu from '@/src/components/shared/layout/mobile-menu/mobile-menu';
 import { CompanyMenu } from '@/src/components/shared/layout/navbar/company-menu';
-import { InnerPagesMenu } from '@/src/components/shared/layout/navbar/inner-pages-menu';
+import { DevelopersMenu } from '@/src/components/shared/layout/navbar/developers-menu';
 import { NavChevron } from '@/src/components/shared/layout/navbar/nav-chevron';
 import { NavbarMobileMenuButton } from '@/src/components/shared/layout/navbar/navbar-mobile-menu-button';
-import { PlanAndSupportMenu } from '@/src/components/shared/layout/navbar/plan-and-support-menu';
-import { PlatformMenu } from '@/src/components/shared/layout/navbar/platform-menu';
+import { PricingMenu } from '@/src/components/shared/layout/navbar/pricing-menu';
+import { ProductsMenu } from '@/src/components/shared/layout/navbar/products-menu';
+import { SolutionsMenu } from '@/src/components/shared/layout/navbar/solutions-menu';
 import { ButtonPrimary } from '@/src/components/shared/ui/button';
 import { mobileMenuData } from '@/src/data/mobile-meu';
 import { useNavbarScroll } from '@/src/hooks/useScrollHeader';
@@ -60,6 +61,57 @@ const Navbar = () => {
                 <li
                   className={cn(
                     'nav-item relative cursor-pointer py-2.5',
+                    menuDropdownId === 'platform-mega-menu-v2' && 'active menu-active'
+                  )}
+                  data-menu="platform-mega-menu-v2"
+                  onMouseEnter={() => setMenuDropdownId('platform-mega-menu-v2')}
+                >
+                  <Link href="#" className={navLinkClass} onClick={(e) => e.preventDefault()}>
+                    <span>Products</span>
+                    <NavChevron open={menuDropdownId === 'platform-mega-menu-v2'} />
+                  </Link>
+                  <ProductsMenu
+                    menuDropdownId={menuDropdownId}
+                    setMenuDropdownId={setMenuDropdownId}
+                  />
+                </li>
+                <li
+                  className={cn(
+                    'nav-item relative cursor-pointer py-2.5',
+                    menuDropdownId === 'resources-dropdown-menu-v2' && 'active menu-active'
+                  )}
+                  data-menu="resources-dropdown-menu-v2"
+                  onMouseEnter={() => setMenuDropdownId('resources-dropdown-menu-v2')}
+                >
+                  <Link href="#" className={navLinkClass} onClick={(e) => e.preventDefault()}>
+                    <span>Solutions</span>
+                    <NavChevron open={menuDropdownId === 'resources-dropdown-menu-v2'} />
+                  </Link>
+                  <SolutionsMenu
+                    menuDropdownId={menuDropdownId}
+                    setMenuDropdownId={setMenuDropdownId}
+                  />
+                </li>
+                <li
+                  className={cn(
+                    'nav-item relative cursor-pointer py-2.5',
+                    menuDropdownId === 'product-mega-menu' && 'active menu-active'
+                  )}
+                  data-menu="product-mega-menu"
+                  onMouseEnter={() => setMenuDropdownId('product-mega-menu')}
+                >
+                  <Link href="#" className={navLinkClass} onClick={(e) => e.preventDefault()}>
+                    <span>Developers</span>
+                    <NavChevron open={menuDropdownId === 'product-mega-menu'} />
+                  </Link>
+                  <DevelopersMenu
+                    menuDropdownId={menuDropdownId}
+                    setMenuDropdownId={setMenuDropdownId}
+                  />
+                </li>
+                <li
+                  className={cn(
+                    'nav-item relative cursor-pointer py-2.5',
                     menuDropdownId === 'company-mega-menu-v2' && 'active menu-active'
                   )}
                   data-menu="company-mega-menu-v2"
@@ -77,50 +129,16 @@ const Navbar = () => {
                 <li
                   className={cn(
                     'nav-item relative cursor-pointer py-2.5',
-                    menuDropdownId === 'resources-dropdown-menu-v2' && 'active menu-active'
+                    menuDropdownId === 'pricing-dropdown-menu-v2' && 'active menu-active'
                   )}
-                  data-menu="resources-dropdown-menu-v2"
-                  onMouseEnter={() => setMenuDropdownId('resources-dropdown-menu-v2')}
+                  data-menu="pricing-dropdown-menu-v2"
+                  onMouseEnter={() => setMenuDropdownId('pricing-dropdown-menu-v2')}
                 >
                   <Link href="#" className={navLinkClass} onClick={(e) => e.preventDefault()}>
-                    <span>Inner pages</span>
-                    <NavChevron open={menuDropdownId === 'resources-dropdown-menu-v2'} />
+                    <span>Pricing</span>
+                    <NavChevron open={menuDropdownId === 'pricing-dropdown-menu-v2'} />
                   </Link>
-                  <InnerPagesMenu
-                    menuDropdownId={menuDropdownId}
-                    setMenuDropdownId={setMenuDropdownId}
-                  />
-                </li>
-                <li
-                  className={cn(
-                    'nav-item relative cursor-pointer py-2.5',
-                    menuDropdownId === 'platform-mega-menu-v2' && 'active menu-active'
-                  )}
-                  data-menu="platform-mega-menu-v2"
-                  onMouseEnter={() => setMenuDropdownId('platform-mega-menu-v2')}
-                >
-                  <Link href="#" className={navLinkClass} onClick={(e) => e.preventDefault()}>
-                    <span>Platform</span>
-                    <NavChevron open={menuDropdownId === 'platform-mega-menu-v2'} />
-                  </Link>
-                  <PlatformMenu
-                    menuDropdownId={menuDropdownId}
-                    setMenuDropdownId={setMenuDropdownId}
-                  />
-                </li>
-                <li
-                  className={cn(
-                    'nav-item relative cursor-pointer py-2.5',
-                    menuDropdownId === 'product-mega-menu' && 'active menu-active'
-                  )}
-                  data-menu="product-mega-menu"
-                  onMouseEnter={() => setMenuDropdownId('product-mega-menu')}
-                >
-                  <Link href="#" className={navLinkClass} onClick={(e) => e.preventDefault()}>
-                    <span>Plans & Support</span>
-                    <NavChevron open={menuDropdownId === 'product-mega-menu'} />
-                  </Link>
-                  <PlanAndSupportMenu
+                  <PricingMenu
                     menuDropdownId={menuDropdownId}
                     setMenuDropdownId={setMenuDropdownId}
                   />

@@ -43,7 +43,6 @@ export const mobileMenuData: MobileMenuData[] = [
       { id: 'testimonial', label: 'Testimonial', href: '#' },
       { id: 'services', label: 'Services', href: '/services' },
       { id: 'contact', label: 'Contact', href: '/contact' },
-      { id: 'team', label: 'Team', href: '/team' },
     ],
   },
   {
@@ -51,7 +50,6 @@ export const mobileMenuData: MobileMenuData[] = [
     title: 'People & Culture',
     submenu: [
       { id: 'process', label: 'Process', href: '#' },
-      { id: 'team', label: 'Team', href: '/team' },
       { id: 'career', label: 'Career', href: '#' },
       { id: 'testimonial', label: 'Testimonial', href: '#' },
       { id: 'customer', label: 'Customer', href: '#' },

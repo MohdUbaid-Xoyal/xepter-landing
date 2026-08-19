@@ -1,6 +1,6 @@
 'use client';
 
-import clutchImg from '@/public/images/ns-img-25.png';
+import xepterLogo from '@/public/images/logo/xepter-logo-full.png';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import { ArrowRightIcon, CheckIcon, GradientCircleIcon } from '@/src/components/shared/icon';
@@ -16,13 +16,20 @@ import { useRef, useState } from 'react';
 
 gsap.registerPlugin(useGSAP);
 
-type PlanId = 'starter' | 'pro' | 'business';
+type PlanId = 'low-volume' | 'mid-volume' | 'high-volume' | 'pay-as-you-go' | 'voice-high-volume';
+
+interface PlanQuotaItem {
+  label: string;
+  value: number;
+}
 
 interface PlanData {
   monthly: number;
   yearly: number;
-  activeCount: number;
+  setupFee: number;
   description: string;
+  benefits: string[];
+  quota: PlanQuotaItem[];
 }
 
 interface Plan {
@@ -32,53 +39,76 @@ interface Plan {
 }
 
 const pricingPlans: Plan[] = [
-  { id: 'starter', name: 'Starter', subtitle: 'For solo teams & small agencies' },
-  { id: 'pro', name: 'Pro', subtitle: 'For growing teams' },
-  { id: 'business', name: 'Business', subtitle: 'For agencies & multi-location teams' },
+  { id: 'pay-as-you-go', name: 'Pay As You Go', subtitle: 'No monthly commitment' },
+  { id: 'low-volume', name: 'Low Volume', subtitle: 'For solo teams & small agencies' },
+  { id: 'mid-volume', name: 'Mid Volume', subtitle: 'For growing teams' },
+  { id: 'high-volume', name: 'High Volume', subtitle: 'For agencies & multi-location teams' },
+  { id: 'voice-high-volume', name: 'Voice High Volume', subtitle: 'For voice-heavy teams' },
 ];
 
 const pricingPlanData: Record<PlanId, PlanData> = {
-  starter: {
-    monthly: 49,
-    yearly: 490,
-    activeCount: 5,
-    description:
-      'Get started with two-way SMS and MMS on one dedicated number, connected to GoHighLevel or HubSpot.',
+  'low-volume': {
+    monthly: 100,
+    yearly: 1200,
+    setupFee: 0,
+    description: 'This is the low volume plan.',
+    benefits: ['Email Support', 'Chat Support'],
+    quota: [
+      { label: 'SMS Inbound', value: 2000 },
+      { label: 'SMS Outbound', value: 15000 },
+    ],
   },
-  pro: {
-    monthly: 149,
-    yearly: 1490,
-    activeCount: 7,
-    description:
-      'Add voice calling and WhatsApp to the mix, with delivery tracking and reusable campaign templates.',
+  'mid-volume': {
+    monthly: 500,
+    yearly: 6000,
+    setupFee: 0,
+    description: 'This is the mid volume plan.',
+    benefits: ['Campaign Pages', 'Email Support', 'Chat Support'],
+    quota: [
+      { label: 'SMS Inbound', value: 4000 },
+      { label: 'SMS Outbound', value: 75000 },
+    ],
   },
-  business: {
-    monthly: 399,
-    yearly: 3990,
-    activeCount: 9,
-    description:
-      'Run every channel across every number and account, with team roles, priority support, and dedicated onboarding.',
+  'high-volume': {
+    monthly: 2000,
+    yearly: 24000,
+    setupFee: 0,
+    description: 'This is the high volume plan.',
+    benefits: ['Campaign Pages', 'Email Support', 'Chat Support', 'Monthly Analytics Detail Report'],
+    quota: [
+      { label: 'SMS Inbound', value: 50000 },
+      { label: 'SMS Outbound', value: 300000 },
+    ],
+  },
+  'pay-as-you-go': {
+    monthly: 0,
+    yearly: 0,
+    setupFee: 0,
+    description: 'Pay as you go plan.',
+    benefits: ['Email Support', 'Campaign Pages'],
+    quota: [],
+  },
+  'voice-high-volume': {
+    monthly: 3000,
+    yearly: 24000,
+    setupFee: 0,
+    description: 'This is the high volume plan for voice.',
+    benefits: ['Campaign Pages', 'Email Support', 'Chat Support', 'Monthly Analytics Detail Report'],
+    quota: [
+      { label: 'Voice Phone Inbound', value: 300 },
+      { label: 'Voice Phone Outbound', value: 1000 },
+      { label: 'Voice WebRTC Inbound', value: 300 },
+      { label: 'Voice WebRTC Outbound', value: 300 },
+    ],
   },
 };
 
-const includedItems: string[] = [
-  'SMS & MMS messaging',
-  'One phone number included',
-  'GoHighLevel & HubSpot integration',
-  'Delivery tracking & webhooks',
-  'Campaign templates',
-  'Voice dialer with hold & transfer',
-  'WhatsApp messaging',
-  'Team roles & permissions',
-  'Priority support & onboarding',
-];
-
 const Pricing = () => {
-  const [selectedPlan, setSelectedPlan] = useState<PlanId>('starter');
+  const [selectedPlan, setSelectedPlan] = useState<PlanId>('pay-as-you-go');
   const [isYearly, setIsYearly] = useState(false);
   const pricingCardRef = useRef<HTMLDivElement>(null);
   const badgeWrapperRef = useRef<HTMLSpanElement>(null);
-  const prevPlanRef = useRef<PlanId>('starter');
+  const prevPlanRef = useRef<PlanId>('pay-as-you-go');
   const badgeRefs = useRef<Partial<Record<PlanId, HTMLSpanElement>>>({});
   const descriptionsRefs = useRef<Partial<Record<PlanId, HTMLParagraphElement>>>({});
   const currentPlan = pricingPlanData[selectedPlan];
@@ -221,7 +251,7 @@ const Pricing = () => {
 
                         <span
                           className={cn(
-                            'bg-secondary flex size-8 items-center justify-center rounded-full transition-all duration-500 ease-in-out',
+                            'bg-secondary flex size-8 shrink-0 items-center justify-center rounded-full transition-all duration-500 ease-in-out',
                             isActive ? 'scale-100' : 'scale-0'
                           )}
                         >
@@ -249,7 +279,14 @@ const Pricing = () => {
               </div>
 
               <figure className="mx-auto flex h-11 w-full max-w-[168px] items-center justify-center">
-                <Image src={clutchImg} alt="clutch-img" />
+                <Image
+                  src={xepterLogo}
+                  alt="Xepter"
+                  width={132}
+                  height={40}
+                  unoptimized
+                  className="h-full w-auto object-contain"
+                />
               </figure>
             </RevealAnimation>
 
@@ -310,13 +347,18 @@ const Pricing = () => {
                           }}
                           className={cn(
                             'col-start-1 row-start-1',
-                            plan.id !== 'starter' && 'opacity-0'
+                            plan.id !== pricingPlans[0].id && 'opacity-0'
                           )}
                         >
                           {pricingPlanData[plan.id]?.description}
                         </p>
                       ))}
                     </span>
+                    {currentPlan.setupFee > 0 && (
+                      <p className="text-tagline-3 text-secondary/60">
+                        Setup fee: ${currentPlan.setupFee.toLocaleString()}
+                      </p>
+                    )}
                   </div>
 
                   <Link href="/contact">
@@ -329,38 +371,40 @@ const Pricing = () => {
                   </Link>
                 </div>
 
-                <div className="space-y-4">
-                  <h4 className="text-heading-6">What&apos;s included:</h4>
-                  <ul className="space-y-5">
-                    {includedItems.map((item, index) => {
-                      const isActive = index < currentPlan.activeCount;
-
-                      return (
-                        <li
-                          key={item}
-                          data-active={isActive ? 'true' : 'false'}
-                          className="group flex items-center gap-x-2"
-                        >
-                          <span className="border-stroke-3 flex size-6 shrink-0 items-center justify-center rounded-full border p-1 transition-colors duration-500 ease-in-out">
-                            <CheckIcon
-                              className={cn(
-                                'size-4 transition-colors duration-500 ease-in-out',
-                                isActive ? 'stroke-secondary' : 'stroke-secondary/40'
-                              )}
-                            />
+                <div className="space-y-6">
+                  <div className="space-y-4">
+                    <h4 className="text-heading-6">Plan Benefits</h4>
+                    <ul className="space-y-5">
+                      {currentPlan.benefits.map((item) => (
+                        <li key={item} className="flex items-center gap-x-2">
+                          <span className="border-stroke-3 flex size-6 shrink-0 items-center justify-center rounded-full border p-1">
+                            <CheckIcon className="stroke-secondary size-4" />
                           </span>
-                          <span
-                            className={cn(
-                              'text-tagline-1 font-inter-tight font-normal transition-colors duration-500 ease-in-out',
-                              isActive ? 'text-secondary' : 'text-secondary/40'
-                            )}
-                          >
+                          <span className="text-tagline-1 font-inter-tight text-secondary font-normal">
                             {item}
                           </span>
                         </li>
-                      );
-                    })}
-                  </ul>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {currentPlan.quota.length > 0 && (
+                    <div className="space-y-4">
+                      <h4 className="text-heading-6">Plan Quota</h4>
+                      <ul className="space-y-5">
+                        {currentPlan.quota.map((item) => (
+                          <li key={item.label} className="flex items-center gap-x-2">
+                            <span className="border-stroke-3 flex size-6 shrink-0 items-center justify-center rounded-full border p-1">
+                              <CheckIcon className="stroke-secondary size-4" />
+                            </span>
+                            <span className="text-tagline-1 font-inter-tight text-secondary font-normal">
+                              {item.label}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
             </RevealAnimation>

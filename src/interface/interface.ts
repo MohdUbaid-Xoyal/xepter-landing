@@ -23,18 +23,6 @@ export interface ServiceData extends MarkdownData {
   iconClass: string;
 }
 
-export interface TeamMember extends MarkdownData {
-  slug: string;
-  name: string;
-  title: string;
-  image: string;
-  heroImage: string;
-  email: string;
-  phone: string;
-  bio: string;
-  order: number;
-}
-
 export interface BlogPost extends MarkdownData {
   slug: string;
   title: string;

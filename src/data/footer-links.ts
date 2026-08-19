@@ -15,7 +15,6 @@ export const footerNavColumns: FooterLinkColumn[] = [
     title: 'Company',
     links: [
       { label: 'About Us', href: '/about' },
-      { label: 'Our Team', href: '/team' },
       { label: 'Blog', href: '/blog' },
       { label: 'Career', href: '#' },
       { label: 'Contact Us', href: '/contact' },

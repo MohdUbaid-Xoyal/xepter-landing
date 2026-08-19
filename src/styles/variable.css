@@ -85,8 +85,8 @@ All the variables are added here
 
   --color-gradient-13: linear-gradient(156deg, #fff 32.92%, #ecc5a2 91%);
 
-  --color-gradient-14: linear-gradient(180deg, #ff6b6b 0%, #f78f1e 100%);
-  /* ^ brand red (was lime green) */
+  --color-gradient-14: linear-gradient(180deg, #de4a40 0%, #de4a40 100%);
+  /* ^ brand red, solid (was primary blue) */
 
   /* =============== TYPOGRAPHY =============== */
   --text-heading-1: 4.25rem;

@@ -9,7 +9,6 @@ export const metadata: Metadata = generateMetadata(
 
 import AboutHero from '@/src/components/about/hero';
 import OurMission from '@/src/components/about/our-mission';
-import AboutTeam from '@/src/components/about/team';
 import Integration from '@/src/components/home/integration';
 import CTA from '@/src/components/shared/cta';
 
@@ -18,7 +17,6 @@ const AboutPage = () => {
     <>
       <AboutHero />
       <OurMission />
-      <AboutTeam />
       <Integration />
       <CTA />
     </>

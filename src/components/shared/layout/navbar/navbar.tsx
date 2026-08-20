@@ -23,7 +23,7 @@ import { useState } from 'react';
 const navLinkClass =
   'hover:border-stroke-2 text-tagline-1 text-secondary hover:text-secondary flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-normal transition-all duration-200';
 
-const activeNavLinkClass = 'border-stroke-2 font-semibold';
+const activeNavLinkClass = 'font-bold';
 
 const isPathActive = (pathname: string, prefixes: string[]) =>
   prefixes.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`));

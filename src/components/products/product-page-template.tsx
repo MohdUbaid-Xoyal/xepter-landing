@@ -2,7 +2,7 @@ import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import CTA from '@/src/components/shared/cta';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';
-import { ButtonPrimary } from '@/src/components/shared/ui/button';
+import { ButtonPrimary, ButtonSecondary } from '@/src/components/shared/ui/button';
 import type { ProductPageContent } from '@/src/data/products-content';
 import Link from 'next/link';
 
@@ -25,14 +25,6 @@ const ProductPageTemplate = ({ content }: { content: ProductPageContent }) => {
             </div>
             <RevealAnimation delay={0.4} instant>
               <div className="flex flex-col items-center justify-center gap-y-3 md:flex-row md:gap-x-5">
-                <Link href="/contact" className="w-[70%] md:w-auto">
-                  <ButtonPrimary
-                    className="w-full md:w-auto"
-                    textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
-                  >
-                    Talk to sales
-                  </ButtonPrimary>
-                </Link>
                 <Link href="/signup" className="w-[70%] md:w-auto">
                   <ButtonPrimary
                     className="w-full md:w-auto"
@@ -40,6 +32,14 @@ const ProductPageTemplate = ({ content }: { content: ProductPageContent }) => {
                   >
                     Get started
                   </ButtonPrimary>
+                </Link>
+                <Link href="/contact" className="w-[70%] md:w-auto">
+                  <ButtonSecondary
+                    className="w-full outline-0! md:w-auto"
+                    textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
+                  >
+                    Talk to an Expert
+                  </ButtonSecondary>
                 </Link>
               </div>
             </RevealAnimation>

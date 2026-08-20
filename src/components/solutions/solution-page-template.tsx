@@ -2,7 +2,7 @@ import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import CTA from '@/src/components/shared/cta';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';
-import { ButtonPrimary } from '@/src/components/shared/ui/button';
+import { ButtonSecondary } from '@/src/components/shared/ui/button';
 import type { SolutionPageContent } from '@/src/data/solutions-content';
 import Link from 'next/link';
 
@@ -26,12 +26,12 @@ const SolutionPageTemplate = ({ content }: { content: SolutionPageContent }) => 
             <RevealAnimation delay={0.4} instant>
               <div className="flex justify-center">
                 <Link href="/contact" className="w-[70%] md:w-auto">
-                  <ButtonPrimary
-                    className="w-full md:w-auto"
+                  <ButtonSecondary
+                    className="w-full outline-0! md:w-auto"
                     textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
                   >
-                    Talk to sales
-                  </ButtonPrimary>
+                    Talk to an Expert
+                  </ButtonSecondary>
                 </Link>
               </div>
             </RevealAnimation>

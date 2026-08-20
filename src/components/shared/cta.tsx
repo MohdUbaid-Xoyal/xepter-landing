@@ -48,7 +48,7 @@ const CTA = () => {
                     className="mx-auto md:mx-0 md:w-fit!"
                     textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
                   >
-                    Talk to sales
+                    Talk to an Expert
                   </ButtonPrimary>
                 </Link>
               </RevealAnimation>

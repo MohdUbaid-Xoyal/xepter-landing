@@ -96,7 +96,7 @@ const DevelopersPageContent = () => {
                     className="w-full outline-0! md:w-auto"
                     textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
                   >
-                    Talk to sales
+                    Talk to an Expert
                   </ButtonSecondary>
                 </Link>
               </div>

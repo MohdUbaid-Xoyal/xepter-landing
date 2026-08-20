@@ -1,5 +1,5 @@
 'use client';
-import logo from '@/public/images/logo/logo.svg';
+import logo from '@/public/images/logo/xepter-icon.png';
 import MenuCloseButton from '@/src/components/shared/layout/mobile-menu/menu-close-button';
 import MobileMenuItem from '@/src/components/shared/layout/mobile-menu/mobile-menu-item';
 import { useMobileMenuContext } from '@/src/context/MobileMenuContext';
@@ -17,6 +17,7 @@ export interface MobileMenuItem {
 export interface MobileMenuGroup {
   id: string;
   title: string;
+  href?: string;
   submenu: MobileMenuItem[];
 }
 
@@ -52,6 +53,7 @@ const MobileMenu = ({ menuData }: { menuData: MobileMenuGroup[] }) => {
                 key={item.id}
                 id={item.id}
                 title={item.title}
+                href={item.href}
                 hasSubmenu={item.submenu.length > 0}
               >
                 {item.submenu.map((subItem, idx) => (
@@ -61,7 +63,7 @@ const MobileMenu = ({ menuData }: { menuData: MobileMenuGroup[] }) => {
                       onClick={closeMenu}
                       data-selected={isActiveLink(subItem.href) ? true : undefined}
                       className={cn(
-                        'text-tagline-3 text-secondary/80 hover:text-secondary/90 ml-4 block text-left font-normal transition-colors duration-200 data-[selected=true]:font-medium data-[selected=true]:text-secondary',
+                        'text-tagline-3 text-secondary hover:text-secondary ml-4 block text-left font-normal transition-colors duration-200 data-[selected=true]:font-medium data-[selected=true]:text-secondary',
                         idx === 0 ? 'py-1.5' : 'py-2.5'
                       )}
                     >

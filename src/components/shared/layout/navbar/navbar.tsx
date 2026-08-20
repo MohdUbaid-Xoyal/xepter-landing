@@ -14,12 +14,16 @@ import { ButtonPrimary } from '@/src/components/shared/ui/button';
 import { mobileMenuData } from '@/src/data/mobile-meu';
 import { useNavbarScroll } from '@/src/hooks/useScrollHeader';
 import { cn } from '@/src/utils/cn';
+import { SERVICE_STATUS_URL } from '@/src/utils/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
 const navLinkClass =
-  'hover:border-stroke-2 text-tagline-1 text-secondary/60 hover:text-secondary flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-normal transition-all duration-200';
+  'hover:border-stroke-2 text-tagline-1 text-secondary hover:text-secondary flex items-center gap-1 rounded-full border border-transparent px-4 py-2 font-normal transition-all duration-200';
+
+const loginLinkClass =
+  'border-stroke-1 hover:border-stroke-2 text-tagline-1 text-secondary flex items-center gap-1 rounded-full border px-4 py-2 font-normal transition-all duration-200';
 
 const Navbar = () => {
   const [menuDropdownId, setMenuDropdownId] = useState<string | null>(null);
@@ -27,10 +31,29 @@ const Navbar = () => {
 
   return (
     <header onMouseLeave={() => setMenuDropdownId(null)}>
+      <div className="fixed top-0 left-0 z-50 hidden w-full bg-transparent pt-2 xl:flex">
+
+        <div className="lp:max-w-[1290px]! mx-auto flex w-full max-w-[350px] items-center gap-x-6 pl-4.5 min-[425px]:max-w-[375px] min-[500px]:max-w-[450px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
+          <a
+            href={SERVICE_STATUS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-tagline-1 text-secondary font-normal transition-opacity duration-200 hover:opacity-70"
+          >
+            Service Status
+          </a>
+          <Link
+            href="/contact"
+            className="text-tagline-1 text-secondary font-normal transition-opacity duration-200 hover:opacity-70"
+          >
+            Support Center
+          </Link>
+        </div>
+      </div>
       <div
         className={cn(
           'lp:max-w-[1290px]! fixed left-1/2 z-50 mx-auto w-full max-w-[350px] -translate-x-1/2 rounded-full backdrop-blur-[25px] transition-all duration-500 ease-in-out min-[425px]:max-w-[375px] min-[500px]:max-w-[450px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]',
-          scroll.isScrolled ? 'top-2' : 'top-5'
+          scroll.isScrolled ? 'top-2 xl:top-8' : 'top-2 xl:top-10'
         )}
       >
         <RevealAnimation direction="up" offset={100} delay={0.1} instant>
@@ -42,10 +65,11 @@ const Navbar = () => {
                   <Image
                     src={mainLogo}
                     alt="Xepter Logo"
-                    width={125}
-                    height={35}
+                    width={150}
+                    height={42}
                     unoptimized
                     priority
+                    className="h-auto w-[110px] min-[425px]:w-[120px] sm:w-[130px] md:w-[140px] lg:w-[150px]"
                   />
                 </figure>
               </Link>
@@ -146,9 +170,14 @@ const Navbar = () => {
               </ul>
             </nav>
 
-            <div className="hidden items-center justify-center xl:flex">
+            <div className="hidden items-center justify-center gap-x-3 xl:flex">
+              <Link href="/login" className={loginLinkClass}>
+                Login
+              </Link>
               <Link href="/signup" className="inline-block" aria-label="Get started">
-                <ButtonPrimary>Get started</ButtonPrimary>
+                <ButtonPrimary className="bg-brand-red hover:bg-brand-red/90">
+                  Get started
+                </ButtonPrimary>
               </Link>
             </div>
             <NavbarMobileMenuButton />

@@ -2,7 +2,7 @@ import { LogoOrbit, OrbitHub, OrbitItem, OrbitRing } from '@/src/components/anim
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';
-import { ButtonWhite } from '@/src/components/shared/ui/button';
+import { ButtonPrimary } from '@/src/components/shared/ui/button';
 import { integrationOrbitLogos } from '@/src/data/integration-orbit-logos';
 import Link from 'next/link';
 
@@ -31,7 +31,9 @@ const Integration = () => {
 
           <RevealAnimation delay={0.4} className="flex items-center justify-center">
             <Link href="/pricing">
-              <ButtonWhite>Start free</ButtonWhite>
+              <ButtonPrimary className="bg-brand-red hover:bg-brand-red/90">
+                Start free
+              </ButtonPrimary>
             </Link>
           </RevealAnimation>
         </div>

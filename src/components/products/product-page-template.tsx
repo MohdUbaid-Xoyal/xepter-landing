@@ -2,7 +2,7 @@ import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import CTA from '@/src/components/shared/cta';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';
-import { ButtonPrimary, ButtonSecondary } from '@/src/components/shared/ui/button';
+import { ButtonPrimary } from '@/src/components/shared/ui/button';
 import type { ProductPageContent } from '@/src/data/products-content';
 import Link from 'next/link';
 
@@ -34,12 +34,12 @@ const ProductPageTemplate = ({ content }: { content: ProductPageContent }) => {
                   </ButtonPrimary>
                 </Link>
                 <Link href="/signup" className="w-[70%] md:w-auto">
-                  <ButtonSecondary
-                    className="w-full outline-0! md:w-auto"
+                  <ButtonPrimary
+                    className="bg-brand-red hover:bg-brand-red/90 w-full md:w-auto"
                     textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
                   >
                     Get started
-                  </ButtonSecondary>
+                  </ButtonPrimary>
                 </Link>
               </div>
             </RevealAnimation>

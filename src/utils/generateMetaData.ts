@@ -1,16 +1,41 @@
 import type { Metadata } from 'next';
 
 export const DEFAULT_URL = 'https://xepter.com/';
-export const DEFAULT_TITLE = 'Xepter - Engage. Communicate. Grow.';
+export const DEFAULT_TITLE = 'Xepter – Powerful SMS, MMS & Voice APIs at Competitive Rates';
 export const DEFAULT_DESCRIPTION =
-  'Xepter is a business communications platform for SMS, MMS, Voice, and WhatsApp — reach your customers on every channel from one place.';
+  'Connect with customers through SMS, MMS, Voice and messaging APIs with Xepter. Scale your communications with reliable APIs, transparent pricing and volume-based rates.';
 export const DEFAULT_IMAGE_URL =
   'https://images.prismic.io/staticmania/aPD-K55xUNkB2D2X_og-image.jpg';
+export const DEFAULT_KEYWORDS = [
+  'SMS API',
+  'SMS API provider',
+  'MMS API',
+  'Voice API',
+  'messaging API',
+  'business messaging',
+  'SMS messaging',
+  'SMS platform',
+  'CPaaS',
+  'communication platform',
+  'SMS gateway',
+  'bulk SMS API',
+  'programmable SMS',
+  'programmable voice',
+  '10DLC',
+  'SMS campaigns',
+  'customer communication',
+  'business communication',
+  'messaging platform',
+  'Xepter',
+];
 
 const defaultMetadata: Metadata = {
   metadataBase: new URL(DEFAULT_URL),
   title: DEFAULT_TITLE,
   description: DEFAULT_DESCRIPTION,
+  keywords: DEFAULT_KEYWORDS,
+  robots: { index: true, follow: true },
+  authors: [{ name: 'Xepter' }],
   openGraph: {
     type: 'website',
     siteName: 'Xepter',
@@ -31,7 +56,9 @@ const generateMetadata = (
   title?: string,
   description?: string,
   canonicaUrl?: string,
-  imageUrl?: string
+  imageUrl?: string,
+  ogTitle?: string,
+  ogDescription?: string
 ): Metadata => {
   return {
     ...defaultMetadata,
@@ -42,8 +69,8 @@ const generateMetadata = (
     },
     openGraph: {
       ...defaultMetadata.openGraph,
-      title: title ?? defaultMetadata.openGraph?.title,
-      description: description ?? defaultMetadata.openGraph?.description,
+      title: ogTitle ?? title ?? defaultMetadata.openGraph?.title,
+      description: ogDescription ?? description ?? defaultMetadata.openGraph?.description,
       url: canonicaUrl ?? defaultMetadata.openGraph?.url,
       images: imageUrl
         ? [{ url: imageUrl, width: 1200, height: 630 }]
@@ -51,8 +78,8 @@ const generateMetadata = (
     },
     twitter: {
       ...defaultMetadata.twitter,
-      title: title ?? defaultMetadata.twitter?.title,
-      description: description ?? defaultMetadata.twitter?.description,
+      title: ogTitle ?? title ?? defaultMetadata.twitter?.title,
+      description: ogDescription ?? description ?? defaultMetadata.twitter?.description,
       images: imageUrl ? [imageUrl] : defaultMetadata.twitter?.images,
     },
   };

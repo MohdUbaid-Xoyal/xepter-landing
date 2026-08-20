@@ -32,7 +32,7 @@ export const ButtonSecondary = forwardRef<HTMLButtonElement, ButtonSecondaryProp
         )}
         {...props}
       >
-        <ButtonIcon ref={iconRef} wrapperClassName="bg-black" iconClassName="fill-white" />
+        <ButtonIcon ref={iconRef} wrapperClassName="bg-secondary" iconClassName="fill-white" />
         <span
           ref={textRef}
           style={buttonHoverTransitionStyle}

@@ -363,7 +363,7 @@ const Pricing = () => {
 
                   <Link href="/contact">
                     <ButtonPrimary
-                      className="w-full"
+                      className="bg-brand-red hover:bg-brand-red/90 w-full"
                       textClassName="text-center flex-1 px-0! pr-8!"
                     >
                       Get started

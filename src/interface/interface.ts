@@ -13,6 +13,7 @@ export interface MobileMenuSubItem {
 export interface MobileMenuData {
   id: string;
   title: string;
+  href?: string;
   submenu: MobileMenuSubItem[];
 }
 

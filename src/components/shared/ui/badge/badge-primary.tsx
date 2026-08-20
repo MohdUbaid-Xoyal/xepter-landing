@@ -9,14 +9,14 @@ export const BadgePrimary = forwardRef<HTMLDivElement, BadgePrimaryProps>(
       <div
         ref={ref}
         className={cn(
-          'border-stroke-3 text-tagline-3 text-secondary inline-block rounded-full border bg-white py-[3px] pr-4 pl-[3px] font-inter-tight font-normal',
+          'border-stroke-3 text-tagline-1 text-secondary inline-flex h-12 items-center rounded-full border bg-white p-1 font-inter-tight font-normal',
           className,
         )}
         {...props}
       >
         <div className="flex items-center gap-x-2">
           <span
-            className="bg-secondary flex h-6 w-8 shrink-0 items-center justify-center rounded-full"
+            className="bg-secondary flex h-10 w-14 shrink-0 items-center justify-center rounded-full"
             aria-hidden="true"
           >
             <svg
@@ -33,7 +33,7 @@ export const BadgePrimary = forwardRef<HTMLDivElement, BadgePrimaryProps>(
               <path d="M6.66602 14.1667H8.33268V15.8334H6.66602V14.1667Z" />
             </svg>
           </span>
-          <span>{children}</span>
+          <span className="pr-4">{children}</span>
         </div>
       </div>
     );

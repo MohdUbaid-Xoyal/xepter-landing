@@ -34,7 +34,7 @@ export const ButtonWhite = forwardRef<HTMLButtonElement, ButtonWhiteProps>(funct
       )}
       {...props}
     >
-      <ButtonIcon ref={iconRef} wrapperClassName="bg-(image:--color-gradient-14)" iconClassName="fill-white" />
+      <ButtonIcon ref={iconRef} wrapperClassName="bg-brand-red" iconClassName="fill-white" />
       <span
         ref={textRef}
         style={buttonHoverTransitionStyle}

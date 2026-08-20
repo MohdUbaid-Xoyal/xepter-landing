@@ -12,6 +12,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 
+const CursorIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path
+      d="M2 1.5L13.5 7L8.2 8.2L7 13.5L2 1.5Z"
+      fill="currentColor"
+      stroke="currentColor"
+      strokeWidth="1"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 const Hero = () => {
   const rootRef = useRef<HTMLElement>(null);
   const leftRef = useRef<HTMLElement>(null);
@@ -51,6 +63,14 @@ const Hero = () => {
 
             <RevealAnimation delay={0.3} instant>
               <div className="flex flex-col items-center justify-center gap-y-3 md:flex-row md:gap-x-5">
+                <Link href="/signup" className="w-[70%] md:w-auto">
+                  <ButtonPrimary
+                    className="w-full md:w-auto"
+                    textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
+                  >
+                    Get Started
+                  </ButtonPrimary>
+                </Link>
                 <Link href="/contact" className="w-[70%] md:w-auto">
                   <ButtonSecondary
                     className="w-full outline-0! md:w-auto"
@@ -59,27 +79,35 @@ const Hero = () => {
                     Talk to an Expert
                   </ButtonSecondary>
                 </Link>
-                <Link href="/signup" className="w-[70%] md:w-auto">
-                  <ButtonPrimary
-                    className="bg-brand-red hover:bg-brand-red/90 w-full md:w-auto"
-                    textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
-                  >
-                    Get Started
-                  </ButtonPrimary>
-                </Link>
               </div>
             </RevealAnimation>
           </div>
 
           <RevealAnimation delay={0.4} instant>
-            <figure className="h-[350px] w-full overflow-hidden rounded-[20px] backdrop-blur-[20px] md:h-[650px] xl:h-[825px]">
-              <Image
-                src={dashboardScreenshot}
-                alt="Xepter dashboard screenshot"
-                className="size-full"
-                priority
+            <div className="relative">
+              <div
+                aria-hidden="true"
+                className="absolute -inset-x-6 -inset-y-10 -z-10 rounded-[40px] opacity-50 blur-3xl md:-inset-x-16 md:-inset-y-16"
+                style={{
+                  background:
+                    'radial-gradient(55% 55% at 18% 25%, #117cc1 0%, transparent 70%), radial-gradient(45% 45% at 85% 75%, #ed2329 0%, transparent 70%)',
+                }}
               />
-            </figure>
+
+              <figure className="h-[350px] w-full overflow-hidden rounded-[20px] backdrop-blur-[20px] md:h-[650px] xl:h-[825px]">
+                <Image
+                  src={dashboardScreenshot}
+                  alt="Xepter dashboard screenshot"
+                  className="size-full"
+                  priority
+                />
+              </figure>
+
+              <div className="bg-secondary absolute top-[52%] -right-3 z-30 hidden items-center gap-2 rounded-full px-4 py-2 text-white shadow-lg md:flex md:-right-8">
+                <CursorIcon className="size-3.5 shrink-0 text-white" />
+                <span className="text-tagline-2 font-semibold text-nowrap">99.77% delivered</span>
+              </div>
+            </div>
           </RevealAnimation>
         </div>
 
@@ -107,7 +135,7 @@ const Hero = () => {
       </div>
 
       <RevealAnimation delay={0.5} instant>
-        <figure className="absolute -bottom-1 left-0 z-20 h-[500px] w-full md:h-[600px] xl:h-[700px]">
+        <figure className="absolute -bottom-1 left-0 z-20 h-[120px] w-full md:h-[180px] xl:h-[220px]">
           <Image src={bottomGradient} alt="bottom-gradient" className="size-full object-cover" />
         </figure>
       </RevealAnimation>

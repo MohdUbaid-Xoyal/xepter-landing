@@ -31,7 +31,7 @@ const Integration = () => {
 
           <RevealAnimation delay={0.4} className="flex items-center justify-center">
             <Link href="/pricing">
-              <ButtonPrimary className="bg-brand-red hover:bg-brand-red/90">
+              <ButtonPrimary>
                 Start free
               </ButtonPrimary>
             </Link>

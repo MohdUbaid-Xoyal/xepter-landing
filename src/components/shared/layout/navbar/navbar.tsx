@@ -175,9 +175,7 @@ const Navbar = () => {
                 Login
               </Link>
               <Link href="/signup" className="inline-block" aria-label="Get started">
-                <ButtonPrimary className="bg-brand-red hover:bg-brand-red/90">
-                  Get started
-                </ButtonPrimary>
+                <ButtonPrimary>Get started</ButtonPrimary>
               </Link>
             </div>
             <NavbarMobileMenuButton />

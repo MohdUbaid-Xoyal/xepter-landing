@@ -35,7 +35,7 @@ const ProductPageTemplate = ({ content }: { content: ProductPageContent }) => {
                 </Link>
                 <Link href="/signup" className="w-[70%] md:w-auto">
                   <ButtonPrimary
-                    className="bg-brand-red hover:bg-brand-red/90 w-full md:w-auto"
+                    className="w-full md:w-auto"
                     textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
                   >
                     Get started

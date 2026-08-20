@@ -40,7 +40,7 @@ const Benefits = () => {
             <RevealAnimation delay={0.4} className="flex items-center justify-center">
               <Link href="/pricing">
                 <ButtonPrimary
-                  className="bg-brand-red hover:bg-brand-red/90 mx-auto w-[80%]! md:w-fit!"
+                  className="mx-auto w-[80%]! md:w-fit!"
                   textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
                 >
                   Get started

@@ -214,7 +214,7 @@ const Pricing = () => {
                     className="peer sr-only"
                     aria-label="Toggle yearly billing"
                   />
-                  <div className="bg-secondary peer peer-checked:after:border-buffer after:shadow-16 relative h-6 w-11.5 rounded-full peer-focus:outline-0 after:absolute after:inset-s-[2px] after:top-1/2 after:size-5 after:-translate-y-1/2 after:rounded-full after:bg-(image:--color-gradient-14) after:transition-all after:content-[''] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full" />
+                  <div className="bg-secondary peer peer-checked:after:border-buffer after:shadow-16 relative h-6 w-11.5 rounded-full peer-focus:outline-0 after:absolute after:inset-s-[2px] after:top-1/2 after:size-5 after:-translate-y-1/2 after:rounded-full after:bg-brand-red after:transition-all after:content-[''] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full" />
                   <span className="text-tagline-2 text-secondary ms-2.5 font-normal select-none">
                     Yearly
                   </span>
@@ -363,7 +363,7 @@ const Pricing = () => {
 
                   <Link href="/contact">
                     <ButtonPrimary
-                      className="bg-brand-red hover:bg-brand-red/90 w-full"
+                      className="w-full"
                       textClassName="text-center flex-1 px-0! pr-8!"
                     >
                       Get started

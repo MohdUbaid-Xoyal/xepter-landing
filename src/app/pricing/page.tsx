@@ -1,20 +1,22 @@
-import Pricing from '@/src/components/home/pricing';
-import Testimonial from '@/src/components/home/testimonial';
+import PricingFaq from '@/src/components/pricing/pricing-faq';
+import PricingHero from '@/src/components/pricing/pricing-hero';
+import PricingRates from '@/src/components/pricing/pricing-rates';
 import CTA from '@/src/components/shared/cta';
 import { generateMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = generateMetadata(
-  'Pricing | Xepter',
-  'Simple pricing that scales with you — from a single SMS number to every channel your team needs.',
+  'Transparent Pricing, Always | Xepter',
+  'Clear, transparent, volume-based pricing for 10DLC SMS and MMS. Number pricing, messaging rates, and carrier pass-through fees on one panel.',
   '/pricing'
 );
 
 const PricingPage = () => {
   return (
     <>
-      <Pricing />
-      <Testimonial />
+      <PricingHero />
+      <PricingRates />
+      <PricingFaq />
       <CTA />
     </>
   );

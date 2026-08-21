@@ -55,12 +55,7 @@ export const mobileMenuData: MobileMenuData[] = [
   {
     id: 'pricing',
     title: 'Pricing',
-    submenu: [
-      { id: 'pricing', label: 'Pricing', href: '/pricing' },
-      { id: 'support', label: 'Customer Support', href: '#' },
-      { id: 'analytics', label: 'Analytics & Reporting', href: '#' },
-      { id: 'whitepaper', label: 'Whitepaper & Reports', href: '#' },
-      { id: 'integrations', label: 'Explore All Integrations', href: '#' },
-    ],
+    href: '/pricing',
+    submenu: [],
   },
 ];

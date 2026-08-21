@@ -1,6 +1,6 @@
 'use client';
 
-import xepterLogo from '@/public/images/logo/xepter-logo-full.png';
+import xepterLogo from '@/public/images/logo/Xepter-Engage-Communicate-Grow-Medium.png';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import { ArrowRightIcon, CheckIcon, GradientCircleIcon } from '@/src/components/shared/icon';
@@ -282,8 +282,8 @@ const Pricing = () => {
                 <Image
                   src={xepterLogo}
                   alt="Xepter"
-                  width={132}
-                  height={40}
+                  width={152}
+                  height={50}
                   unoptimized
                   className="h-full w-auto object-contain"
                 />

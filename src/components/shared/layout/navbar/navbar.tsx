@@ -7,7 +7,6 @@ import { CompanyMenu } from '@/src/components/shared/layout/navbar/company-menu'
 import { DevelopersMenu } from '@/src/components/shared/layout/navbar/developers-menu';
 import { NavChevron } from '@/src/components/shared/layout/navbar/nav-chevron';
 import { NavbarMobileMenuButton } from '@/src/components/shared/layout/navbar/navbar-mobile-menu-button';
-import { PricingMenu } from '@/src/components/shared/layout/navbar/pricing-menu';
 import { ProductsMenu } from '@/src/components/shared/layout/navbar/products-menu';
 import { SolutionsMenu } from '@/src/components/shared/layout/navbar/solutions-menu';
 import { ButtonPrimary } from '@/src/components/shared/ui/button';
@@ -36,7 +35,6 @@ const Navbar = () => {
   const scroll = useNavbarScroll(100);
   const pathname = usePathname();
 
-  const isHomeActive = pathname === '/';
   const isProductsActive = isPathActive(pathname, ['/products']);
   const isSolutionsActive = isPathActive(pathname, ['/solutions']);
   const isDevelopersActive = isPathActive(pathname, ['/developers']);
@@ -58,13 +56,13 @@ const Navbar = () => {
             href={SERVICE_STATUS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-tagline-2 text-secondary font-normal uppercase transition-opacity duration-200 hover:opacity-70"
+            className="text-tagline-3 text-secondary font-semibold uppercase transition-opacity duration-200 hover:opacity-70"
           >
             Service Status
           </a>
           <Link
             href="/contact"
-            className="text-tagline-2 text-secondary font-normal uppercase transition-opacity duration-200 hover:opacity-70"
+            className="text-tagline-3 text-secondary font-semibold uppercase transition-opacity duration-200 hover:opacity-70"
           >
             Support Center
           </Link>
@@ -97,11 +95,6 @@ const Navbar = () => {
 
             <nav className="hidden items-center xl:flex" aria-label="Main">
               <ul className="flex items-center">
-                <li className="nav-item relative py-2.5">
-                  <Link href="/" className={cn(navLinkClass, isHomeActive && activeNavLinkClass)}>
-                    <span>Home</span>
-                  </Link>
-                </li>
                 <li
                   className={cn(
                     'nav-item relative cursor-pointer py-2.5',
@@ -186,26 +179,13 @@ const Navbar = () => {
                     setMenuDropdownId={setMenuDropdownId}
                   />
                 </li>
-                <li
-                  className={cn(
-                    'nav-item relative cursor-pointer py-2.5',
-                    menuDropdownId === 'pricing-dropdown-menu-v2' && 'active menu-active'
-                  )}
-                  data-menu="pricing-dropdown-menu-v2"
-                  onMouseEnter={() => setMenuDropdownId('pricing-dropdown-menu-v2')}
-                >
+                <li className="nav-item relative py-2.5">
                   <Link
-                    href="#"
+                    href="/pricing"
                     className={cn(navLinkClass, isPricingActive && activeNavLinkClass)}
-                    onClick={(e) => e.preventDefault()}
                   >
                     <span>Pricing</span>
-                    <NavChevron open={menuDropdownId === 'pricing-dropdown-menu-v2'} />
                   </Link>
-                  <PricingMenu
-                    menuDropdownId={menuDropdownId}
-                    setMenuDropdownId={setMenuDropdownId}
-                  />
                 </li>
               </ul>
             </nav>

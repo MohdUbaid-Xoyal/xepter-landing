@@ -2,21 +2,19 @@
 
 import {
   DocsIcon,
-  LegalNoticeIcon,
   LoginIcon,
-  PrivacyIcon,
-  SignUpIcon,
-  TermsConditionsIcon,
+  // temporarily hidden — see commented-out entries below
+  // LegalNoticeIcon,
+  // PrivacyIcon,
+  // SignUpIcon,
+  // TermsConditionsIcon,
 } from '@/src/components/shared/icon/menu-icon';
 import {
   DevelopersMenuLink,
   type DevelopersMenuLinkProps,
 } from '@/src/components/shared/layout/navbar/developers-menu-link';
-import whatsNewImage from '@/public/images/ns-img-419.jpg';
 import { DOCS_URL } from '@/src/utils/constants';
 import { cn } from '@/src/utils/cn';
-import Image from 'next/image';
-import Link from 'next/link';
 
 const MENU_DEVELOPERS_ID = 'product-mega-menu';
 
@@ -24,45 +22,45 @@ type DeveloperLink = Omit<DevelopersMenuLinkProps, 'onClose'>;
 
 const columnOne: DeveloperLink[] = [
   {
-    title: 'Login',
-    description: 'Log into your dashboard',
-    href: '/login',
-    icon: LoginIcon,
-  },
-  {
-    title: 'Create Account',
-    description: 'Create your free account',
-    href: '/signup',
-    icon: SignUpIcon,
-  },
-  {
     title: 'Documentation',
     description: 'REST APIs and webhooks for every channel',
     href: DOCS_URL,
     icon: DocsIcon,
   },
+  {
+    title: 'Login to Portal',
+    description: 'Log into your dashboard',
+    href: '/login',
+    icon: LoginIcon,
+  },
+  // {
+  //   title: 'Create Account',
+  //   description: 'Create your free account',
+  //   href: '/signup',
+  //   icon: SignUpIcon,
+  // },
 ];
 
-const columnTwo: DeveloperLink[] = [
-  {
-    title: 'Terms & Conditions',
-    description: 'Understand our terms',
-    href: '#',
-    icon: TermsConditionsIcon,
-  },
-  {
-    title: 'Privacy Policy',
-    description: 'Understand data protection',
-    href: '#',
-    icon: PrivacyIcon,
-  },
-  {
-    title: 'Legal',
-    description: 'Read legal policies',
-    href: '#',
-    icon: LegalNoticeIcon,
-  },
-];
+// const columnTwo: DeveloperLink[] = [
+//   {
+//     title: 'Terms & Conditions',
+//     description: 'Understand our terms',
+//     href: '#',
+//     icon: TermsConditionsIcon,
+//   },
+//   {
+//     title: 'Privacy Policy',
+//     description: 'Understand data protection',
+//     href: '#',
+//     icon: PrivacyIcon,
+//   },
+//   {
+//     title: 'Legal',
+//     description: 'Read legal policies',
+//     href: '#',
+//     icon: LegalNoticeIcon,
+//   },
+// ];
 
 interface DevelopersMenuProps {
   menuDropdownId: string | null;
@@ -78,11 +76,11 @@ export const DevelopersMenu = ({
 
   return (
     <div>
-      <div className="dropdown-menu-bridge pointer-events-none fixed top-full left-1/2 z-40 h-3 w-full min-w-[952px] -translate-x-1/2 bg-transparent transition-opacity duration-300" />
+      <div className="dropdown-menu-bridge pointer-events-none fixed top-full left-1/2 z-40 h-3 w-full -translate-x-1/2 bg-transparent transition-opacity duration-300 md:w-[360px]" />
       <div
         id={MENU_DEVELOPERS_ID}
         className={cn(
-          'dropdown-menu border-stroke-1 fixed top-full left-1/2 z-50 mt-2 w-full -translate-x-1/2 space-y-6 rounded-[20px] border bg-white p-4 transition-all duration-300 md:w-[952px]',
+          'dropdown-menu border-stroke-1 fixed top-full left-1/2 z-50 mt-2 w-full -translate-x-1/2 space-y-6 rounded-[20px] border bg-white p-4 transition-all duration-300 md:w-[360px]',
           isOpen && 'active'
         )}
       >
@@ -92,31 +90,11 @@ export const DevelopersMenu = ({
               <DevelopersMenuLink key={item.title} {...item} onClose={handleClose} />
             ))}
           </ul>
-          <ul className="flex-1 space-y-2">
+          {/* <ul className="flex-1 space-y-2">
             {columnTwo.map((item) => (
               <DevelopersMenuLink key={item.title} {...item} onClose={handleClose} />
             ))}
-          </ul>
-          <figure className="w-full flex-1 space-y-3">
-            <p className="text-tagline-2 text-secondary/60 font-medium">What&apos;s New</p>
-            <Link href="#" onClick={handleClose}>
-              <figure className="group relative min-h-[200px] w-full max-w-full overflow-hidden rounded-[14px]">
-                <Image
-                  src={whatsNewImage}
-                  alt="What's New"
-                  fill
-                  className="rounded-[14px] object-cover transition-all duration-500 ease-in-out group-hover:scale-105"
-                  sizes="(max-width: 1024px) 100vw, 320px"
-                />
-                <div className="absolute top-4 left-4 size-full space-y-1 transition-all duration-500 ease-in-out group-hover:top-5 group-hover:left-5">
-                  <p className="text-tagline-1 font-medium text-white">Automation SaaS Changelog</p>
-                  <p className="text-tagline-3 w-full max-w-[212px] font-normal text-white/60">
-                    Access all your workflows, analytics, and integrations in one smart dashboard.
-                  </p>
-                </div>
-              </figure>
-            </Link>
-          </figure>
+          </ul> */}
         </div>
       </div>
     </div>

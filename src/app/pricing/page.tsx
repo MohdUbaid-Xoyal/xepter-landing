@@ -1,7 +1,6 @@
-import PricingFaq from '@/src/components/pricing/pricing-faq';
+import PricingCta from '@/src/components/pricing/pricing-cta';
 import PricingHero from '@/src/components/pricing/pricing-hero';
 import PricingRates from '@/src/components/pricing/pricing-rates';
-import CTA from '@/src/components/shared/cta';
 import { generateMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -16,8 +15,7 @@ const PricingPage = () => {
     <>
       <PricingHero />
       <PricingRates />
-      <PricingFaq />
-      <CTA />
+      <PricingCta />
     </>
   );
 };

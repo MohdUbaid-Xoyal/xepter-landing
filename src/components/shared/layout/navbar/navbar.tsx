@@ -1,6 +1,6 @@
 'use client';
 
-import mainLogo from '@/public/images/logo/Xepter ORIGINAL- Logo.png';
+import mainLogo from '@/public/images/logo/Xepter-Engage-Communicate-Grow-Medium.png';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import MobileMenu from '@/src/components/shared/layout/mobile-menu/mobile-menu';
 import { CompanyMenu } from '@/src/components/shared/layout/navbar/company-menu';
@@ -51,7 +51,7 @@ const Navbar = () => {
     <header onMouseLeave={() => setMenuDropdownId(null)}>
       <div className="fixed top-0 left-0 z-50 hidden w-full bg-transparent pt-2 xl:flex">
 
-        <div className="lp:max-w-[1290px]! mx-auto flex w-full max-w-[350px] items-center gap-x-6 pl-4.5 min-[425px]:max-w-[375px] min-[500px]:max-w-[450px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
+        <div className="lp:max-w-[1290px]! mx-auto flex w-full max-w-[350px] items-center justify-end gap-x-6 pr-4.5 min-[425px]:max-w-[375px] min-[500px]:max-w-[450px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
           <a
             href={SERVICE_STATUS_URL}
             target="_blank"

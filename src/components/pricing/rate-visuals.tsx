@@ -5,14 +5,10 @@ import TMobileLogo from '@icons-pack/react-simple-icons/icons/SiDeutschetelekom'
 import VerizonLogo from '@icons-pack/react-simple-icons/icons/SiVerizon';
 import {
   FileText,
-  Headphones,
   Info,
-  MessageSquareMore,
   MessageSquareText,
   Radio,
-  Search,
   Send,
-  Smartphone,
   User,
   Users,
   UsersRound,
@@ -349,92 +345,3 @@ export const CarrierFeesGrid = ({ rows }: { rows: CarrierFeeGroupRow[] }) => {
   );
 };
 
-export const LookupFeeCard = ({
-  title,
-  subtitle,
-  value,
-  unit,
-}: {
-  title: string;
-  subtitle: string;
-  value: string;
-  unit: string;
-}) => (
-  <div className="shadow-1 relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] bg-white p-6 md:p-8">
-    <div
-      aria-hidden="true"
-      className="bg-primary-50 pointer-events-none absolute right-0 bottom-0 size-56 rounded-full blur-2xl max-md:hidden"
-    />
-    <div
-      aria-hidden="true"
-      className="absolute right-28 bottom-16 grid grid-cols-2 gap-2 max-md:hidden"
-    >
-      {Array.from({ length: 5 }).map((_, index) => (
-        <span key={index} className="bg-primary-200 size-1.5 rounded-full" />
-      ))}
-    </div>
-    <Smartphone
-      aria-hidden="true"
-      strokeWidth={1.25}
-      className="text-primary-200 absolute right-8 bottom-4 size-24 rotate-[8deg] max-md:hidden"
-    />
-    <span className="bg-primary-500 absolute right-10 bottom-9 flex size-9 items-center justify-center rounded-full text-white shadow-md max-md:hidden">
-      <Search className="size-4.5" strokeWidth={2} />
-    </span>
-
-    <div className="relative flex items-start gap-x-3">
-      <span className="bg-primary-50 text-primary-500 flex size-10 shrink-0 items-center justify-center rounded-2xl">
-        <Search className="size-5" />
-      </span>
-      <div>
-        <h3 className="text-heading-6 text-secondary font-bold">{title}</h3>
-        <p className="text-tagline-2 text-secondary/60 mt-1">{subtitle}</p>
-      </div>
-    </div>
-
-    <p className="relative mt-8 flex items-baseline gap-x-2">
-      <span className="text-heading-3 text-secondary font-bold tabular-nums">{value}</span>
-      <span className="text-tagline-2 text-secondary/50 font-normal">{unit}</span>
-    </p>
-  </div>
-);
-
-export const LiveSupportCard = ({
-  title,
-  subtitle,
-  rows,
-}: {
-  title: string;
-  subtitle: string;
-  rows: RateRow[];
-}) => (
-  <SectionCard className="flex h-full flex-col gap-y-6">
-    <CardHeader
-      icon={Headphones}
-      title={title}
-      subtitle={subtitle}
-      tint="red"
-      iconRounded="rounded-2xl"
-      action={
-        <span
-          aria-hidden="true"
-          className="bg-brand-red/10 text-brand-red flex size-10 shrink-0 items-center justify-center rounded-2xl"
-        >
-          <MessageSquareMore className="size-5" strokeWidth={1.75} />
-        </span>
-      }
-    />
-
-    <div className="space-y-3">
-      {rows.map((row) => (
-        <div
-          key={row.label}
-          className="bg-background-4 flex items-center justify-between gap-x-4 rounded-xl px-4 py-3.5"
-        >
-          <span className="text-tagline-2 text-secondary font-medium">{row.label}</span>
-          <span className="text-tagline-2 font-semibold text-emerald-600">{row.value}</span>
-        </div>
-      ))}
-    </div>
-  </SectionCard>
-);

@@ -216,74 +216,12 @@ export const comingSoonPanels: Record<Exclude<SenderTypeId, LiveSenderTypeId>, C
 
 export const lookupFee = {
   title: 'Number look-up fee',
-  subtitle: 'Applies across all sender types',
   value: '$0.005',
   unit: '/ look-up',
 };
 
-export const liveSupport = {
-  title: 'Live support',
-  subtitle: 'Real humans, every plan',
-  rows: [
-    { label: 'Pay as you go', value: 'Free' },
-    { label: '500k+ segments / mo', value: 'Free + dedicated Slack' },
-  ] satisfies RateRow[],
-};
-
-export const volumeCta = {
-  title: "Sending at volume? Let's talk numbers.",
-  description: 'All rates are negotiable based on volume and agreement terms.',
+export const pricingCtaButtons = {
   primary: { label: 'Talk to an Expert', href: '/contact' },
   secondary: { label: 'Start sending free', href: '/signup' },
 };
 
-export interface PricingFaqItem {
-  value: string;
-  question: string;
-  answer: string;
-}
-
-export const pricingFaqs: PricingFaqItem[] = [
-  {
-    value: 'tier-2-aggregation',
-    question: 'What is Tier 2 Aggregation?',
-    answer:
-      'Xepter is a Tier 2 Aggregator which means, at most, your messages will go through one additional layer before reaching the carriers and your customer’s handsets. This is in contrast to many CPaaS providers who go through 3-4 layers before doing the same. This enables us to deliver messages in <1 second, have quick support turn-around times, and provide you with unrivaled transparency and visibility into the metrics that matter most.',
-  },
-  {
-    value: 'what-is-cpaas',
-    question: 'What is a CPaaS?',
-    answer:
-      'CPaaS stands for Communications Platform as a Service. It’s a cloud-based platform that provides businesses with Application Programming Interfaces (APIs) for integrating real-time communication features like SMS, voice calls, video chat, and more, into their applications.',
-  },
-  {
-    value: 'xepter-instead-of-twilio',
-    question: 'Can I use Xepter instead of Twilio?',
-    answer:
-      'Yes! Xepter offers the same services as Twilio; however, we provide up to 90% cheaper pricing, unparalleled support for all business types, superior integrations and documentation, and higher message throughput. If you are currently using Twilio looking for better delivery and pricing, Xepter is your partner!',
-  },
-  {
-    value: 'downtime-when-switching',
-    question: 'Will we have downtime when we switch?',
-    answer:
-      'No! We leverage our connections with the Direct Connect Aggregators (DCAs) and other upstream partners to ensure seamless migration of any existing messaging campaigns.',
-  },
-  {
-    value: 'cheaper-than-twilio',
-    question: 'Why is your messaging so much cheaper than Twilio?',
-    answer:
-      "We are very transparent with our pricing and don't price gouge. With our strong network partnerships we are able to leverage substantial discounted pricing and pass those savings to our clients.",
-  },
-  {
-    value: 'port-numbers',
-    question: 'Can I port numbers to Xepter?',
-    answer:
-      'Absolutely! Our proprietary LOA port infrastructure supports single and bulk phone porting for 10DLC and Toll Free.',
-  },
-  {
-    value: 'a2p-registration-fees',
-    question: 'What are registration (A2P) fees for 10DLC?',
-    answer:
-      'We do not make a margin on 10DLC, A2P registration fees — they are passed-through to the upstream providers (TCR, DCAs, etc.). They are as follows: Brand: $4.50 (each time the brand is attempted to be verified; usually this is one-time). Campaign: $15 (one time). Low Volume Campaign: $1.50/month. Standard Campaign: $10/month.',
-  },
-];

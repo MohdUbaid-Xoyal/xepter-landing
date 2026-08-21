@@ -1,4 +1,4 @@
-import mainLogo from '@/public/images/logo/xepter-logo-full.png';
+import mainLogo from '@/public/images/logo/Xepter-Engage-Communicate-Grow-Medium.png';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { FooterBottom } from '@/src/components/shared/layout/footer/footer-bottom';
 import { FooterLinkGroups } from '@/src/components/shared/layout/footer/footer-link-groups';

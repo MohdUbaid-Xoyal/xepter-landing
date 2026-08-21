@@ -5,27 +5,23 @@ import {
   CardHeader,
   CarrierFeesGrid,
   Footnote,
-  LiveSupportCard,
-  LookupFeeCard,
   MessagingRateCard,
   SectionCard,
   TierList,
 } from '@/src/components/pricing/rate-visuals';
-import { ButtonPrimary, ButtonSecondary } from '@/src/components/shared/ui/button';
+import { ButtonPrimary } from '@/src/components/shared/ui/button';
 import {
   comingSoonPanels,
-  liveSupport,
   lookupFee,
   senderPanels,
   senderTypes,
-  volumeCta,
   type ComingSoonPanel,
   type LiveSenderTypeId,
   type SenderPanel,
   type SenderTypeId,
 } from '@/src/data/pricing-content';
 import { cn } from '@/src/utils/cn';
-import { Phone, RadioTower } from 'lucide-react';
+import { Phone, RadioTower, Search } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -39,42 +35,44 @@ const SenderPicker = ({
   active: SenderTypeId;
   onSelect: (id: SenderTypeId) => void;
 }) => (
-  <div
-    role="tablist"
-    aria-label="Sender type"
-    className="bg-white shadow-1 mx-auto flex w-fit max-w-full flex-wrap justify-center gap-1 rounded-full p-1.5"
-  >
-    {senderTypes.map((sender) => {
-      const isActive = active === sender.id;
+  <div className="scroll-bar -mx-4 overflow-x-auto px-4 sm:mx-0 sm:overflow-visible sm:px-0">
+    <div
+      role="tablist"
+      aria-label="Sender type"
+      className="bg-white shadow-1 mx-auto flex w-fit max-w-full flex-nowrap justify-center gap-1 rounded-full p-1.5"
+    >
+      {senderTypes.map((sender) => {
+        const isActive = active === sender.id;
 
-      return (
-        <button
-          key={sender.id}
-          type="button"
-          role="tab"
-          id={`sender-tab-${sender.id}`}
-          aria-selected={isActive}
-          aria-controls="sender-panel"
-          onClick={() => onSelect(sender.id)}
-          className={cn(
-            'text-tagline-2 flex cursor-pointer items-center gap-x-2 rounded-full px-4 py-2 font-medium transition-all duration-300',
-            isActive ? 'bg-secondary text-white' : 'text-secondary hover:bg-background-4'
-          )}
-        >
-          {sender.name}
-          {sender.status === 'soon' && (
-            <span
-              className={cn(
-                'rounded-full px-1.5 py-0.5 text-[9px] font-bold tracking-wider uppercase',
-                isActive ? 'bg-white/20 text-white' : 'bg-background-4 text-secondary/50'
-              )}
-            >
-              Soon
-            </span>
-          )}
-        </button>
-      );
-    })}
+        return (
+          <button
+            key={sender.id}
+            type="button"
+            role="tab"
+            id={`sender-tab-${sender.id}`}
+            aria-selected={isActive}
+            aria-controls="sender-panel"
+            onClick={() => onSelect(sender.id)}
+            className={cn(
+              'text-tagline-2 flex shrink-0 cursor-pointer items-center gap-x-2 rounded-full px-4 py-2 font-medium whitespace-nowrap transition-all duration-300',
+              isActive ? 'bg-secondary text-white' : 'text-secondary hover:bg-background-4'
+            )}
+          >
+            {sender.name}
+            {sender.status === 'soon' && (
+              <span
+                className={cn(
+                  'rounded-full px-1.5 py-0.5 text-[9px] font-bold tracking-wider uppercase',
+                  isActive ? 'bg-white/20 text-white' : 'bg-background-4 text-secondary/50'
+                )}
+              >
+                Soon
+              </span>
+            )}
+          </button>
+        );
+      })}
+    </div>
   </div>
 );
 
@@ -98,6 +96,21 @@ const RateSheet = ({ panel }: { panel: SenderPanel }) => {
               unitLabel={panel.numberPricing.unitLabel}
             />
           )}
+
+          <div className="border-stroke-1 flex items-center justify-between gap-x-4 rounded-2xl border p-4">
+            <span className="flex items-center gap-x-3">
+              <span className="bg-primary-50 text-primary-500 flex size-10 shrink-0 items-center justify-center rounded-xl">
+                <Search className="size-4" />
+              </span>
+              <span className="text-tagline-2 text-secondary font-bold">{lookupFee.title}</span>
+            </span>
+            <span className="text-right">
+              <span className="text-tagline-1 text-secondary block font-bold tabular-nums">
+                {lookupFee.value}
+              </span>
+              <span className="text-tagline-3 text-secondary/50">{lookupFee.unit}</span>
+            </span>
+          </div>
         </SectionCard>
 
         <MessagingRateCard
@@ -118,24 +131,6 @@ const RateSheet = ({ panel }: { panel: SenderPanel }) => {
         />
         <CarrierFeesGrid rows={panel.carrierFees.rows} />
       </SectionCard>
-
-      <div className="grid grid-cols-12 items-stretch gap-5">
-        <div className="col-span-12 lg:col-span-5">
-          <LookupFeeCard
-            title={lookupFee.title}
-            subtitle={lookupFee.subtitle}
-            value={lookupFee.value}
-            unit={lookupFee.unit}
-          />
-        </div>
-        <div className="col-span-12 lg:col-span-7">
-          <LiveSupportCard
-            title={liveSupport.title}
-            subtitle={liveSupport.subtitle}
-            rows={liveSupport.rows}
-          />
-        </div>
-      </div>
 
       {panel.panelFootnote && <Footnote>{panel.panelFootnote}</Footnote>}
     </div>
@@ -185,33 +180,6 @@ const PricingRates = () => {
             )
           )}
         </div>
-
-        <RevealAnimation delay={0.2}>
-          <div className="bg-secondary flex flex-col items-start justify-between gap-8 rounded-[20px] px-8 py-14 md:px-12 md:py-16 lg:flex-row lg:items-center">
-            <div className="space-y-2">
-              <h3 className="text-heading-5 text-white">{volumeCta.title}</h3>
-              <p className="max-w-[480px] text-white/60">{volumeCta.description}</p>
-            </div>
-            <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-auto lg:shrink-0">
-              <Link href={volumeCta.primary.href} className="w-full sm:w-auto">
-                <ButtonSecondary
-                  className="w-full outline-0! sm:w-auto"
-                  textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
-                >
-                  {volumeCta.primary.label}
-                </ButtonSecondary>
-              </Link>
-              <Link href={volumeCta.secondary.href} className="w-full sm:w-auto">
-                <ButtonPrimary
-                  className="w-full border border-white/30 bg-transparent sm:w-auto"
-                  textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
-                >
-                  {volumeCta.secondary.label}
-                </ButtonPrimary>
-              </Link>
-            </div>
-          </div>
-        </RevealAnimation>
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import AttLogo from '@icons-pack/react-simple-icons/icons/SiAtandt';
 import TMobileLogo from '@icons-pack/react-simple-icons/icons/SiDeutschetelekom';
 import VerizonLogo from '@icons-pack/react-simple-icons/icons/SiVerizon';
 import {
+  ArrowDown,
   FileText,
   Info,
   MessageSquareText,
@@ -13,6 +14,7 @@ import {
   Users,
   UsersRound,
 } from 'lucide-react';
+import Link from 'next/link';
 import type { ComponentType, ReactNode } from 'react';
 
 export const SectionCard = ({
@@ -126,18 +128,28 @@ export const TierList = ({ rows, unitLabel }: { rows: RateRow[]; unitLabel?: str
 
 const parseAmount = (value: string) => parseFloat(value.replace(/[^0-9.]/g, ''));
 
-type MessageChannel = 'sms' | 'mms';
+export type MessageChannel = 'sms' | 'mms';
+export type MessageDirection = 'outbound' | 'inbound';
 
-const DarkChannelToggle = ({
-  channel,
+const DarkPillToggle = <T extends string>({
+  value,
+  options,
   onChange,
+  variant = 'solid',
 }: {
-  channel: MessageChannel;
-  onChange: (next: MessageChannel) => void;
+  value: T;
+  options: readonly T[];
+  onChange: (next: T) => void;
+  variant?: 'solid' | 'subtle';
 }) => (
-  <div className="inline-flex shrink-0 rounded-full bg-white/10 p-1">
-    {(['sms', 'mms'] as const).map((option) => {
-      const isActive = channel === option;
+  <div
+    className={cn(
+      'inline-flex shrink-0 rounded-full p-1',
+      variant === 'solid' ? 'bg-white/10' : 'gap-1 bg-transparent'
+    )}
+  >
+    {options.map((option) => {
+      const isActive = value === option;
       return (
         <button
           key={option}
@@ -145,8 +157,16 @@ const DarkChannelToggle = ({
           aria-pressed={isActive}
           onClick={() => onChange(option)}
           className={cn(
-            'text-tagline-3 cursor-pointer rounded-full px-4 py-1.5 font-semibold uppercase transition-all duration-300',
-            isActive ? 'text-secondary bg-white' : 'text-white/60 hover:text-white'
+            'cursor-pointer rounded-full font-semibold uppercase transition-all duration-300',
+            variant === 'solid'
+              ? cn(
+                  'text-tagline-3 px-4 py-1.5',
+                  isActive ? 'text-secondary bg-white' : 'text-white/60 hover:text-white'
+                )
+              : cn(
+                  'text-[11px] px-3 py-1 tracking-wide',
+                  isActive ? 'bg-white/15 text-white' : 'text-white/45 hover:text-white/70'
+                )
           )}
         >
           {option}
@@ -166,12 +186,16 @@ export const MessagingRateCard = ({
   table,
   channel,
   onChannelChange,
+  direction,
+  onDirectionChange,
 }: {
   title: string;
   subtitle: string;
   table: RateTable;
   channel: MessageChannel;
   onChannelChange: (next: MessageChannel) => void;
+  direction: MessageDirection;
+  onDirectionChange: (next: MessageDirection) => void;
 }) => {
   const amounts = table.rows.map((row) => parseAmount(row.value));
   const max = Math.max(...amounts, 0.0001);
@@ -188,13 +212,25 @@ export const MessagingRateCard = ({
             <p className="text-tagline-2 mt-1 text-white/70">{subtitle}</p>
           </div>
         </div>
-        <DarkChannelToggle channel={channel} onChange={onChannelChange} />
+        <DarkPillToggle value={channel} options={['sms', 'mms'] as const} onChange={onChannelChange} />
+      </div>
+
+      <div className="border-white/10 flex items-center justify-between border-b pb-4">
+        <span className="text-tagline-3 font-semibold tracking-wide text-white/40 uppercase">
+          Direction
+        </span>
+        <DarkPillToggle
+          variant="subtle"
+          value={direction}
+          options={['outbound', 'inbound'] as const}
+          onChange={onDirectionChange}
+        />
       </div>
 
       <div className="space-y-4">
         {table.rows.map((row, index) => (
           <div key={row.label} className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
-            <span className="text-tagline-3 w-[74px] shrink-0 font-medium text-white/85">
+            <span className="text-tagline-2 w-20 shrink-0 font-medium text-white/85">
               {row.label}
             </span>
             <span className="relative h-2.5 min-w-16 flex-1 basis-full overflow-hidden rounded-[3px] bg-white/10 sm:basis-0">
@@ -208,7 +244,7 @@ export const MessagingRateCard = ({
             </span>
             <span
               className={cn(
-                'text-tagline-2 ml-auto shrink-0 text-right font-semibold tabular-nums sm:ml-0 sm:w-[70px]',
+                'text-tagline-1 ml-auto shrink-0 text-right font-bold tabular-nums sm:ml-0 sm:w-20',
                 row.best ? 'text-emerald-400' : 'text-white'
               )}
             >
@@ -222,6 +258,14 @@ export const MessagingRateCard = ({
           </div>
         ))}
       </div>
+
+      <Link
+        href="#carrier-fees"
+        className="text-tagline-3 group -mt-2 inline-flex w-fit items-center gap-x-1.5 font-semibold text-primary-300 underline decoration-primary-300/40 underline-offset-4 transition-colors hover:text-white"
+      >
+        + carrier fee
+        <ArrowDown className="size-3.5 transition-transform duration-200 group-hover:translate-y-0.5" />
+      </Link>
 
       {table.footnote && (
         <p className="text-tagline-3 mt-auto flex items-start gap-x-2 text-white/65">

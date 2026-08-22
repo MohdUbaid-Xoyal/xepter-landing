@@ -42,11 +42,16 @@ export interface CarrierFeesTable {
   rows: CarrierFeeGroupRow[];
 }
 
+export interface MessagingDirectionRates {
+  outbound: RateTable;
+  inbound: RateTable;
+}
+
 export interface MessagingRates {
   title: string;
   subtitle: string;
-  sms: RateTable;
-  mms: RateTable;
+  sms: MessagingDirectionRates;
+  mms: MessagingDirectionRates;
 }
 
 export interface NumberPricing {
@@ -106,14 +111,6 @@ export const senderTypes: SenderType[] = [
 
 const negotiableNote = 'All rates are negotiable based on volume and agreement terms.';
 
-const sharedMmsRates: RateTable = {
-  columns: ['Monthly volume', 'Rate'],
-  rows: [
-    { label: '0 – 500k', value: '$0.0030' },
-    { label: '500k+', value: '$0.0025', best: true },
-  ],
-  footnote: negotiableNote,
-};
 
 export const senderPanels: Record<LiveSenderTypeId, SenderPanel> = {
   local: {
@@ -133,19 +130,40 @@ export const senderPanels: Record<LiveSenderTypeId, SenderPanel> = {
     },
     messagingRates: {
       title: 'Messaging rates',
-      subtitle: 'Per outbound segment · volume-based discounts',
+      subtitle: 'Per segment · volume-based discounts',
       sms: {
-        columns: ['Monthly volume', 'Rate'],
-        rows: [
-          { label: '0 – 500k', value: '$0.0060' },
-          { label: '501k – 1m', value: '$0.0050' },
-          { label: '1m – 5m', value: '$0.0040' },
-          { label: '5m – 10m', value: '$0.0035' },
-          { label: '10m+', value: '$0.0030', best: true },
-        ],
-        footnote: negotiableNote,
+        outbound: {
+          columns: ['Monthly volume', 'Rate'],
+          rows: [
+            { label: '0 – 500k', value: '$0.0060' },
+            { label: '501k – 1m', value: '$0.0050' },
+            { label: '1m – 5m', value: '$0.0040' },
+            { label: '5m – 10m', value: '$0.0035' },
+            { label: '10m+', value: '$0.0030', best: true },
+          ],
+          footnote: negotiableNote,
+        },
+        inbound: {
+          columns: ['Monthly volume', 'Rate'],
+          rows: [
+            { label: '0 – 500k', value: '$0.0030' },
+            { label: '500k+', value: '$0.0025', best: true },
+          ],
+          footnote: negotiableNote,
+        },
       },
-      mms: sharedMmsRates,
+      mms: {
+        outbound: {
+          columns: ['Monthly volume', 'Rate'],
+          rows: [{ label: '1+', value: '$0.0180' }],
+          footnote: negotiableNote,
+        },
+        inbound: {
+          columns: ['Monthly volume', 'Rate'],
+          rows: [{ label: '1+', value: '$0.0150' }],
+          footnote: negotiableNote,
+        },
+      },
     },
     carrierFees: {
       title: 'Carrier fees',

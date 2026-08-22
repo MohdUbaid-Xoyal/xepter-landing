@@ -18,7 +18,6 @@ import Features from '@/src/components/home/features';
 import Hero from '@/src/components/home/hero';
 import Integration from '@/src/components/home/integration';
 import NetworkBand from '@/src/components/home/network-band';
-import Pricing from '@/src/components/home/pricing';
 import Process from '@/src/components/home/process';
 import Testimonial from '@/src/components/home/testimonial';
 import CTA from '@/src/components/shared/cta';
@@ -33,7 +32,6 @@ const Page = () => {
       <CoreFeatures />
       <Benefits />
       <NetworkBand />
-      <Pricing />
       <Integration />
       <Testimonial />
       <FAQ />

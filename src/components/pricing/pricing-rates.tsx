@@ -8,6 +8,8 @@ import {
   MessagingRateCard,
   SectionCard,
   TierList,
+  type MessageChannel,
+  type MessageDirection,
 } from '@/src/components/pricing/rate-visuals';
 import { ButtonPrimary } from '@/src/components/shared/ui/button';
 import {
@@ -24,8 +26,6 @@ import { cn } from '@/src/utils/cn';
 import { Phone, RadioTower, Search } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
-
-type MessageChannel = 'sms' | 'mms';
 
 /** Compact horizontal sender picker. */
 const SenderPicker = ({
@@ -79,61 +79,76 @@ const SenderPicker = ({
 /** Every rate for the active sender — nothing hidden behind a disclosure. */
 const RateSheet = ({ panel }: { panel: SenderPanel }) => {
   const [channel, setChannel] = useState<MessageChannel>('sms');
+  const [direction, setDirection] = useState<MessageDirection>('outbound');
 
   return (
-    <div className="space-y-5">
+    <SectionCard className="space-y-8">
       <div className="grid grid-cols-12 items-stretch gap-5">
-        <SectionCard className="col-span-12 flex flex-col gap-y-6 lg:col-span-6">
-          <CardHeader
-            icon={Phone}
-            title={panel.numberPricing.title}
-            subtitle={panel.numberPricing.subtitle}
-            iconRounded="rounded-2xl"
-          />
-          {panel.numberPricing.table && (
-            <TierList
-              rows={panel.numberPricing.table.rows}
-              unitLabel={panel.numberPricing.unitLabel}
+        <RevealAnimation delay={0.3} direction="left" offset={50} className="col-span-12 lg:col-span-6">
+          <div className="flex flex-col gap-y-6">
+            <CardHeader
+              icon={Phone}
+              title={panel.numberPricing.title}
+              subtitle={panel.numberPricing.subtitle}
+              iconRounded="rounded-2xl"
             />
-          )}
+            {panel.numberPricing.table && (
+              <TierList
+                rows={panel.numberPricing.table.rows}
+                unitLabel={panel.numberPricing.unitLabel}
+              />
+            )}
 
-          <div className="border-stroke-1 flex items-center justify-between gap-x-4 rounded-2xl border p-4">
-            <span className="flex items-center gap-x-3">
-              <span className="bg-primary-50 text-primary-500 flex size-10 shrink-0 items-center justify-center rounded-xl">
-                <Search className="size-4" />
+            <div className="border-stroke-1 flex items-center justify-between gap-x-4 rounded-2xl border p-4">
+              <span className="flex items-center gap-x-3">
+                <span className="bg-primary-50 text-primary-500 flex size-10 shrink-0 items-center justify-center rounded-xl">
+                  <Search className="size-4" />
+                </span>
+                <span className="text-tagline-2 text-secondary font-bold">{lookupFee.title}</span>
               </span>
-              <span className="text-tagline-2 text-secondary font-bold">{lookupFee.title}</span>
-            </span>
-            <span className="text-right">
-              <span className="text-tagline-1 text-secondary block font-bold tabular-nums">
-                {lookupFee.value}
+              <span className="text-right">
+                <span className="text-tagline-1 text-secondary block font-bold tabular-nums">
+                  {lookupFee.value}
+                </span>
+                <span className="text-tagline-3 text-secondary/50">{lookupFee.unit}</span>
               </span>
-              <span className="text-tagline-3 text-secondary/50">{lookupFee.unit}</span>
-            </span>
+            </div>
           </div>
-        </SectionCard>
+        </RevealAnimation>
 
-        <MessagingRateCard
-          title={panel.messagingRates.title}
-          subtitle={panel.messagingRates.subtitle}
-          table={panel.messagingRates[channel]}
-          channel={channel}
-          onChannelChange={setChannel}
-        />
+        <RevealAnimation delay={0.4} direction="right" offset={50} className="col-span-12 lg:col-span-6">
+          <div>
+            <MessagingRateCard
+              title={panel.messagingRates.title}
+              subtitle={panel.messagingRates.subtitle}
+              table={panel.messagingRates[channel][direction]}
+              channel={channel}
+              onChannelChange={setChannel}
+              direction={direction}
+              onDirectionChange={setDirection}
+            />
+          </div>
+        </RevealAnimation>
       </div>
 
-      <SectionCard className="space-y-6">
-        <CardHeader
-          icon={RadioTower}
-          title={panel.carrierFees.title}
-          subtitle={panel.carrierFees.subtitle}
-          iconRounded="rounded-2xl"
-        />
-        <CarrierFeesGrid rows={panel.carrierFees.rows} />
-      </SectionCard>
+      <RevealAnimation
+        delay={0.5}
+        id="carrier-fees"
+        className="border-stroke-1 scroll-mt-32 border-t pt-8"
+      >
+        <div className="space-y-6">
+          <CardHeader
+            icon={RadioTower}
+            title={panel.carrierFees.title}
+            subtitle={panel.carrierFees.subtitle}
+            iconRounded="rounded-2xl"
+          />
+          <CarrierFeesGrid rows={panel.carrierFees.rows} />
+        </div>
+      </RevealAnimation>
 
       {panel.panelFootnote && <Footnote>{panel.panelFootnote}</Footnote>}
-    </div>
+    </SectionCard>
   );
 };
 
@@ -158,8 +173,10 @@ const PricingRates = () => {
   return (
     <section id="rates" className="scroll-mt-32 pb-20 md:pb-25 lg:pb-28">
       <div className="main-container space-y-8 md:space-y-10">
-        <RevealAnimation delay={0.1}>
-          <SenderPicker active={activeSender} onSelect={setActiveSender} />
+        <RevealAnimation delay={0.1} direction="up" offset={40}>
+          <div>
+            <SenderPicker active={activeSender} onSelect={setActiveSender} />
+          </div>
         </RevealAnimation>
 
         <div

@@ -4,8 +4,7 @@ export const DEFAULT_URL = 'https://xepter.com/';
 export const DEFAULT_TITLE = 'Xepter – Powerful SMS, MMS & Voice APIs at Competitive Rates';
 export const DEFAULT_DESCRIPTION =
   'Connect with customers through SMS, MMS, Voice and messaging APIs with Xepter. Scale your communications with reliable APIs, transparent pricing and volume-based rates.';
-export const DEFAULT_IMAGE_URL =
-  'https://images.prismic.io/staticmania/aPD-K55xUNkB2D2X_og-image.jpg';
+export const DEFAULT_IMAGE_URL = '/images/logo/Xepter-Engage-Communicate-Grow-Medium.png';
 export const DEFAULT_KEYWORDS = [
   'SMS API',
   'SMS API provider',

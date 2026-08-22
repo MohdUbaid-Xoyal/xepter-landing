@@ -3,13 +3,13 @@
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import {
   CardHeader,
-  CarrierFeesGrid,
+  CarrierFeeModal,
   Footnote,
   MessagingRateCard,
   SectionCard,
   TierList,
+  TrustBadges,
   type MessageChannel,
-  type MessageDirection,
 } from '@/src/components/pricing/rate-visuals';
 import { ButtonPrimary } from '@/src/components/shared/ui/button';
 import {
@@ -23,7 +23,7 @@ import {
   type SenderTypeId,
 } from '@/src/data/pricing-content';
 import { cn } from '@/src/utils/cn';
-import { Phone, RadioTower, Search } from 'lucide-react';
+import { Phone, Search } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -79,76 +79,91 @@ const SenderPicker = ({
 /** Every rate for the active sender — nothing hidden behind a disclosure. */
 const RateSheet = ({ panel }: { panel: SenderPanel }) => {
   const [channel, setChannel] = useState<MessageChannel>('sms');
-  const [direction, setDirection] = useState<MessageDirection>('outbound');
+  const [showCarrierFees, setShowCarrierFees] = useState(false);
 
   return (
-    <SectionCard className="space-y-8">
+    <div className="space-y-5">
       <div className="grid grid-cols-12 items-stretch gap-5">
-        <RevealAnimation delay={0.3} direction="left" offset={50} className="col-span-12 lg:col-span-6">
-          <div className="flex flex-col gap-y-6">
-            <CardHeader
-              icon={Phone}
-              title={panel.numberPricing.title}
-              subtitle={panel.numberPricing.subtitle}
-              iconRounded="rounded-2xl"
-            />
-            {panel.numberPricing.table && (
-              <TierList
-                rows={panel.numberPricing.table.rows}
-                unitLabel={panel.numberPricing.unitLabel}
-              />
-            )}
+        <RevealAnimation
+          delay={0.3}
+          direction="left"
+          offset={50}
+          className="col-span-12 lg:col-span-5"
+        >
+          <div>
+            <SectionCard className="flex h-full flex-col">
+              <div className="border-stroke-1 border-b pb-6">
+                <CardHeader
+                  icon={Phone}
+                  title={panel.numberPricing.title}
+                  subtitle={panel.numberPricing.subtitle}
+                  iconRounded="rounded-2xl"
+                  iconBoxSize="size-14"
+                  iconSize="size-7"
+                />
+              </div>
+              {panel.numberPricing.table && (
+                <div className="pt-6">
+                  <TierList
+                    rows={panel.numberPricing.table.rows}
+                    unitLabel={panel.numberPricing.unitLabel}
+                  />
+                </div>
+              )}
 
-            <div className="border-stroke-1 flex items-center justify-between gap-x-4 rounded-2xl border p-4">
-              <span className="flex items-center gap-x-3">
-                <span className="bg-primary-50 text-primary-500 flex size-10 shrink-0 items-center justify-center rounded-xl">
-                  <Search className="size-4" />
+              <div className="border-stroke-1 mt-6 flex items-center gap-x-4 border-t pt-6">
+                <span className="bg-primary-50 text-primary-500 flex size-14 shrink-0 items-center justify-center rounded-xl">
+                  <Search className="size-7" />
                 </span>
-                <span className="text-tagline-2 text-secondary font-bold">{lookupFee.title}</span>
-              </span>
-              <span className="text-right">
-                <span className="text-tagline-1 text-secondary block font-bold tabular-nums">
-                  {lookupFee.value}
+                <span className="flex-1 space-y-0.5">
+                  <span className="text-tagline-1 text-secondary block font-bold">
+                    {lookupFee.title}
+                  </span>
+                  <span className="text-tagline-3 text-secondary/70 block">
+                    {lookupFee.subtitle}
+                  </span>
                 </span>
-                <span className="text-tagline-3 text-secondary/50">{lookupFee.unit}</span>
-              </span>
-            </div>
+                <span className="shrink-0 text-right">
+                  <span className="text-heading-6 text-secondary block font-bold tabular-nums">
+                    {lookupFee.value}
+                  </span>
+                  <span className="text-tagline-3 text-secondary/70">{lookupFee.unit}</span>
+                </span>
+              </div>
+            </SectionCard>
           </div>
         </RevealAnimation>
 
-        <RevealAnimation delay={0.4} direction="right" offset={50} className="col-span-12 lg:col-span-6">
+        <RevealAnimation delay={0.4} direction="right" offset={50} className="col-span-12 lg:col-span-7">
           <div>
             <MessagingRateCard
               title={panel.messagingRates.title}
               subtitle={panel.messagingRates.subtitle}
-              table={panel.messagingRates[channel][direction]}
+              outboundTable={panel.messagingRates[channel].outbound}
+              inboundTable={panel.messagingRates[channel].inbound}
               channel={channel}
               onChannelChange={setChannel}
-              direction={direction}
-              onDirectionChange={setDirection}
+              onShowCarrierFees={() => setShowCarrierFees(true)}
             />
           </div>
         </RevealAnimation>
       </div>
 
-      <RevealAnimation
-        delay={0.5}
-        id="carrier-fees"
-        className="border-stroke-1 scroll-mt-32 border-t pt-8"
-      >
-        <div className="space-y-6">
-          <CardHeader
-            icon={RadioTower}
-            title={panel.carrierFees.title}
-            subtitle={panel.carrierFees.subtitle}
-            iconRounded="rounded-2xl"
-          />
-          <CarrierFeesGrid rows={panel.carrierFees.rows} />
+      <RevealAnimation delay={0.45}>
+        <div>
+          <TrustBadges />
         </div>
       </RevealAnimation>
 
       {panel.panelFootnote && <Footnote>{panel.panelFootnote}</Footnote>}
-    </SectionCard>
+
+      <CarrierFeeModal
+        open={showCarrierFees}
+        onClose={() => setShowCarrierFees(false)}
+        subtitle={panel.carrierFees.subtitle}
+        rows={panel.carrierFees.rows}
+      />
+    </div>
   );
 };
 

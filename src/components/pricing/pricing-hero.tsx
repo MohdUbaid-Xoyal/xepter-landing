@@ -4,7 +4,7 @@ import { BadgePrimary } from '@/src/components/shared/ui/badge';
 
 const PricingHero = () => {
   return (
-    <section className="relative isolate overflow-hidden pt-[190px] pb-20 md:pb-25 lg:pb-28">
+    <section className="relative isolate overflow-hidden pt-[190px] pb-10 md:pb-14 lg:pb-16">
       <div className="main-container relative z-10">
         <div className="space-y-9 text-center md:space-y-18">
           <div>

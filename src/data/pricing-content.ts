@@ -170,19 +170,174 @@ export const senderPanels: Record<LiveSenderTypeId, SenderPanel> = {
       subtitle: 'Set by the carriers, passed through at cost — per segment',
       rows: [
         {
+          carrier: '1st Point',
+          sms: { outbound: '$0.0035', inbound: 'N/A' },
+          mms: { outbound: 'N/A', inbound: 'N/A' },
+        },
+        {
+          carrier: 'ACS Alaska',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Appalachian Wireless',
+          sms: { outbound: '$0.004', inbound: 'No carrier fee' },
+          mms: { outbound: 'N/A', inbound: 'N/A' },
+        },
+        {
           carrier: 'AT&T',
           sms: { outbound: '$0.0035', inbound: '$0.0035' },
           mms: { outbound: '$0.009', inbound: '$0.009' },
         },
         {
-          carrier: 'Verizon',
+          carrier: 'Bell & Virgin',
+          sms: { outbound: 'N/A', inbound: 'N/A' },
+          mms: { outbound: 'N/A', inbound: 'No carrier fee' },
+        },
+        {
+          carrier: 'C Spire Wireless',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Carolina West',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Carrier Group A',
+          sms: { outbound: 'No carrier fee', inbound: 'No carrier fee' },
+          mms: { outbound: 'No carrier fee', inbound: 'No carrier fee' },
+        },
+        {
+          carrier: 'Carrier Group B',
+          sms: { outbound: 'No carrier fee', inbound: 'No carrier fee' },
+          mms: { outbound: 'N/A', inbound: 'N/A' },
+        },
+        {
+          carrier: 'Cellcom',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Chat Mobility',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Copper Valley LRA',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Cross Wireless',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Digicel',
+          sms: { outbound: '$0.20', inbound: 'N/A' },
+          mms: { outbound: 'N/A', inbound: 'N/A' },
+        },
+        {
+          carrier: 'Dish Wireless',
+          sms: { outbound: '$0.0045', inbound: 'No carrier fee' },
+          mms: { outbound: '$0.01', inbound: 'No carrier fee' },
+        },
+        {
+          carrier: 'EastLink',
+          sms: { outbound: 'N/A', inbound: 'N/A' },
+          mms: { outbound: 'N/A', inbound: 'No carrier fee' },
+        },
+        {
+          carrier: 'GCI',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Inland Cellular',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'James Valley Cellular',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Lleida',
+          sms: { outbound: '$0.04', inbound: 'No carrier fee' },
+          mms: { outbound: '$0.04', inbound: 'No carrier fee' },
+        },
+        {
+          carrier: 'Nex-Tech Wireless',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Panhandle Telecommunications',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Pine Belt Cellular',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Pine Cellular',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Shelcomm',
+          sms: { outbound: '$0.0035', inbound: 'N/A' },
+          mms: { outbound: 'N/A', inbound: 'N/A' },
+        },
+        {
+          carrier: 'SouthernLinc Wireless',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'T-Mobile USA',
+          sms: { outbound: '$0.0045', inbound: '$0.0025' },
+          mms: { outbound: '$0.01', inbound: '$0.01' },
+        },
+        {
+          carrier: 'Telus',
+          sms: { outbound: 'N/A', inbound: 'N/A' },
+          mms: { outbound: 'N/A', inbound: 'No carrier fee' },
+        },
+        {
+          carrier: 'Textnow Peerless',
+          sms: { outbound: '$0.0035', inbound: 'No carrier fee' },
+          mms: { outbound: '$0.0035', inbound: 'No carrier fee' },
+        },
+        {
+          carrier: 'U.S. Cellular',
+          sms: { outbound: '$0.005', inbound: 'No carrier fee' },
+          mms: { outbound: '$0.01', inbound: 'No carrier fee' },
+        },
+        {
+          carrier: 'Union Wireless',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'Verizon Wireless',
           sms: { outbound: '$0.0045', inbound: 'No carrier fee' },
           mms: { outbound: '$0.007', inbound: 'No carrier fee' },
         },
         {
-          carrier: 'T-Mobile',
-          sms: { outbound: '$0.0045', inbound: '$0.0025' },
-          mms: { outbound: '$0.01', inbound: '$0.01' },
+          carrier: 'Viaero Wireless',
+          sms: { outbound: '$0.0045', inbound: '$0.0045' },
+          mms: { outbound: '$0.01', inbound: '$0.005' },
+        },
+        {
+          carrier: 'All other carriers',
+          sms: { outbound: 'No carrier fee', inbound: 'No carrier fee' },
+          mms: { outbound: 'No carrier fee', inbound: 'No carrier fee' },
         },
       ],
     },
@@ -233,7 +388,8 @@ export const comingSoonPanels: Record<Exclude<SenderTypeId, LiveSenderTypeId>, C
 };
 
 export const lookupFee = {
-  title: 'Number look-up fee',
+  title: 'Number Look-up Fee',
+  subtitle: 'Applies across all sender types',
   value: '$0.005',
   unit: '/ look-up',
 };

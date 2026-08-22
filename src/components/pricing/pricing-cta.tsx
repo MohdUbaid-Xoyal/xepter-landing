@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const PricingCta = () => {
   return (
-    <section className="pt-20 md:pt-25 lg:pt-39">
+    <section>
       <RevealAnimation delay={0.1}>
         <div className="main-container">
           <div className="relative overflow-hidden rounded-2xl bg-white px-5 pt-20 pb-20 md:px-16 md:pt-39 md:pb-39 lg:pt-60">

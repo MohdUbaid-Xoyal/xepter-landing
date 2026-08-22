@@ -6,17 +6,14 @@ import AttLogo from '@icons-pack/react-simple-icons/icons/SiAtandt';
 import TMobileLogo from '@icons-pack/react-simple-icons/icons/SiDeutschetelekom';
 import VerizonLogo from '@icons-pack/react-simple-icons/icons/SiVerizon';
 import {
-  Award,
   ArrowDown,
   ChevronDown,
   FileText,
-  Globe,
   Info,
   MessageSquareText,
   Radio,
   RadioTower,
   Send,
-  ShieldCheck,
   User,
   Users,
   UsersRound,
@@ -328,49 +325,6 @@ export const MessagingRateCard = ({
       </p>
     )}
   </div>
-);
-
-const trustBadgeItems = [
-  {
-    icon: ShieldCheck,
-    title: 'No Hidden Fees',
-    description: 'Transparent pricing always',
-    tint: 'bg-primary-50 text-primary-500',
-  },
-  {
-    icon: Globe,
-    title: 'US Local Numbers',
-    description: 'Compliant & carrier grade',
-    tint: 'bg-emerald-50 text-emerald-600',
-  },
-  {
-    icon: Award,
-    title: 'Enterprise Ready',
-    description: 'Scalable, reliable & secure',
-    tint: 'bg-primary-50 text-primary-500',
-  },
-];
-
-/** Three trust signals in a row, reused as a lightweight reassurance strip below the rate cards. */
-export const TrustBadges = () => (
-  <SectionCard className="grid grid-cols-1 justify-items-center gap-8 py-8 sm:grid-cols-3 sm:gap-6 md:py-12">
-    {trustBadgeItems.map((item) => (
-      <div key={item.title} className="flex items-center gap-x-3">
-        <span
-          className={cn(
-            'flex size-12 shrink-0 items-center justify-center rounded-2xl',
-            item.tint
-          )}
-        >
-          <item.icon className="size-5" />
-        </span>
-        <div>
-          <p className="text-tagline-2 text-secondary font-bold">{item.title}</p>
-          <p className="text-tagline-3 text-secondary/70">{item.description}</p>
-        </div>
-      </div>
-    ))}
-  </SectionCard>
 );
 
 /** Real carrier wordmarks (simple-icons), each rendered in its own official brand color. */

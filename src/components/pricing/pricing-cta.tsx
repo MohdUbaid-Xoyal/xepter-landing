@@ -50,7 +50,7 @@ const PricingCta = () => {
               >
                 <Link href={pricingCtaButtons.primary.href} className="w-full sm:w-auto">
                   <ButtonSecondary
-                    className="w-full sm:w-auto"
+                    className="border-stroke-1 hover:border-stroke-2 w-full border sm:w-auto"
                     textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
                   >
                     {pricingCtaButtons.primary.label}

@@ -22,9 +22,18 @@ import {
   type SenderTypeId,
 } from '@/src/data/pricing-content';
 import { cn } from '@/src/utils/cn';
-import { Phone, Search } from 'lucide-react';
+import WhatsAppLogo from '@icons-pack/react-simple-icons/icons/SiWhatsapp';
+import { Code, Phone, PhoneCall, PhoneIncoming, Search } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
+import { type ComponentType, useState } from 'react';
+
+const senderTypeIcons: Record<SenderTypeId, ComponentType<{ className?: string }>> = {
+  local: Phone,
+  voice: PhoneCall,
+  tollfree: PhoneIncoming,
+  shortcode: Code,
+  whatsapp: () => <WhatsAppLogo title="WhatsApp" color="#25D366" size={16} />,
+};
 
 /** Compact horizontal sender picker. */
 const SenderPicker = ({
@@ -42,6 +51,7 @@ const SenderPicker = ({
     >
       {senderTypes.map((sender) => {
         const isActive = active === sender.id;
+        const Icon = senderTypeIcons[sender.id];
 
         return (
           <button
@@ -57,6 +67,7 @@ const SenderPicker = ({
               isActive ? 'bg-secondary text-white' : 'text-secondary hover:bg-background-4'
             )}
           >
+            <Icon className="size-4 shrink-0" />
             {sender.name}
             {sender.status === 'soon' && (
               <span

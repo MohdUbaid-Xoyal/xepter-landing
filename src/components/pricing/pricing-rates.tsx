@@ -8,7 +8,6 @@ import {
   MessagingRateCard,
   SectionCard,
   TierList,
-  TrustBadges,
   type MessageChannel,
 } from '@/src/components/pricing/rate-visuals';
 import { ButtonPrimary } from '@/src/components/shared/ui/button';
@@ -148,12 +147,6 @@ const RateSheet = ({ panel }: { panel: SenderPanel }) => {
           </div>
         </RevealAnimation>
       </div>
-
-      <RevealAnimation delay={0.45}>
-        <div>
-          <TrustBadges />
-        </div>
-      </RevealAnimation>
 
       {panel.panelFootnote && <Footnote>{panel.panelFootnote}</Footnote>}
 

@@ -1,5 +1,6 @@
+import ContactHero from '@/src/components/contact/contact-hero';
+import ContactQuickLinks from '@/src/components/contact/contact-quick-links';
 import ContactUs from '@/src/components/contact/contact-us';
-import CTA from '@/src/components/shared/cta';
 import { generateMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -12,8 +13,9 @@ export const metadata: Metadata = generateMetadata(
 const ContactPage = () => {
   return (
     <>
+      <ContactHero />
       <ContactUs />
-      <CTA />
+      <ContactQuickLinks />
     </>
   );
 };

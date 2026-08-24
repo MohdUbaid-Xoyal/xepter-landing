@@ -8,12 +8,14 @@ import {
   summaryPoints,
   type PolicyBlock,
 } from '@/src/data/privacy-policy-content';
-import { ChevronRight, ListChecks, ShieldCheck } from 'lucide-react';
+import { ChevronRight, Globe, ListChecks, Mail, MapPin, Phone, ShieldCheck } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const Card = ({ className, children }: { className?: string; children: React.ReactNode }) => (
   <div className={cn('shadow-1 rounded-[20px] bg-white p-6 md:p-8', className)}>{children}</div>
 );
+
+const CONTACT_ID = 'contact-information';
 
 /** h3/h4 sub-headings per section, with a stable anchor id — feeds the TOC's expandable sub-items. */
 const sectionSubheadings = new Map(
@@ -168,6 +170,21 @@ const TableOfContents = ({
           );
         })}
       </ul>
+      <div className="border-stroke-1 my-3 border-t" />
+      <a
+        href={`#${CONTACT_ID}`}
+        onClick={() => onNavigate(CONTACT_ID)}
+        data-active={activeId === CONTACT_ID || undefined}
+        className={cn(
+          'lenis-scroll-to text-tagline-2 flex items-center gap-x-2 rounded-lg px-2.5 py-1.5 transition-colors duration-200',
+          activeId === CONTACT_ID
+            ? 'bg-primary-50 text-secondary font-semibold'
+            : 'text-secondary/60 hover:bg-background-4 hover:text-secondary'
+        )}
+      >
+        <Mail className="size-3.5 shrink-0" />
+        <span>Contact Information</span>
+      </a>
     </nav>
   );
 };
@@ -194,6 +211,7 @@ const PrivacyContent = () => {
         section.id,
         ...(sectionSubheadings.get(section.id) ?? []).map((sub) => sub.id),
       ]),
+      CONTACT_ID,
     ];
     const headingEls = orderedIds
       .map((id) => document.getElementById(id))
@@ -349,6 +367,70 @@ const PrivacyContent = () => {
             </Card>
           </RevealAnimation>
         </div>
+
+        <RevealAnimation asChild={false} delay={0.3} id={CONTACT_ID} className="scroll-mt-32">
+          <Card className="p-6 md:p-8">
+            <div className="flex items-start gap-x-4">
+              <span className="bg-background-4 text-secondary flex size-12 shrink-0 items-center justify-center rounded-2xl">
+                <Mail className="size-6" />
+              </span>
+              <div>
+                <h2 className="text-heading-6 text-secondary font-bold">Contact Information</h2>
+                <p className="text-tagline-1 text-secondary/70 mt-2">
+                  Questions about this Privacy Policy can be directed to us using the details below.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="bg-background-4 rounded-2xl p-5">
+                <div className="flex items-center gap-x-2">
+                  <MapPin className="text-primary-500 size-4.5" />
+                  <p className="text-tagline-new text-secondary font-bold">{privacyPolicyMeta.address[0]}</p>
+                </div>
+                <p className="text-tagline-2 text-secondary/70 mt-2">
+                  {privacyPolicyMeta.address.slice(1).join(', ')}
+                </p>
+              </div>
+
+              <div className="bg-background-4 rounded-2xl p-5">
+                <div className="flex items-center gap-x-2">
+                  <Mail className="text-primary-500 size-4.5" />
+                  <p className="text-tagline-new text-secondary font-bold">Email</p>
+                </div>
+                <a
+                  href={`mailto:${privacyPolicyMeta.contactEmail}`}
+                  className="text-tagline-2 text-primary-500 mt-2 block font-medium"
+                >
+                  {privacyPolicyMeta.contactEmail}
+                </a>
+              </div>
+
+              <div className="bg-background-4 rounded-2xl p-5">
+                <div className="flex items-center gap-x-2">
+                  <Phone className="text-primary-500 size-4.5" />
+                  <p className="text-tagline-new text-secondary font-bold">Phone</p>
+                </div>
+                <p className="text-tagline-2 text-secondary/70 mt-2">{privacyPolicyMeta.phone}</p>
+              </div>
+
+              <div className="bg-background-4 rounded-2xl p-5">
+                <div className="flex items-center gap-x-2">
+                  <Globe className="text-primary-500 size-4.5" />
+                  <p className="text-tagline-new text-secondary font-bold">Website</p>
+                </div>
+                <a
+                  href={privacyPolicyMeta.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-tagline-2 text-primary-500 mt-2 block font-medium"
+                >
+                  {privacyPolicyMeta.website}
+                </a>
+              </div>
+            </div>
+          </Card>
+        </RevealAnimation>
       </div>
     </section>
   );

@@ -433,7 +433,7 @@ const TermsContent = () => {
                   rel="noopener noreferrer"
                   className="text-tagline-2 text-primary-500 mt-2 block font-medium"
                 >
-                  {termsMeta.website.replace(/^https?:\/\//, '')}
+                  {termsMeta.website}
                 </a>
               </div>
             </div>

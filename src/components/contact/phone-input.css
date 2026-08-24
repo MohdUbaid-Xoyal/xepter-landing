@@ -1,0 +1,20 @@
+@reference "../../app/globals.css";
+
+.xepter-phone-input {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.xepter-phone-input .PhoneInputCountry {
+  margin-right: 0;
+  min-width: 5.5rem;
+  @apply border-secondary/20 focus-within:border-secondary/60 flex shrink-0 items-center rounded-md border px-3.5;
+}
+
+.xepter-phone-input .PhoneInputCountryIcon {
+  --PhoneInputCountryFlag-height: 1.1em;
+  border-radius: 2px;
+  overflow: hidden;
+}

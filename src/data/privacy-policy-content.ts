@@ -703,22 +703,4 @@ export const policySections: PolicySection[] = [
       { type: 'ul', items: ['Email: support@xepter.io', 'Phone: +1 949-393-3901'] },
     ],
   },
-  {
-    id: 'contact-information',
-    number: 25,
-    title: 'Contact Information',
-    blocks: [
-      { type: 'p', text: 'For all privacy-related questions and requests:' },
-      {
-        type: 'ul',
-        items: [
-          'Xepter LLC',
-          '30 N Gould St, Ste N, Sheridan, WY 82801, United States',
-          'Email: support@xepter.io',
-          'Phone: +1 949-393-3901',
-          'Website: https://www.xepter.io',
-        ],
-      },
-    ],
-  },
 ];

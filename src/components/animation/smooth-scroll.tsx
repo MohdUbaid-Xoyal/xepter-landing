@@ -32,13 +32,15 @@ const SmoothScrollProvider = ({ children }: Readonly<SmoothScrollingProps>) => {
     }
 
     const handleClick = (ele: Element) => {
-      lenis.scrollTo(ele.getAttribute('href') ?? '', {
+      const href = ele.getAttribute('href');
+      if (!href) return;
+      lenis.scrollTo(href, {
         offset: -100,
       });
     };
 
     const elements = document.querySelectorAll('.lenis-scroll-to');
-    const clickHandler = (e: Event) => handleClick(e.target as Element);
+    const clickHandler = (e: Event) => handleClick(e.currentTarget as Element);
 
     elements.forEach((ele) => {
       ele.addEventListener('click', clickHandler);

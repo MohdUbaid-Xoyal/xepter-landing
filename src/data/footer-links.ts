@@ -32,7 +32,7 @@ export const footerNavColumns: FooterLinkColumn[] = [
   {
     title: 'Legal Policies',
     links: [
-      { label: 'Terms & Conditions', href: '#' },
+      { label: 'Terms & Conditions', href: '/terms-of-service' },
       { label: 'Privacy Policy', href: '/privacy-policy' },
       { label: 'Refund Policy', href: '#' },
       { label: 'Affiliate Policy', href: '#' },

@@ -64,6 +64,15 @@ const TableOfContents = ({ activeId }: { activeId: string }) => {
     });
   };
 
+  useEffect(() => {
+    for (const [sectionId, subs] of sectionSubheadings) {
+      if (subs.some((sub) => sub.id === activeId)) {
+        setExpandedIds((prev) => (prev.has(sectionId) ? prev : new Set(prev).add(sectionId)));
+        break;
+      }
+    }
+  }, [activeId]);
+
   return (
     <nav
       aria-label="Table of contents"
@@ -74,7 +83,7 @@ const TableOfContents = ({ activeId }: { activeId: string }) => {
       <a
         href="#summary"
         className={cn(
-          'lenis-scroll-to text-tagline-2 mb-2 flex items-center gap-x-2 rounded-lg px-2.5 py-1.5 transition-colors duration-200',
+          'lenis-scroll-to text-tagline-1 mb-2 flex items-center gap-x-2 rounded-lg px-2.5 py-1.5 transition-colors duration-200',
           activeId === 'summary'
             ? 'bg-primary-50 text-secondary font-semibold'
             : 'text-secondary/60 hover:bg-background-4 hover:text-secondary'
@@ -89,7 +98,7 @@ const TableOfContents = ({ activeId }: { activeId: string }) => {
           const subs = sectionSubheadings.get(section.id) ?? [];
           const hasSubs = subs.length > 0;
           const isExpanded = expandedIds.has(section.id);
-          const isActive = activeId === section.id;
+          const isActive = activeId === section.id || subs.some((sub) => sub.id === activeId);
 
           return (
             <li key={section.id}>
@@ -112,7 +121,7 @@ const TableOfContents = ({ activeId }: { activeId: string }) => {
                 <a
                   href={`#${section.id}`}
                   className={cn(
-                    'lenis-scroll-to text-tagline-2 flex flex-1 items-start gap-x-2 rounded-lg px-2.5 py-1.5 transition-colors duration-200',
+                    'lenis-scroll-to text-tagline-1 flex flex-1 items-start gap-x-2 rounded-lg px-2.5 py-1.5 transition-colors duration-200',
                     isActive
                       ? 'bg-primary-50 text-secondary font-semibold'
                       : 'text-secondary/60 hover:bg-background-4 hover:text-secondary'
@@ -125,17 +134,25 @@ const TableOfContents = ({ activeId }: { activeId: string }) => {
 
               {hasSubs && isExpanded && (
                 <ul className="mt-1 ml-6 space-y-1">
-                  {subs.map((sub, subIndex) => (
-                    <li key={sub.id}>
-                      <a
-                        href={`#${sub.id}`}
-                        className="lenis-scroll-to text-tagline-2 text-secondary/50 hover:bg-background-4 hover:text-secondary block rounded-lg px-2.5 py-1.5 transition-colors duration-200"
-                      >
-                        {sub.type === 'h3' ? `${String.fromCharCode(65 + subIndex)}. ` : ''}
-                        {sub.text}
-                      </a>
-                    </li>
-                  ))}
+                  {subs.map((sub, subIndex) => {
+                    const isSubActive = activeId === sub.id;
+                    return (
+                      <li key={sub.id}>
+                        <a
+                          href={`#${sub.id}`}
+                          className={cn(
+                            'lenis-scroll-to text-tagline-1 block rounded-lg px-2.5 py-1.5 transition-colors duration-200',
+                            isSubActive
+                              ? 'bg-background-4 text-secondary font-semibold'
+                              : 'text-secondary/50 hover:bg-background-4 hover:text-secondary'
+                          )}
+                        >
+                          {sub.type === 'h3' ? `${String.fromCharCode(65 + subIndex)}. ` : ''}
+                          {sub.text}
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
             </li>
@@ -150,21 +167,46 @@ const PrivacyContent = () => {
   const [activeId, setActiveId] = useState(policySections[0].id);
 
   useEffect(() => {
-    const headings = [document.getElementById('summary'), ...policySections.map((section) => document.getElementById(section.id))].filter(
-      (el): el is HTMLElement => el !== null
-    );
+    // Document-order id list (section, then its own sub-headings, before the next section) —
+    // the active heading is the last one whose top has crossed the reference line below.
+    const orderedIds = [
+      'summary',
+      ...policySections.flatMap((section) => [
+        section.id,
+        ...(sectionSubheadings.get(section.id) ?? []).map((sub) => sub.id),
+      ]),
+    ];
+    const headingEls = orderedIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveId(entry.target.id);
-        });
-      },
-      { rootMargin: '-140px 0px -70% 0px' }
-    );
+    const REFERENCE_LINE = 150;
+    let ticking = false;
 
-    headings.forEach((heading) => observer.observe(heading));
-    return () => observer.disconnect();
+    const updateActive = () => {
+      ticking = false;
+      let current = headingEls[0]?.id;
+      for (const heading of headingEls) {
+        if (heading.getBoundingClientRect().top <= REFERENCE_LINE) current = heading.id;
+        else break;
+      }
+      if (current) setActiveId(current);
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateActive);
+      }
+    };
+
+    updateActive();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
   }, []);
 
   return (

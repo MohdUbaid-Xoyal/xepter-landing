@@ -40,7 +40,12 @@ const SmoothScrollProvider = ({ children }: Readonly<SmoothScrollingProps>) => {
     };
 
     const elements = document.querySelectorAll('.lenis-scroll-to');
-    const clickHandler = (e: Event) => handleClick(e.currentTarget as Element);
+    const clickHandler = (e: Event) => {
+      // Let Lenis own the scroll animation — without this, the browser's native
+      // anchor-jump also fires and races Lenis for control of the scroll position.
+      e.preventDefault();
+      handleClick(e.currentTarget as Element);
+    };
 
     elements.forEach((ele) => {
       ele.addEventListener('click', clickHandler);

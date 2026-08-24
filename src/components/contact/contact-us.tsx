@@ -1,4 +1,4 @@
-import contactMapImg from '@/public/images/opai-img-21.png';
+import contactMapImg from '@/public/images/opai-img-21.webp';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import ContactForm from '@/src/components/contact/contact-form';

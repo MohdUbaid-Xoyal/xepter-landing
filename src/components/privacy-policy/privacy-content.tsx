@@ -9,7 +9,7 @@ import {
   type PolicyBlock,
 } from '@/src/data/privacy-policy-content';
 import { ChevronRight, ListChecks, ShieldCheck } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const Card = ({ className, children }: { className?: string; children: React.ReactNode }) => (
   <div className={cn('shadow-1 rounded-[20px] bg-white p-6 md:p-8', className)}>{children}</div>
@@ -52,8 +52,15 @@ const Block = ({ block }: { block: PolicyBlock }) => {
 };
 
 /** Sticky "on this page" nav — sections with sub-headings expand to show lettered jump links. */
-const TableOfContents = ({ activeId }: { activeId: string }) => {
+const TableOfContents = ({
+  activeId,
+  onNavigate,
+}: {
+  activeId: string;
+  onNavigate: (id: string) => void;
+}) => {
   const [expandedIds, setExpandedIds] = useState<Set<string>>(() => new Set());
+  const navRef = useRef<HTMLElement>(null);
 
   const toggle = (id: string) => {
     setExpandedIds((prev) => {
@@ -65,16 +72,12 @@ const TableOfContents = ({ activeId }: { activeId: string }) => {
   };
 
   useEffect(() => {
-    for (const [sectionId, subs] of sectionSubheadings) {
-      if (subs.some((sub) => sub.id === activeId)) {
-        setExpandedIds((prev) => (prev.has(sectionId) ? prev : new Set(prev).add(sectionId)));
-        break;
-      }
-    }
+    navRef.current?.querySelector('[data-active="true"]')?.scrollIntoView({ block: 'nearest' });
   }, [activeId]);
 
   return (
     <nav
+      ref={navRef}
       aria-label="Table of contents"
       data-lenis-prevent
       className="scroll-bar max-h-[calc(100vh-11rem)] overflow-y-auto"
@@ -82,8 +85,10 @@ const TableOfContents = ({ activeId }: { activeId: string }) => {
       <p className="text-tagline-2 text-secondary mb-3 font-bold tracking-wider uppercase">Table of Contents</p>
       <a
         href="#summary"
+        onClick={() => onNavigate('summary')}
+        data-active={activeId === 'summary' || undefined}
         className={cn(
-          'lenis-scroll-to text-tagline-1 mb-2 flex items-center gap-x-2 rounded-lg px-2.5 py-1.5 transition-colors duration-200',
+          'lenis-scroll-to text-tagline-2 mb-2 flex items-center gap-x-2 rounded-lg px-2.5 py-1.5 transition-colors duration-200',
           activeId === 'summary'
             ? 'bg-primary-50 text-secondary font-semibold'
             : 'text-secondary/60 hover:bg-background-4 hover:text-secondary'
@@ -120,8 +125,10 @@ const TableOfContents = ({ activeId }: { activeId: string }) => {
                 )}
                 <a
                   href={`#${section.id}`}
+                  onClick={() => onNavigate(section.id)}
+                  data-active={isActive || undefined}
                   className={cn(
-                    'lenis-scroll-to text-tagline-1 flex flex-1 items-start gap-x-2 rounded-lg px-2.5 py-1.5 transition-colors duration-200',
+                    'lenis-scroll-to text-tagline-2 flex flex-1 items-start gap-x-2 rounded-lg px-2.5 py-1.5 transition-colors duration-200',
                     isActive
                       ? 'bg-primary-50 text-secondary font-semibold'
                       : 'text-secondary/60 hover:bg-background-4 hover:text-secondary'
@@ -140,8 +147,10 @@ const TableOfContents = ({ activeId }: { activeId: string }) => {
                       <li key={sub.id}>
                         <a
                           href={`#${sub.id}`}
+                          onClick={() => onNavigate(sub.id)}
+                          data-active={isSubActive || undefined}
                           className={cn(
-                            'lenis-scroll-to text-tagline-1 block rounded-lg px-2.5 py-1.5 transition-colors duration-200',
+                            'lenis-scroll-to text-tagline-2 block rounded-lg px-2.5 py-1.5 transition-colors duration-200',
                             isSubActive
                               ? 'bg-background-4 text-secondary font-semibold'
                               : 'text-secondary/50 hover:bg-background-4 hover:text-secondary'
@@ -165,6 +174,16 @@ const TableOfContents = ({ activeId }: { activeId: string }) => {
 
 const PrivacyContent = () => {
   const [activeId, setActiveId] = useState(policySections[0].id);
+  // While a TOC click's Lenis scroll animation is in flight, ignore scroll-driven updates —
+  // the click already tells us the answer, and layout still settling underneath (images,
+  // reveal animations) can otherwise make the scroll-computed position land on the wrong
+  // heading before things stabilize.
+  const suppressScrollSpyUntilRef = useRef(0);
+
+  const handleNavigate = (id: string) => {
+    setActiveId(id);
+    suppressScrollSpyUntilRef.current = Date.now() + 1300;
+  };
 
   useEffect(() => {
     // Document-order id list (section, then its own sub-headings, before the next section) —
@@ -180,14 +199,19 @@ const PrivacyContent = () => {
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => el !== null);
 
-    const REFERENCE_LINE = 150;
     let ticking = false;
 
     const updateActive = () => {
       ticking = false;
+      if (Date.now() < suppressScrollSpyUntilRef.current) return;
+      // Fixed px, not viewport-relative: a click always lands the target heading at the
+      // same offset (navbar + scroll-margin + Lenis offset ≈ 228px) regardless of viewport
+      // size, so a percentage-based line either misses it on short screens or — on tall
+      // screens — overshoots into the next heading when a section is short.
+      const referenceLine = 290;
       let current = headingEls[0]?.id;
       for (const heading of headingEls) {
-        if (heading.getBoundingClientRect().top <= REFERENCE_LINE) current = heading.id;
+        if (heading.getBoundingClientRect().top <= referenceLine) current = heading.id;
         else break;
       }
       if (current) setActiveId(current);
@@ -253,7 +277,7 @@ const PrivacyContent = () => {
             className="col-span-12 hidden lg:sticky lg:top-32 lg:col-span-3 lg:block"
           >
             <Card className="p-6 pl-4 md:p-8 md:pl-5">
-              <TableOfContents activeId={activeId} />
+              <TableOfContents activeId={activeId} onNavigate={handleNavigate} />
             </Card>
           </RevealAnimation>
 

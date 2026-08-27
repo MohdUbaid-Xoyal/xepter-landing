@@ -1,4 +1,4 @@
-import ProductPageTemplate from '@/src/components/products/product-page-template';
+import SmsPageContent from '@/src/components/products/sms-page-content';
 import { productsContent } from '@/src/data/products-content';
 import { generateMetadata as buildMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -11,6 +11,6 @@ export const metadata: Metadata = buildMetadata(
   '/products/sms'
 );
 
-const SmsPage = () => <ProductPageTemplate content={content} />;
+const SmsPage = () => <SmsPageContent />;
 
 export default SmsPage;

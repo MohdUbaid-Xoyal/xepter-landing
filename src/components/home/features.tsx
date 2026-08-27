@@ -105,16 +105,16 @@ const Features = () => {
                   delay={0.2 + index * 0.1}
                   className={cn('w-full lg:w-0 lg:flex-1', card.offset)}
                 >
-                  <div className="shadow-1 bg-secondary rounded-2xl p-5 xl:p-6">
-                    <span className="bg-primary-500/15 text-primary-300 mb-5 flex size-12 shrink-0 items-center justify-center rounded-2xl">
+                  <div className="shadow-1 rounded-2xl bg-white p-5 xl:p-6">
+                    <span className="bg-primary-50 text-primary-500 mb-5 flex size-12 shrink-0 items-center justify-center rounded-2xl">
                       <card.icon className="size-6" />
                     </span>
-                    <h3 className="text-heading-6 font-bold text-white">{card.title}</h3>
-                    <p className="text-tagline-2 mt-2 text-white/70">{card.description}</p>
+                    <h3 className="text-heading-6 text-secondary font-bold">{card.title}</h3>
+                    <p className="text-tagline-2 text-secondary/80 mt-2">{card.description}</p>
                     <Link
                       href="/features"
                       aria-label={`Learn more about ${card.title}`}
-                      className="bg-white/10 hover:bg-white/20 mt-5 flex size-10 items-center justify-center rounded-full transition-colors duration-200"
+                      className="bg-secondary hover:bg-secondary/90 mt-5 flex size-10 items-center justify-center rounded-full transition-colors duration-200"
                     >
                       <ArrowDotRightIcon className="size-5 fill-white" />
                     </Link>

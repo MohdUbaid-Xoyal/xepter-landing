@@ -47,10 +47,8 @@ export interface FooterSocialLink {
 }
 
 export const footerSocialLinks: FooterSocialLink[] = [
-  { label: 'Facebook', href: '#', icon: '/images/icons/facebook-dark.svg' },
+  { label: 'LinkedIn', href: '#', icon: '/images/icons/linkedin-dark.svg' },
   { label: 'Instagram', href: '#', icon: '/images/icons/instagram-dark.svg' },
   { label: 'Youtube', href: '#', icon: '/images/icons/youtube-dark.svg' },
-  { label: 'LinkedIn', href: '#', icon: '/images/icons/linkedin-dark.svg' },
-  { label: 'Dribble', href: '#', icon: '/images/icons/dribble-dark.svg' },
-  { label: 'Behance', href: '#', icon: '/images/icons/behance-dark.svg' },
+  { label: 'X', href: '#', icon: '/images/icons/x-dark.svg' },
 ];

@@ -22,7 +22,7 @@ const highlights = [
 
 const NetworkBand = () => {
   return (
-    <section className="pt-20 md:pt-25 lg:pt-39">
+    <section className="pt-12 md:pt-16 lg:pt-20">
       <div className="main-container">
         <div className="bg-secondary rounded-[20px] px-6 py-16 md:px-16 md:py-20">
           <div className="mx-auto max-w-[640px] space-y-3 text-center">

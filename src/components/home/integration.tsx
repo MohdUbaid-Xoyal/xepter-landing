@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const Integration = () => {
   return (
-    <section className="relative pt-20 md:pt-25 lg:pt-39">
+    <section className="relative pt-12 md:pt-16 lg:pt-20">
       <div className="main-container relative overflow-hidden pb-35">
         <div className="relative z-30 space-y-8 lg:space-y-14">
           <div className="space-y-5 text-center">

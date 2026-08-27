@@ -15,7 +15,7 @@ const benefitCards = [
 
 const Benefits = () => {
   return (
-    <section className="pt-20 md:pt-25 lg:pt-39">
+    <section className="pt-12 md:pt-16 lg:pt-20">
       <div className="main-container">
         <div className="space-y-10 lg:space-y-18">
           <div className="space-y-8 text-center">

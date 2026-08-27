@@ -10,8 +10,14 @@ import Link from 'next/link';
 
 const AboutUs = () => {
   return (
-    <section className="pt-20 md:pt-25 lg:pt-39">
-      <div className="main-container">
+    <section className="pt-12 md:pt-16 lg:pt-20">
+      <div className="main-container space-y-8 lg:space-y-14">
+        <div className="text-center">
+          <RevealAnimation delay={0.1}>
+            <BadgePrimary>Why Choose Xepter</BadgePrimary>
+          </RevealAnimation>
+        </div>
+
         <div className="grid grid-cols-12 items-center justify-center gap-y-8 lg:gap-x-8 xl:gap-x-14">
           <RevealAnimation
             delay={0.1}
@@ -25,25 +31,57 @@ const AboutUs = () => {
           </RevealAnimation>
 
           <div className="col-span-12 lg:col-span-9">
-            <div className="flex w-full flex-col gap-y-8 xl:gap-y-14">
-              <RevealAnimation delay={0.2}>
-                <div className="flex flex-col items-center justify-center gap-y-8 md:gap-x-8 lg:flex-row xl:gap-x-14">
-                  <div className="w-full space-y-5 lg:w-1/2">
-                    <BadgePrimary>About Us</BadgePrimary>
+            <RevealAnimation delay={0.2}>
+              <div className="flex flex-col items-start gap-y-8 md:flex-row md:gap-x-8 xl:gap-x-14">
+                <div className="w-full space-y-8 md:w-1/2">
+                  <div className="space-y-5">
                     <TextReveal delay={0.3}>
-                      <h2>The team behind every conversation</h2>
+                      <h2 className="text-heading-4 font-normal">
+                        Built for Reliable Messaging.
+                        <br />
+                        Designed to Help Your Business{' '}
+                        Grow.
+                      </h2>
+                    </TextReveal>
+                    <TextReveal delay={0.35}>
+                      <p className="text-background-14/60">
+                        Whether you&apos;re sending marketing campaigns, appointment reminders, OTPs, or customer
+                        notifications, Xepter delivers fast, reliable, and compliant messaging across the US. Our
+                        platform combines powerful APIs, transparent pricing, and enterprise-grade infrastructure
+                        to help your business communicate with confidence.
+                      </p>
                     </TextReveal>
                   </div>
 
-                  <div className="w-full space-y-8 lg:w-1/2 lg:space-y-14">
+                  <div className="flex items-center gap-x-8">
+                    <div className="space-y-1">
+                      <h3 className="text-heading-5">
+                        <CounterNumberOnScroll value={99} />%
+                      </h3>
+                      <p className="text-background-14/60">SMS Delivery Rate</p>
+                    </div>
+                    <div className="space-y-1">
+                      <h3 className="text-heading-5">
+                        <CounterNumberOnScroll value={99.9} />%
+                      </h3>
+                      <p className="text-background-14/60">Platform Uptime</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="w-full space-y-5 md:w-1/2">
+                  <div className="space-y-3">
                     <TextReveal delay={0.4}>
-                      <p>
-                        We built Xepter to solve one problem — too many channels, too many logins,
-                        too many missed replies. One number, every channel, one conversation.
+                      <p className="text-tagline-2 text-secondary/60 font-inter-tight font-semibold tracking-widest uppercase">
+                        See Xepter in Action
                       </p>
                     </TextReveal>
-
-                    <Link href="/about">
+                    <TextReveal delay={0.45}>
+                      <h3 className="text-heading-4">
+                        Everything You Need to Send, Track &amp; Scale SMS Campaigns
+                      </h3>
+                    </TextReveal>
+                    <Link href="/about" className="inline-block pt-3">
                       <ButtonWhite
                         className="mx-auto w-[80%]! md:mx-0 md:w-fit!"
                         textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"
@@ -52,36 +90,8 @@ const AboutUs = () => {
                       </ButtonWhite>
                     </Link>
                   </div>
-                </div>
-              </RevealAnimation>
 
-              <RevealAnimation delay={0.3}>
-                <div className="flex flex-col items-end justify-end gap-y-5 md:flex-row md:gap-x-8 xl:gap-x-14">
-                  <div className="w-full space-y-8 md:w-1/2">
-                    <div className="flex items-center justify-start gap-x-8">
-                      <div className="space-y-1">
-                        <h3 className="text-heading-5">
-                          <CounterNumberOnScroll value={4} />
-                        </h3>
-                        <p className="text-background-14/60">channels in one inbox</p>
-                      </div>
-                      <div className="space-y-1">
-                        <h3 className="text-heading-5">
-                          <CounterNumberOnScroll value={2} />
-                        </h3>
-                        <p className="text-background-14/60">native CRM integrations</p>
-                      </div>
-                    </div>
-
-                    <div className="space-y-1">
-                      <h3 className="text-heading-5">
-                        <CounterNumberOnScroll value={1} />
-                      </h3>
-                      <p className="text-background-14/60">number for SMS, MMS, voice & WhatsApp</p>
-                    </div>
-                  </div>
-
-                  <figure className="h-[290px] w-full overflow-hidden rounded-[20px] md:w-1/2">
+                  <figure className="h-[290px] w-full overflow-hidden rounded-[20px]">
                     <Image
                       src={aboutImgSecondary}
                       alt="about-us-img"
@@ -89,8 +99,8 @@ const AboutUs = () => {
                     />
                   </figure>
                 </div>
-              </RevealAnimation>
-            </div>
+              </div>
+            </RevealAnimation>
           </div>
         </div>
       </div>

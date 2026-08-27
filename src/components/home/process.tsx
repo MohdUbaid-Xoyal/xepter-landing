@@ -147,7 +147,7 @@ const processCards: ProcessCardData[] = [
 
 const Process = () => {
   return (
-    <section className="pt-20 md:pt-25 lg:pt-39">
+    <section className="pt-12 md:pt-16 lg:pt-20">
       <div className="main-container">
         <div className="space-y-10 lg:space-y-18">
           <div className="flex w-auto flex-col items-center justify-center gap-x-18 md:mx-auto md:w-[500px] lg:w-auto lg:flex-row">

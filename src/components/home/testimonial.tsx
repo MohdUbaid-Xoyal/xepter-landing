@@ -25,7 +25,7 @@ import Image from 'next/image';
 
 const Testimonial = () => {
   return (
-    <section className="pt-20 md:pt-25 lg:pt-39">
+    <section className="pt-12 md:pt-16 lg:pt-20">
       <div className="main-container">
         <div className="grid grid-cols-12 items-start justify-center gap-x-5 gap-y-5 lg:gap-y-0 xl:gap-x-14">
           <div className="col-span-12 lg:col-span-4">

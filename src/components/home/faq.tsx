@@ -53,7 +53,7 @@ const faqItems = [
 
 const FAQ = () => {
   return (
-    <section className="pt-20 md:pt-25 lg:pt-39">
+    <section className="pt-12 md:pt-16 lg:pt-20">
       <div className="main-container">
         <div className="flex flex-col items-start justify-center gap-y-6 overflow-hidden lg:flex-row lg:gap-x-18 lg:gap-y-0">
           <RevealAnimation delay={0.1} direction="left" offset={100} className="w-full lg:w-1/2">

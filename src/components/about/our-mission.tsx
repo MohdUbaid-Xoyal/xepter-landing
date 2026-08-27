@@ -1,4 +1,4 @@
-import missionImg from '@/public/images/ns-img-30.jpg';
+import missionImg from '@/public/images/ns-img-30.webp';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';

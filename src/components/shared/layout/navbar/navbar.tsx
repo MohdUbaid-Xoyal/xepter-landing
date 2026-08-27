@@ -1,6 +1,6 @@
 'use client';
 
-import mainLogo from '@/public/images/logo/Xepter-Engage-Communicate-Grow-Medium.png';
+import mainLogo from '@/public/images/logo/Xepter-Full-Logo.png';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import MobileMenu from '@/src/components/shared/layout/mobile-menu/mobile-menu';
 import { CompanyMenu } from '@/src/components/shared/layout/navbar/company-menu';
@@ -83,7 +83,7 @@ const Navbar = () => {
                   <Image
                     src={mainLogo}
                     alt="Xepter Logo"
-                    width={150}
+                    width={140}
                     height={42}
                     unoptimized
                     priority

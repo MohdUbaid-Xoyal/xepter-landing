@@ -10,7 +10,7 @@ const Integration = () => {
   return (
     <section className="relative pt-12 md:pt-16 lg:pt-20">
       <div className="main-container relative overflow-hidden pb-35">
-        <div className="relative z-30 space-y-8 lg:space-y-14">
+        <div className="relative z-30 space-y-8 pt-28 md:pt-0 lg:space-y-14">
           <div className="space-y-5 text-center">
             <RevealAnimation delay={0.1}>
               <BadgePrimary>Integration</BadgePrimary>
@@ -41,7 +41,7 @@ const Integration = () => {
         <RevealAnimation
           asChild={false}
           delay={0.5}
-          className="absolute top-[-18%] left-1/2 -translate-x-1/2 md:top-[-72%] lg:top-[-115%] xl:top-[-137%]"
+          className="absolute top-[calc(min(85vw,380px)*-1+65px)] left-1/2 -translate-x-1/2 md:top-[-72%] lg:top-[-115%] xl:top-[-137%]"
         >
           <LogoOrbit speed={0.3}>
             <OrbitRing>

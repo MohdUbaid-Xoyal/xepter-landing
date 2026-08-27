@@ -26,7 +26,7 @@ const OrbitItem = ({ src, alt, className, ...props }: OrbitItemProps) => {
       className="absolute top-[calc(var(--orbit-size)*-0.5)]"
       {...props}
     >
-      <div ref={orbitItemRef} className={cn('absolute top-[-20px] size-16 rounded-full', className)}>
+      <div ref={orbitItemRef} className={cn('absolute top-[-20px] size-11 rounded-full md:size-16', className)}>
         <Image src={src} alt={alt} className="size-full object-cover" />
       </div>
     </div>

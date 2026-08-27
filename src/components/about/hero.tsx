@@ -1,5 +1,5 @@
 import gradientImg from '@/public/images/gradient/opai-29.png';
-import aboutHeroImg from '@/public/images/ns-img-29.jpg';
+import aboutHeroImg from '@/public/images/ns-img-29.webp';
 import CounterNumberOnScroll from '@/src/components/animation/counter-number-on-scroll';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';

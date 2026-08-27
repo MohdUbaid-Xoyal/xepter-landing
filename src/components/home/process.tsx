@@ -18,7 +18,7 @@ import {
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';
-import { ButtonWhite } from '@/src/components/shared/ui/button';
+import { ButtonPrimary, ButtonWhite } from '@/src/components/shared/ui/button';
 import { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
@@ -38,11 +38,8 @@ type ProcessCardData = {
 
 const processOneActions = (
   <>
-    <Link
-      href="/contact"
-      className="bg-secondary hover:bg-primary-600 text-tagline-1 rounded-full px-6 py-3 font-medium text-white transition-colors"
-    >
-      Talk to an expert
+    <Link href="/signup" className="inline-block" aria-label="Get started">
+      <ButtonPrimary>Get started</ButtonPrimary>
     </Link>
     <Link
       href="/developers"
@@ -55,91 +52,85 @@ const processOneActions = (
 
 const processCards: ProcessCardData[] = [
   {
-    id: 'apis',
+    id: 'get-started',
     image: processCardOneImg,
-    imageAlt: 'Messaging, email, and voice APIs',
-    eyebrow: 'APIs',
-    title: (
-      <>
-        Messaging, email, and voice
-        <br />
-        APIs to help developers build
-        <br />
-        better products
-      </>
-    ),
-    description: (
-      <>
-        Start small or scale globally—our messaging, email, and
-        <br />
-        voice APIs provide the secure, reliable foundation you
-        <br />
-        need to connect with every handset worldwide.
-      </>
-    ),
-    details: [],
+    imageAlt: 'Create your Xepter account and add funds',
+    eyebrow: 'Get started',
+    title: 'Create Your Account & Add Funds',
+    description:
+      'Get started with Xepter in minutes. Create your account, add funds to your messaging wallet, and configure your business profile.',
+    details: [
+      {
+        title: 'Quick account setup',
+        description: 'Create your Xepter account and configure your business information.',
+      },
+      {
+        title: 'Pay as you go',
+        description: 'No long-term commitment. Add funds and pay based on your messaging usage.',
+      },
+    ],
     actions: processOneActions,
   },
   {
-    id: 'channels',
+    id: '10dlc-compliance',
     image: processCardTwoImg,
-    imageAlt: 'Connect every channel',
+    imageAlt: 'Register your brand and 10DLC campaign',
     overlay: processCardTwoOverlay,
     overlayAlt: 'process-card-2-img',
-    eyebrow: 'Channels',
-    title: 'Bring SMS, MMS, Voice, and WhatsApp into one number',
+    eyebrow: '10DLC compliance',
+    title: 'Register Your Brand & 10DLC Campaign',
     description:
-      'Provision a number, connect it to GoHighLevel, HubSpot, or your own stack, and start sending and receiving across every channel from the same place.',
+      'Tell us about your business and messaging use case. Xepter helps guide you through the required 10DLC registration and campaign submission process.',
     details: [
       {
-        title: 'One number, every channel',
-        description: 'SMS, MMS, voice, and WhatsApp all run through the same number and conversation thread.',
+        title: 'Brand registration',
+        description: 'Submit your business information for 10DLC brand registration.',
       },
       {
-        title: 'CRM-native setup',
-        description: 'Connect in minutes inside GoHighLevel or HubSpot — no separate messaging app to manage.',
+        title: 'Campaign setup',
+        description: 'Provide your messaging use case, sample messages, opt-in process, and campaign details.',
       },
     ],
   },
   {
-    id: 'compliance',
+    id: 'connect',
     image: processCardThreeImg,
-    imageAlt: 'Stay compliant and deliverable',
+    imageAlt: 'Get your number and connect your messaging',
     overlay: processCardThreeOverlay,
     overlayAlt: 'process-card-3-img',
-    eyebrow: 'Compliance',
-    title: 'Built-in 10DLC compliance and delivery tracking',
+    eyebrow: 'Connect',
+    title: 'Get Your Number & Connect Your Messaging',
     description:
-      'Brand and campaign registration, delivery receipts, and webhooks are handled for you, so your traffic stays compliant and you always know what happened.',
+      'Choose your messaging number and connect Xepter to the tools your business already uses. Developers can integrate through our APIs and webhooks.',
     details: [
       {
-        title: '10DLC handled for you',
-        description: 'Brand and campaign registration keeps your SMS traffic compliant by default.',
+        title: 'US Phone Numbers',
+        description: 'Search, purchase, and manage messaging-enabled numbers.',
       },
       {
-        title: 'Real-time delivery events',
-        description: 'Webhooks and receipts show exactly what was sent, delivered, or failed.',
+        title: 'Powerful APIs & Webhooks',
+        description: 'Connect Xepter to your application, CRM, website, or existing workflow.',
       },
     ],
   },
   {
-    id: 'scale',
+    id: 'launch',
     image: processCardFourImg,
-    imageAlt: 'Scale with confidence',
+    imageAlt: 'Start sending, tracking, and scaling',
     overlay: processCardFourOverlay,
     overlayAlt: 'process-card-4-img',
-    eyebrow: 'Scale',
-    title: 'Grow from one number to every team and account',
+    eyebrow: 'Launch',
+    title: 'Start Sending, Track & Scale',
     description:
-      "Add numbers, teams, and accounts as you grow, with role-based access and usage visibility across the whole organization.",
+      'Launch your messaging campaigns and monitor performance from your Xepter dashboard. Track delivery, failures, clicks, and usage as you grow.',
     details: [
       {
-        title: 'Team & role management',
-        description: 'Control who can send, call, and manage numbers across your organization.',
+        title: 'Real-time analytics',
+        description: 'See how your messages are performing with detailed delivery and engagement insights.',
       },
       {
-        title: 'Built for growth',
-        description: "Add numbers and accounts as your business — or your agency's client list — grows.",
+        title: 'Scale with confidence',
+        description: 'Increase your messaging volume and take advantage of volume-based pricing as your business grows.',
       },
     ],
   },

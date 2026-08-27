@@ -15,7 +15,7 @@ const OrbitRing = ({ children, className, ...props }: OrbitRingProps) => {
     <div
       ref={orbitRingRef}
       className={cn(
-        'border-stroke-3 relative mx-auto aspect-square size-[min(calc(100vw-1.5rem),1100px)] rounded-full border-2 md:size-[min(90vw,960px)] lg:size-[min(88vw,1100px)]',
+        'border-stroke-3 relative mx-auto aspect-square size-[min(85vw,380px)] rounded-full border-2 md:size-[min(90vw,960px)] lg:size-[min(88vw,1100px)]',
         className
       )}
       {...props}

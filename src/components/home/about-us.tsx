@@ -25,7 +25,7 @@ const AboutUs = () => {
             offset={100}
             className="col-span-12 lg:col-span-3"
           >
-            <figure className="h-[520px] w-full overflow-hidden rounded-[20px]">
+            <figure className="h-[260px] w-full overflow-hidden rounded-[20px] sm:h-[320px] md:h-[400px] lg:h-[520px]">
               <Image src={aboutImgPrimary} alt="about-us-img" className="size-full object-cover" />
             </figure>
           </RevealAnimation>
@@ -91,7 +91,7 @@ const AboutUs = () => {
                     </Link>
                   </div>
 
-                  <figure className="h-[290px] w-full overflow-hidden rounded-[20px]">
+                  <figure className="h-[220px] w-full overflow-hidden rounded-[20px] md:h-[260px] lg:h-[290px]">
                     <Image
                       src={aboutImgSecondary}
                       alt="about-us-img"

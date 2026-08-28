@@ -15,27 +15,23 @@ export const footerNavColumns: FooterLinkColumn[] = [
     title: 'Company',
     links: [
       { label: 'About Us', href: '/about' },
-      { label: 'Blog', href: '/blog' },
-      { label: 'Career', href: '#' },
+      { label: 'News & Updates', href: '/blog' },
       { label: 'Contact Us', href: '/contact' },
     ],
   },
   {
     title: 'Support',
     links: [
-      { label: 'FAQ', href: '#' },
       { label: 'Documentation', href: DOCS_URL },
-      { label: 'Tutorial', href: '#' },
-      { label: 'Support', href: '#' },
+      { label: 'Login to Portal', href: '/login' },
+      { label: 'Use Cases', href: '/solutions/use-cases' },
     ],
   },
   {
     title: 'Legal Policies',
     links: [
-      { label: 'Terms & Conditions', href: '/terms-of-service' },
       { label: 'Privacy Policy', href: '/privacy-policy' },
-      { label: 'Refund Policy', href: '#' },
-      { label: 'Affiliate Policy', href: '#' },
+      { label: 'Terms of Use', href: '/terms-of-service' },
     ],
   },
 ];

@@ -1,19 +1,13 @@
-import BlogList from '@/src/components/blog/blog-list';
-import Testimonial from '@/src/components/home/testimonial';
-import CTA from '@/src/components/shared/cta';
-import { generateMetadata } from '@/src/utils/generateMetaData';
+import ComingSoonContent from '@/src/components/products/coming-soon-content';
+import { generateMetadata as buildMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = generateMetadata('Blog | Xepter', undefined, '/blog');
+export const metadata: Metadata = buildMetadata(
+  'News & Updates | Coming Soon | Xepter',
+  'Our news and updates page is coming soon. Subscribe to be the first to know when it goes live.',
+  '/blog'
+);
 
-const Page = () => {
-  return (
-    <>
-      <BlogList />
-      <Testimonial />
-      <CTA />
-    </>
-  );
-};
+const Page = () => <ComingSoonContent productName="News & Updates" />;
 
 export default Page;

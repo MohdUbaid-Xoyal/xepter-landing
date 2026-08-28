@@ -31,9 +31,9 @@ const aboutLinksColumnOne: CompanyLink[] = [
     icon: AboutIcon,
   },
   {
-    title: 'Why Choose Us',
+    title: 'Why Choose Us (Coming soon)',
     description: 'Our unique selling points and competitive advantages',
-    href: '#',
+    href: '/why-choose-us',
     icon: WhyChooseUsIcon,
   },
   // {
@@ -58,7 +58,7 @@ const aboutLinksColumnTwo: CompanyLink[] = [
     icon: ContactIcon,
   },
   {
-    title: 'News & Updates',
+    title: 'News & Updates (Coming soon)',
     description: 'News, updates, and guides',
     href: '/blog',
     icon: BlogIcon,

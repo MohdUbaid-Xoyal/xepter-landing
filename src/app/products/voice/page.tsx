@@ -1,16 +1,13 @@
-import ProductPageTemplate from '@/src/components/products/product-page-template';
-import { productsContent } from '@/src/data/products-content';
+import ComingSoonContent from '@/src/components/products/coming-soon-content';
 import { generateMetadata as buildMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
-const content = productsContent.voice;
-
 export const metadata: Metadata = buildMetadata(
-  content.metaTitle,
-  content.metaDescription,
+  'Voice | Coming Soon | Xepter',
+  'Xepter Voice is coming soon. Subscribe to be the first to know when it goes live.',
   '/products/voice'
 );
 
-const VoicePage = () => <ProductPageTemplate content={content} />;
+const VoicePage = () => <ComingSoonContent productName="Voice" />;
 
 export default VoicePage;

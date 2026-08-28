@@ -1,16 +1,13 @@
-import ProductPageTemplate from '@/src/components/products/product-page-template';
-import { productsContent } from '@/src/data/products-content';
+import ComingSoonContent from '@/src/components/products/coming-soon-content';
 import { generateMetadata as buildMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
-const content = productsContent.whatsapp;
-
 export const metadata: Metadata = buildMetadata(
-  content.metaTitle,
-  content.metaDescription,
+  'WhatsApp | Coming Soon | Xepter',
+  'Xepter WhatsApp is coming soon. Subscribe to be the first to know when it goes live.',
   '/products/whatsapp'
 );
 
-const WhatsAppPage = () => <ProductPageTemplate content={content} />;
+const WhatsAppPage = () => <ComingSoonContent productName="WhatsApp" />;
 
 export default WhatsAppPage;

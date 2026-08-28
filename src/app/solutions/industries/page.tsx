@@ -1,16 +1,13 @@
-import SolutionPageTemplate from '@/src/components/solutions/solution-page-template';
-import { solutionsContent } from '@/src/data/solutions-content';
+import ComingSoonContent from '@/src/components/products/coming-soon-content';
 import { generateMetadata as buildMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
-const content = solutionsContent.industries;
-
 export const metadata: Metadata = buildMetadata(
-  content.metaTitle,
-  content.metaDescription,
+  'Industries | Coming Soon | Xepter',
+  'Our industries page is coming soon. Subscribe to be the first to know when it goes live.',
   '/solutions/industries'
 );
 
-const IndustriesPage = () => <SolutionPageTemplate content={content} />;
+const IndustriesPage = () => <ComingSoonContent productName="Industries" />;
 
 export default IndustriesPage;

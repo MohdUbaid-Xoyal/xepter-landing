@@ -1,16 +1,13 @@
-import SolutionPageTemplate from '@/src/components/solutions/solution-page-template';
-import { solutionsContent } from '@/src/data/solutions-content';
+import ComingSoonContent from '@/src/components/products/coming-soon-content';
 import { generateMetadata as buildMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
-const content = solutionsContent['use-cases'];
-
 export const metadata: Metadata = buildMetadata(
-  content.metaTitle,
-  content.metaDescription,
+  'Use Cases | Coming Soon | Xepter',
+  'Our use-cases page is coming soon. Subscribe to be the first to know when it goes live.',
   '/solutions/use-cases'
 );
 
-const UseCasesPage = () => <SolutionPageTemplate content={content} />;
+const UseCasesPage = () => <ComingSoonContent productName="Use Cases" />;
 
 export default UseCasesPage;

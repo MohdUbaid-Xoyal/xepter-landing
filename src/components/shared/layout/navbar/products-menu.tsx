@@ -35,7 +35,7 @@ const productLinksColumnOne: ProductLink[] = [
     icon: MmsIcon,
   },
   {
-    title: 'Voice',
+    title: 'Voice (Coming soon)',
     description: 'A browser-based dialer with hold, transfer, and conferencing',
     href: '/products/voice',
     icon: VoiceIcon,
@@ -44,7 +44,7 @@ const productLinksColumnOne: ProductLink[] = [
 
 const productLinksColumnTwo: ProductLink[] = [
   {
-    title: 'WhatsApp',
+    title: 'WhatsApp (Coming soon)',
     description: 'Template messaging and two-way WhatsApp conversations',
     href: '/products/whatsapp',
     icon: WhatsAppIcon,
@@ -52,7 +52,7 @@ const productLinksColumnTwo: ProductLink[] = [
   {
     title: 'RCS (Coming soon)',
     description: 'Rich messaging for Android',
-    href: '#',
+    href: '/products/rcs',
     icon: RcsIcon,
   },
 ];

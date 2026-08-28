@@ -17,19 +17,19 @@ const MENU_SOLUTIONS_ID = 'resources-dropdown-menu-v2';
 
 const solutionLinks: SolutionLink[] = [
   {
-    title: 'Use Cases',
+    title: 'Use Cases (Coming soon)',
     description: 'Real-world examples of our solutions',
     href: '/solutions/use-cases',
     icon: UseCaseIcon,
   },
   {
-    title: 'Industries',
+    title: 'Industries (Coming soon)',
     description: 'Built for agencies, real estate, and more',
     href: '/solutions/industries',
     icon: IndustriesIcon,
   },
   {
-    title: 'Teams',
+    title: 'Teams (Coming soon)',
     description: 'For marketing, sales, support, and operations',
     href: '/solutions/teams',
     icon: TeamIcon,

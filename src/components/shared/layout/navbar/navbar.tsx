@@ -194,7 +194,7 @@ const Navbar = () => {
               <Link href="/login" className={loginLinkClass}>
                 Login
               </Link>
-              <Link href="/signup" className="inline-block" aria-label="Get started">
+              <Link href="/demo" className="inline-block" aria-label="Get started">
                 <ButtonPrimary>Get started</ButtonPrimary>
               </Link>
             </div>

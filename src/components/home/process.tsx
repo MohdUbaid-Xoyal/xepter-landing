@@ -38,7 +38,7 @@ type ProcessCardData = {
 
 const processOneActions = (
   <>
-    <Link href="/signup" className="inline-block" aria-label="Get started">
+    <Link href="/demo" className="inline-block" aria-label="Get started">
       <ButtonPrimary>Get started</ButtonPrimary>
     </Link>
     <Link

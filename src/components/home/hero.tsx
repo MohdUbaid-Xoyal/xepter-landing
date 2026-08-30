@@ -63,7 +63,7 @@ const Hero = () => {
 
             <RevealAnimation delay={0.3} instant>
               <div className="flex flex-col items-center justify-center gap-y-3 md:flex-row md:gap-x-5">
-                <Link href="/signup" className="w-[70%] md:w-auto">
+                <Link href="/demo" className="w-[70%] md:w-auto">
                   <ButtonPrimary
                     className="w-full md:w-auto"
                     textClassName="text-center text-nowrap max-sm:flex-1 max-sm:pr-8!"

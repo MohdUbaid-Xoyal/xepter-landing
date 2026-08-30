@@ -2,12 +2,24 @@
 
 import Script from 'next/script';
 
+// The GHL form iframe carries a little top/bottom chrome padding baked into
+// its declared data-height. It's trimmed with small negative margins on a
+// clipped wrapper — the form itself needs close to the full 948px.
 const ContactForm = () => {
   return (
-    <>
+    <div className="relative w-full overflow-hidden pt-5">
       <iframe
         src="https://api.leadconnectorhq.com/widget/form/e1lJnQ2TwlUBDtSDd3Su"
-        style={{ width: '100%', height: '100%', border: 'none', borderRadius: '20px', display: 'block' }}
+        scrolling="no"
+        style={{
+          width: '100%',
+          height: '948px',
+          marginTop: '-14px',
+          marginBottom: '-14px',
+          border: 'none',
+          borderRadius: '20px',
+          display: 'block',
+        }}
         id="inline-e1lJnQ2TwlUBDtSDd3Su"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
@@ -25,7 +37,7 @@ const ContactForm = () => {
         title="Form 1"
       />
       <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
-    </>
+    </div>
   );
 };
 

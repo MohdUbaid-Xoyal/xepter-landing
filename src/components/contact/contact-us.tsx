@@ -10,7 +10,7 @@ const ContactUs = () => {
           <ContactInfoPanel />
 
           <RevealAnimation asChild={false} delay={0.2} className="col-span-12 lg:col-span-7 lg:col-start-6">
-            <div className="shadow-1 h-[948px] overflow-hidden rounded-[20px] bg-white">
+            <div className="shadow-1 overflow-hidden rounded-[20px] bg-white">
               <ContactForm />
             </div>
           </RevealAnimation>

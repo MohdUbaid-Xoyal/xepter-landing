@@ -4,10 +4,8 @@ import DemoForm from '@/src/components/products/demo-form';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';
 import {
   CalendarCheck,
-  Code2,
-  Hash,
   Image as ImageIcon,
-  Lock,
+  LayoutGrid,
   MessageSquare,
   Phone,
 } from 'lucide-react';
@@ -16,8 +14,7 @@ const channels = [
   { icon: MessageSquare, label: 'SMS', className: 'text-primary-500' },
   { icon: ImageIcon, label: 'MMS', className: 'text-primary-500' },
   { icon: Phone, label: 'Voice', className: 'text-brand-red' },
-  { icon: Code2, label: 'APIs', className: 'text-secondary' },
-  { icon: Hash, label: '10DLC', className: 'text-secondary' },
+  { icon: LayoutGrid, label: 'and more', className: 'text-secondary' },
 ];
 
 const DemoContent = () => {
@@ -35,7 +32,7 @@ const DemoContent = () => {
       />
 
       <div className="main-container">
-        <div className="grid grid-cols-1 items-start gap-y-12 lg:grid-cols-2 lg:gap-x-16">
+        <div className="grid grid-cols-1 items-start gap-y-12 lg:grid-cols-[1fr_1.2fr] lg:gap-x-10">
           {/* Left — message */}
           <div className="space-y-6 text-center lg:text-left">
             <RevealAnimation delay={0.1} asChild={false} className="flex justify-center lg:justify-start">
@@ -92,7 +89,7 @@ const DemoContent = () => {
 
           {/* Right — request demo */}
           <RevealAnimation delay={0.3} asChild={false} direction="left" offset={60}>
-            <div className="shadow-2 border-stroke-1 mx-auto w-full max-w-[460px] rounded-[28px] border bg-white p-6 md:p-8">
+            <div className="shadow-2 border-stroke-1 mx-auto w-full max-w-[700px] rounded-[28px] border bg-white p-6 md:p-8">
               <div className="space-y-4 text-center">
                 <span className="bg-primary-50 mx-auto flex size-16 items-center justify-center rounded-full">
                   <CalendarCheck className="text-primary-500 size-7" />
@@ -110,11 +107,6 @@ const DemoContent = () => {
               <hr className="border-stroke-1 my-6" />
 
               <DemoForm />
-
-              <p className="text-tagline-2 text-secondary/50 mt-5 flex items-center justify-center gap-x-1.5">
-                <Lock className="size-4 shrink-0" />
-                We respect your privacy. No spam, ever.
-              </p>
             </div>
           </RevealAnimation>
         </div>

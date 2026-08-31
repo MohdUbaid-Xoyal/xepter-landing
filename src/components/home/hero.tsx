@@ -2,8 +2,8 @@
 
 import bottomGradient from '@/public/images/bottom-gradient.svg';
 import dashboardScreenshot from '@/public/images/dashboard-screenshot.png';
-import leftElement from '@/public/images/ns-img-27.svg';
-import rightElement from '@/public/images/ns-img-28.svg';
+import leftElement from '@/public/images/xepter-hero-badge-left.svg';
+import rightElement from '@/public/images/xepter-hero-badge-right.svg';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import { ButtonPrimary, ButtonSecondary } from '@/src/components/shared/ui/button';
@@ -113,22 +113,24 @@ const Hero = () => {
 
         <figure
           ref={leftRef}
+          aria-hidden="true"
           className="absolute top-[57%] left-[2%] z-30 hidden h-14 will-change-transform md:block xl:top-[50%] xl:left-[-5%] 2xl:left-[-8%]"
         >
           <RevealAnimation delay={0.5} direction="left" offset={50}>
             <div className="size-full">
-              <Image src={leftElement} alt="left-elements" className="size-full object-cover" />
+              <Image src={leftElement} alt="" className="size-full object-cover" />
             </div>
           </RevealAnimation>
         </figure>
 
         <figure
           ref={rightRef}
+          aria-hidden="true"
           className="absolute top-[59%] right-[8%] z-30 hidden h-14 will-change-transform md:block xl:top-[42%] xl:right-[-3%] 2xl:right-[-5%]"
         >
           <RevealAnimation delay={0.6} direction="right" offset={50}>
             <div className="size-full">
-              <Image src={rightElement} alt="right-elements" className="size-full object-cover" />
+              <Image src={rightElement} alt="" className="size-full object-cover" />
             </div>
           </RevealAnimation>
         </figure>

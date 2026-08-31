@@ -9,7 +9,7 @@ import {
   // FeatureIcon,
 } from '@/src/components/shared/icon/menu-icon';
 import newArrowWhite from '@/public/images/icons/new-arrow-white.svg';
-import whatsNewImage from '@/public/images/ns-img-422.jpg';
+import whatsNewImage from '@/public/images/xepter-whats-new-card.jpg';
 import {
   MenuLink,
   type MenuLinkProps,

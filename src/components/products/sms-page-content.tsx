@@ -1,6 +1,7 @@
-import processCardFourImg from '@/public/images/ns-img-16.webp';
-import processCardThreeImg from '@/public/images/ns-img-17.webp';
-import processCardTwoImg from '@/public/images/ns-img-18.webp';
+import processCardFourImg from '@/public/images/xepter-process-launch-scale.webp';
+import processCardThreeImg from '@/public/images/xepter-process-connect-number.webp';
+import processCardTwoImg from '@/public/images/xepter-process-10dlc-registration.webp';
+import smsHeroImg from '@/public/images/xepter-sms-hero.png';
 import CounterNumberOnScroll from '@/src/components/animation/counter-number-on-scroll';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
@@ -22,38 +23,12 @@ import {
   Lock,
   Megaphone,
   MessagesSquare,
-  MoreVertical,
   ShieldCheck,
-  User,
   Users,
   Webhook,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Fragment } from 'react';
-
-const curlLines = [
-  'curl -X POST https://api.xepter.com/v1/messages \\',
-  '  -H "Authorization: Bearer {api_key}" \\',
-  '  -H "Content-Type: application/json" \\',
-  "  -d '{",
-  '    "from": "+1XXXXXXXXXX",',
-  '    "to": "+1XXXXXXXXXX",',
-  '    "text": "Your appointment is confirmed."',
-  "  }'",
-];
-
-// Splits a code line on quoted strings so they can be highlighted separately from the rest of the line.
-const renderCodeLine = (line: string) =>
-  line.split(/("(?:[^"\\]|\\.)*")/g).map((part, i) =>
-    part.startsWith('"') ? (
-      <span key={i} className="text-[#f78f1e]">
-        {part}
-      </span>
-    ) : (
-      <Fragment key={i}>{part}</Fragment>
-    )
-  );
 
 const trustStats = [
   { value: 99, suffix: '%', label: 'SMS Delivery Rate' },
@@ -262,46 +237,13 @@ const SmsPageContent = () => {
             </div>
 
             <RevealAnimation delay={0.3} direction="left" offset={60} className="lg:col-span-6">
-              <div className="relative mx-auto max-w-[520px] pb-20 sm:pb-24">
-                <div
-                  aria-hidden="true"
-                  className="bg-primary-100 absolute -inset-x-12 -top-6 -bottom-2 -z-10 rounded-2xl"
+              <div className="relative mx-auto max-w-[560px] overflow-hidden rounded-[20px]">
+                <Image
+                  src={smsHeroImg}
+                  alt="Xepter SMS API request and delivered SMS message preview"
+                  className="h-auto w-full"
+                  priority
                 />
-                <div className="shadow-1 bg-secondary rounded-2xl p-5 md:p-6">
-                  <div className="mb-4 flex gap-1.5">
-                    <span className="size-2.5 rounded-full bg-[#ff5f57]" />
-                    <span className="size-2.5 rounded-full bg-[#febc2e]" />
-                    <span className="size-2.5 rounded-full bg-[#28c840]" />
-                  </div>
-                  <pre className="text-tagline-3 overflow-x-auto font-mono leading-relaxed whitespace-pre text-white/80">
-                    {curlLines.map((line, i) => (
-                      <div key={i} className="flex gap-3">
-                        <span className="text-white/30 select-none">
-                          {String(i + 1).padStart(2, '0')}
-                        </span>
-                        <span>{renderCodeLine(line)}</span>
-                      </div>
-                    ))}
-                  </pre>
-                </div>
-
-                <div className="shadow-1 border-primary-500 absolute -right-4 -bottom-10 w-[240px] rounded-[24px] border-4 bg-white p-4 sm:-right-8 sm:w-[260px]">
-                  <div className="flex items-center gap-2">
-                    <span className="bg-primary-50 text-primary-500 flex size-9 shrink-0 items-center justify-center rounded-full">
-                      <User className="size-4.5" />
-                    </span>
-                    <span className="text-tagline-2 text-secondary flex-1 font-semibold">
-                      (320) 844-6534
-                    </span>
-                    <MoreVertical className="text-secondary/40 size-4 shrink-0" />
-                  </div>
-                  <p className="text-secondary/40 mt-3 text-center text-[11px]">
-                    Yesterday &bull; 10:00 AM
-                  </p>
-                  <div className="bg-background-13 text-tagline-3 text-secondary/80 mt-2 rounded-xl p-3">
-                    Your driver is almost there. Jesse will arrive in 3 minutes.
-                  </div>
-                </div>
               </div>
             </RevealAnimation>
           </div>

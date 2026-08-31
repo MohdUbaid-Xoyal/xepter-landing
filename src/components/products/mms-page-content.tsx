@@ -1,6 +1,7 @@
-import processCardFourImg from '@/public/images/ns-img-16.webp';
-import processCardThreeImg from '@/public/images/ns-img-17.webp';
-import processCardTwoImg from '@/public/images/ns-img-18.webp';
+import processCardFourImg from '@/public/images/xepter-process-launch-scale.webp';
+import processCardThreeImg from '@/public/images/xepter-process-connect-number.webp';
+import processCardTwoImg from '@/public/images/xepter-process-10dlc-registration.webp';
+import mmsHeroImg from '@/public/images/xepter-mms-hero.png';
 import CounterNumberOnScroll from '@/src/components/animation/counter-number-on-scroll';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
@@ -33,31 +34,6 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Fragment } from 'react';
-
-const jsonLines = [
-  'POST https://api.xepter.com/v1/messages',
-  'Content-Type: application/json',
-  '',
-  '{',
-  '  "from": "+1XXXXXXXXXX",',
-  '  "to": "+1XXXXXXXXXX",',
-  '  "text": "Here\'s your receipt!",',
-  '  "media_url": "https://cdn.xepter.com/receipt.jpg"',
-  '}',
-];
-
-// Splits a code line on quoted strings so they can be highlighted separately from the rest of the line.
-const renderCodeLine = (line: string) =>
-  line.split(/("(?:[^"\\]|\\.)*")/g).map((part, i) =>
-    part.startsWith('"') ? (
-      <span key={i} className="text-[#f78f1e]">
-        {part}
-      </span>
-    ) : (
-      <Fragment key={i}>{part}</Fragment>
-    )
-  );
 
 const trustStats = [
   { value: 15, suffix: '%', label: 'Higher Engagement' },
@@ -297,37 +273,13 @@ const MmsPageContent = () => {
             </div>
 
             <RevealAnimation delay={0.3} direction="left" offset={60} className="lg:col-span-5">
-              <div className="relative mx-auto max-w-[440px] pb-20 sm:pb-24">
-                <div
-                  aria-hidden="true"
-                  className="bg-primary-100 absolute -inset-x-12 -top-6 -bottom-2 -z-10 rounded-2xl"
+              <div className="relative mx-auto max-w-[480px] overflow-hidden rounded-[20px]">
+                <Image
+                  src={mmsHeroImg}
+                  alt="Xepter MMS API request and delivered MMS receipt message preview"
+                  className="h-auto w-full"
+                  priority
                 />
-                <div className="shadow-1 bg-secondary rounded-2xl p-5 md:p-6">
-                  <div className="mb-4 flex gap-1.5">
-                    <span className="size-2.5 rounded-full bg-[#ff5f57]" />
-                    <span className="size-2.5 rounded-full bg-[#febc2e]" />
-                    <span className="size-2.5 rounded-full bg-[#28c840]" />
-                  </div>
-                  <pre className="text-tagline-3 overflow-x-auto font-mono leading-relaxed whitespace-pre text-white/80">
-                    {jsonLines.map((line, i) => (
-                      <div key={i} className="flex gap-3">
-                        <span className="text-white/30 select-none">
-                          {String(i + 1).padStart(2, '0')}
-                        </span>
-                        <span>{renderCodeLine(line)}</span>
-                      </div>
-                    ))}
-                  </pre>
-                </div>
-
-                <div className="shadow-1 border-primary-500 absolute -right-4 -bottom-10 w-[240px] rounded-[24px] border-4 bg-white p-4 sm:-right-8 sm:w-[260px]">
-                  <div className="bg-background-13 flex aspect-video items-center justify-center rounded-xl">
-                    <ImageIcon className="text-secondary/40 size-8" />
-                  </div>
-                  <p className="text-secondary/80 text-tagline-3 mt-3">
-                    Here&apos;s your receipt! 🧾
-                  </p>
-                </div>
               </div>
             </RevealAnimation>
           </div>

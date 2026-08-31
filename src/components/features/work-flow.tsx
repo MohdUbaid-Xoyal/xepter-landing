@@ -1,4 +1,4 @@
-import workflowImg from '@/public/images/ns-img-31.jpg';
+import workflowImg from '@/public/images/xepter-features-placeholder-workflow.jpg';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import { ButtonWhite } from '@/src/components/shared/ui/button';
@@ -86,7 +86,7 @@ const WorkFlow = () => {
                 <li className="max-h-[250px] overflow-hidden rounded-lg">
                   <Image
                     src={workflowImg}
-                    alt="Feature Work Flow"
+                    alt="Workflow builder preview image coming soon"
                     className="size-full object-cover"
                   />
                 </li>

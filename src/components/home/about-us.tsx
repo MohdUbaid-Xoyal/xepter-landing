@@ -1,5 +1,5 @@
-import aboutImgPrimary from '@/public/images/ns-img-6.webp';
-import aboutImgSecondary from '@/public/images/ns-img-7.webp';
+import aboutImgPrimary from '@/public/images/xepter-about-primary-photo.webp';
+import aboutImgSecondary from '@/public/images/xepter-about-secondary-photo.webp';
 import CounterNumberOnScroll from '@/src/components/animation/counter-number-on-scroll';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
@@ -26,7 +26,11 @@ const AboutUs = () => {
             className="col-span-12 lg:col-span-3"
           >
             <figure className="h-[260px] w-full overflow-hidden rounded-[20px] sm:h-[320px] md:h-[400px] lg:h-[520px]">
-              <Image src={aboutImgPrimary} alt="about-us-img" className="size-full object-cover" />
+              <Image
+                src={aboutImgPrimary}
+                alt="Person using a smartphone to send business SMS messages"
+                className="size-full object-cover"
+              />
             </figure>
           </RevealAnimation>
 
@@ -94,7 +98,7 @@ const AboutUs = () => {
                   <figure className="h-[220px] w-full overflow-hidden rounded-[20px] md:h-[260px] lg:h-[290px]">
                     <Image
                       src={aboutImgSecondary}
-                      alt="about-us-img"
+                      alt="Two people reviewing SMS campaign performance on a phone"
                       className="size-full object-cover"
                     />
                   </figure>

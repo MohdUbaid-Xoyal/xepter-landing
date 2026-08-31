@@ -1,6 +1,6 @@
 'use client';
 
-import benefitRoiImg from '@/public/images/ns-img-23.webp';
+import benefitRoiImg from '@/public/images/xepter-benefit-roi-channels.webp';
 import CounterNumberOnScroll from '@/src/components/animation/counter-number-on-scroll';
 import { cn } from '@/src/utils/cn';
 import Image from 'next/image';
@@ -19,7 +19,7 @@ export const BenefitRoiCard = ({ className, ...props }: BenefitRoiCardProps) => 
     >
       <Image
         src={benefitRoiImg}
-        alt="one-platform-every-channel"
+        alt="Person using a smartphone, representing SMS, MMS, Voice, and WhatsApp on one platform"
         fill
         className="object-cover object-center"
         sizes="(max-width: 768px) 100vw, 25vw"

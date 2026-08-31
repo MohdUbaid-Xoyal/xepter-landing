@@ -1,10 +1,10 @@
-import processCardOneImg from '@/public/images/ns-img-1.webp';
-import processCardTwoOverlay from '@/public/images/ns-img-13.webp';
-import processCardThreeOverlay from '@/public/images/ns-img-14.svg';
-import processCardFourOverlay from '@/public/images/ns-img-15.svg';
-import processCardFourImg from '@/public/images/ns-img-16.webp';
-import processCardThreeImg from '@/public/images/ns-img-17.webp';
-import processCardTwoImg from '@/public/images/ns-img-18.webp';
+import processCardOneImg from '@/public/images/xepter-process-account-setup.webp';
+import processCardTwoOverlay from '@/public/images/xepter-process-10dlc-avatars-overlay.webp';
+import processCardThreeOverlay from '@/public/images/xepter-process-connect-chart-overlay.svg';
+import processCardFourOverlay from '@/public/images/xepter-process-launch-stats-overlay.svg';
+import processCardFourImg from '@/public/images/xepter-process-launch-scale.webp';
+import processCardThreeImg from '@/public/images/xepter-process-connect-number.webp';
+import processCardTwoImg from '@/public/images/xepter-process-10dlc-registration.webp';
 import {
   CardRevealWithProcess,
   CardsWrapper,
@@ -76,7 +76,7 @@ const processCards: ProcessCardData[] = [
     image: processCardTwoImg,
     imageAlt: 'Register your brand and 10DLC campaign',
     overlay: processCardTwoOverlay,
-    overlayAlt: 'process-card-2-img',
+    overlayAlt: 'Cluster of customer avatars using Xepter',
     eyebrow: '10DLC compliance',
     title: 'Register Your Brand & 10DLC Campaign',
     description:
@@ -97,7 +97,7 @@ const processCards: ProcessCardData[] = [
     image: processCardThreeImg,
     imageAlt: 'Get your number and connect your messaging',
     overlay: processCardThreeOverlay,
-    overlayAlt: 'process-card-3-img',
+    overlayAlt: 'Xepter phone number search interface',
     eyebrow: 'Connect',
     title: 'Get Your Number & Connect Your Messaging',
     description:
@@ -118,7 +118,7 @@ const processCards: ProcessCardData[] = [
     image: processCardFourImg,
     imageAlt: 'Start sending, tracking, and scaling',
     overlay: processCardFourOverlay,
-    overlayAlt: 'process-card-4-img',
+    overlayAlt: 'Xepter delivery and engagement analytics cards',
     eyebrow: 'Launch',
     title: 'Start Sending, Track & Scale',
     description:

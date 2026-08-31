@@ -1,7 +1,7 @@
-import avatarImgOne from '@/public/images/ns-avatar-13.webp';
-import avatarImgTwo from '@/public/images/ns-avatar-14.webp';
-import featureImgOne from '@/public/images/opai-img-126.jpg';
-import featureImgTwo from '@/public/images/opai-img-127.jpg';
+import avatarImgOne from '@/public/images/xepter-customer-avatar-1.webp';
+import avatarImgTwo from '@/public/images/xepter-customer-avatar-2.webp';
+import featureImgOne from '@/public/images/xepter-features-placeholder-1.jpg';
+import featureImgTwo from '@/public/images/xepter-features-placeholder-2.jpg';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';
@@ -11,7 +11,7 @@ const featureCards = [
   {
     type: 'image' as const,
     src: featureImgOne,
-    alt: 'Core Features',
+    alt: 'Feature preview image coming soon',
   },
   {
     type: 'card' as const,
@@ -23,7 +23,7 @@ const featureCards = [
   {
     type: 'image' as const,
     src: avatarImgTwo,
-    alt: 'Core Features',
+    alt: 'Xepter customer avatar',
   },
   {
     type: 'card' as const,
@@ -40,7 +40,7 @@ const featureCards = [
   {
     type: 'image' as const,
     src: featureImgTwo,
-    alt: 'Core Features',
+    alt: 'Feature preview image coming soon',
   },
   {
     type: 'card' as const,
@@ -51,7 +51,7 @@ const featureCards = [
   {
     type: 'image' as const,
     src: avatarImgOne,
-    alt: 'Core Features',
+    alt: 'Xepter customer avatar',
   },
 ];
 
@@ -82,7 +82,7 @@ const FeaturesSection = () => {
         <RevealAnimation
           delay={0.1}
           asChild={false}
-          className="relative grid w-full grid-cols-1 gap-8 overflow-hidden rounded-2xl bg-[url('/images/opai-img-138.jpg')] bg-cover bg-center bg-no-repeat p-4 md:grid-cols-2 md:p-8 lg:grid-cols-4"
+          className="relative grid w-full grid-cols-1 gap-8 overflow-hidden rounded-2xl bg-[url('/images/xepter-features-placeholder-background.jpg')] bg-cover bg-center bg-no-repeat p-4 md:grid-cols-2 md:p-8 lg:grid-cols-4"
         >
           {featureCards.map((item) => {
             if (item.type === 'image') {

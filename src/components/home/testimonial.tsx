@@ -1,12 +1,12 @@
-import slideImg8 from '@/public/images/ns-avatar-10.webp';
-import avatar3 from '@/public/images/ns-avatar-14.webp';
-import slideImg2 from '@/public/images/ns-avatar-4.webp';
-import slideImg3 from '@/public/images/ns-avatar-5.webp';
-import slideImg4 from '@/public/images/ns-avatar-6.webp';
-import slideImg5 from '@/public/images/ns-avatar-7.webp';
-import { default as avatar1, default as slideImg6 } from '@/public/images/ns-avatar-8.webp';
-import { default as avatar2, default as slideImg7 } from '@/public/images/ns-avatar-9.webp';
-import slideImg1 from '@/public/images/ns-img-2.webp';
+import slideImg8 from '@/public/images/xepter-testimonial-whatsapp-channel.webp';
+import avatar3 from '@/public/images/xepter-customer-avatar-2.webp';
+import slideImg2 from '@/public/images/xepter-testimonial-agency-numbers.webp';
+import slideImg3 from '@/public/images/xepter-testimonial-hubspot-integration.webp';
+import slideImg4 from '@/public/images/xepter-testimonial-support-team.webp';
+import slideImg5 from '@/public/images/xepter-testimonial-appointment-reminders.webp';
+import { default as avatar1, default as slideImg6 } from '@/public/images/xepter-testimonial-10dlc-compliance.webp';
+import { default as avatar2, default as slideImg7 } from '@/public/images/xepter-testimonial-voice-dialer.webp';
+import slideImg1 from '@/public/images/xepter-testimonial-unified-inbox.webp';
 import CounterNumberOnScroll from '@/src/components/animation/counter-number-on-scroll';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import {
@@ -45,7 +45,7 @@ const Testimonial = () => {
                       >
                         <Image
                           src={avatar}
-                          alt={`avatar-${index + 1}`}
+                          alt="Xepter customer avatar"
                           className="size-full rounded-full object-cover"
                         />
                       </AvatarItem>
@@ -113,7 +113,7 @@ const Testimonial = () => {
             <div className="col-span-12 lg:col-span-8">
               <SplitSlide>
                 <SlideItem>
-                  <SlideImg src={slideImg1} alt="testimonial one" />
+                  <SlideImg src={slideImg1} alt="Xepter customer testimonial — unified SMS, calls, and WhatsApp inbox" />
                   <SlideContent>
                     <p className="text-secondary">
                       &ldquo;Before Xepter, our SMS, calls, and WhatsApp all lived in different
@@ -127,7 +127,7 @@ const Testimonial = () => {
                 </SlideItem>
 
                 <SlideItem>
-                  <SlideImg src={slideImg2} alt="testimonial two" />
+                  <SlideImg src={slideImg2} alt="Xepter customer testimonial — per-client agency numbers" />
                   <SlideContent>
                     <p className="text-secondary">
                       &ldquo;We run every client account on its own number now, without
@@ -141,7 +141,7 @@ const Testimonial = () => {
                 </SlideItem>
 
                 <SlideItem>
-                  <SlideImg src={slideImg3} alt="testimonial three" />
+                  <SlideImg src={slideImg3} alt="Xepter customer testimonial — HubSpot integration" />
                   <SlideContent>
                     <p className="text-secondary">
                       &ldquo;Connecting Xepter to HubSpot took an afternoon, not a sprint.
@@ -154,7 +154,7 @@ const Testimonial = () => {
                 </SlideItem>
 
                 <SlideItem>
-                  <SlideImg src={slideImg4} alt="testimonial four" />
+                  <SlideImg src={slideImg4} alt="Xepter customer testimonial — unified support team tools" />
                   <SlideContent>
                     <p className="text-secondary">
                       &ldquo;Our support team stopped switching tabs between a dialer, a texting
@@ -168,7 +168,7 @@ const Testimonial = () => {
                 </SlideItem>
 
                 <SlideItem>
-                  <SlideImg src={slideImg5} alt="testimonial five" />
+                  <SlideImg src={slideImg5} alt="Xepter customer testimonial — automated SMS appointment reminders" />
                   <SlideContent>
                     <p className="text-secondary">
                       &ldquo;Appointment reminders used to slip through the cracks in spreadsheets.
@@ -181,7 +181,7 @@ const Testimonial = () => {
                 </SlideItem>
 
                 <SlideItem>
-                  <SlideImg src={slideImg6} alt="testimonial six" />
+                  <SlideImg src={slideImg6} alt="Xepter customer testimonial — 10DLC compliance handled automatically" />
                   <SlideContent>
                     <p className="text-secondary">
                       &ldquo;10DLC compliance was the part we dreaded most about scaling our SMS
@@ -195,7 +195,7 @@ const Testimonial = () => {
                 </SlideItem>
 
                 <SlideItem>
-                  <SlideImg src={slideImg7} alt="testimonial seven" />
+                  <SlideImg src={slideImg7} alt="Xepter customer testimonial — browser-based voice dialer" />
                   <SlideContent>
                     <p className="text-secondary">
                       &ldquo;Our sales team dials straight from the browser now, with hold,
@@ -209,7 +209,7 @@ const Testimonial = () => {
                 </SlideItem>
 
                 <SlideItem>
-                  <SlideImg src={slideImg8} alt="testimonial eight" />
+                  <SlideImg src={slideImg8} alt="Xepter customer testimonial — WhatsApp added as a messaging channel" />
                   <SlideContent>
                     <p className="text-secondary">
                       &ldquo;Adding WhatsApp used to mean a whole new tool and a whole new login.

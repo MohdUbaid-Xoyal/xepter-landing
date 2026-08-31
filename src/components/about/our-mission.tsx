@@ -1,4 +1,4 @@
-import missionImg from '@/public/images/ns-img-30.webp';
+import missionImg from '@/public/images/xepter-mission-team-photo.webp';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';
@@ -57,7 +57,7 @@ const OurMission = () => {
 
           <RevealAnimation delay={0.3} offset={80}>
             <figure className="max-h-[650px] overflow-hidden rounded-[20px]">
-              <Image src={missionImg} alt="Our mission" className="size-full object-cover" />
+              <Image src={missionImg} alt="Two Xepter customers laughing together while looking at a phone" className="size-full object-cover" />
             </figure>
           </RevealAnimation>
         </div>

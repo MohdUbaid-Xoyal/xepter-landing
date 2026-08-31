@@ -1,4 +1,4 @@
-import faqImg from '@/public/images/ns-img-16.webp';
+import faqImg from '@/public/images/xepter-process-launch-scale.webp';
 import CounterNumberOnScroll from '@/src/components/animation/counter-number-on-scroll';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';

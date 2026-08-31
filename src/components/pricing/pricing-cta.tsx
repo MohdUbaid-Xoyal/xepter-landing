@@ -1,4 +1,4 @@
-import globeImg from '@/public/images/ns-img-26.svg';
+import globeImg from '@/public/images/xepter-cta-globe-decoration.svg';
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';
@@ -17,8 +17,8 @@ const PricingCta = () => {
               delay={0.2}
               className="absolute top-15 left-1/2 z-10 size-[639px] -translate-x-1/2"
             >
-              <figure>
-                <Image src={globeImg} alt="globe" className="size-full object-cover" />
+              <figure aria-hidden="true">
+                <Image src={globeImg} alt="" className="size-full object-cover" />
               </figure>
             </RevealAnimation>
 

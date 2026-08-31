@@ -1,4 +1,4 @@
-import benefitImage from '@/public/images/ns-img-24.webp';
+import benefitImage from '@/public/images/xepter-benefit-analytics-chart.webp';
 import { cn } from '@/src/utils/cn';
 import Image from 'next/image';
 import type { HTMLAttributes } from 'react';
@@ -13,7 +13,7 @@ export const BenefitImageCard = ({ className, ...props }: BenefitImageCardProps)
     >
       <Image
         src={benefitImage}
-        alt="benefits"
+        alt="Delivery analytics chart on a phone screen"
         fill
         className="object-cover object-center"
         sizes="(max-width: 768px) 100vw, 25vw"

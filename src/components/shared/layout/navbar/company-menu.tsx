@@ -5,8 +5,6 @@ import {
   BlogIcon,
   ContactIcon,
   WhyChooseUsIcon,
-  // temporarily hidden — see commented-out entry below
-  // FeatureIcon,
 } from '@/src/components/shared/icon/menu-icon';
 import newArrowWhite from '@/public/images/icons/new-arrow-white.svg';
 import whatsNewImage from '@/public/images/xepter-whats-new-card.jpg';
@@ -35,12 +33,6 @@ const aboutLinksColumnOne: CompanyLink[] = [
     href: '/why-choose-us',
     icon: WhyChooseUsIcon,
   },
-  // {
-  //   title: 'Features',
-  //   description: 'What you can do with Xepter',
-  //   href: '/features',
-  //   icon: FeatureIcon,
-  // },
 ];
 
 const aboutLinksColumnTwo: CompanyLink[] = [

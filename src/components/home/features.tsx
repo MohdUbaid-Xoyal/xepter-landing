@@ -112,7 +112,7 @@ const Features = () => {
                     <h3 className="text-heading-6 text-secondary font-bold">{card.title}</h3>
                     <p className="text-tagline-2 text-secondary/80 mt-2">{card.description}</p>
                     <Link
-                      href="/features"
+                      href="/demo"
                       aria-label={`Learn more about ${card.title}`}
                       className="bg-secondary hover:bg-secondary/90 mt-5 flex size-10 items-center justify-center rounded-full transition-colors duration-200"
                     >

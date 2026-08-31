@@ -18,7 +18,7 @@ import {
 import RevealAnimation from '@/src/components/animation/reveal-animation';
 import { TextReveal } from '@/src/components/animation/text-reveal';
 import { BadgePrimary } from '@/src/components/shared/ui/badge';
-import { ButtonPrimary, ButtonWhite } from '@/src/components/shared/ui/button';
+import { ButtonPrimary } from '@/src/components/shared/ui/button';
 import { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
@@ -157,11 +157,6 @@ const Process = () => {
                   the beginning.
                 </p>
               </TextReveal>
-              <RevealAnimation delay={0.4} className="inline-block w-full md:w-auto">
-                <Link href="/features">
-                  <ButtonWhite className="mx-auto w-[80%]! md:w-fit!">View all features</ButtonWhite>
-                </Link>
-              </RevealAnimation>
             </div>
           </div>
 

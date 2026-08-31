@@ -38,13 +38,7 @@ const Navbar = () => {
   const isProductsActive = isPathActive(pathname, ['/products']);
   const isSolutionsActive = isPathActive(pathname, ['/solutions']);
   const isDevelopersActive = isPathActive(pathname, ['/developers']);
-  const isCompanyActive = isPathActive(pathname, [
-    '/about',
-    '/features',
-    '/services',
-    '/blog',
-    '/contact',
-  ]);
+  const isCompanyActive = isPathActive(pathname, ['/about', '/blog', '/contact']);
   const isPricingActive = isPathActive(pathname, ['/pricing']);
 
   return (

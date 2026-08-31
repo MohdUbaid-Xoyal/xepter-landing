@@ -45,7 +45,6 @@ export const mobileMenuData: MobileMenuData[] = [
     title: 'Company',
     submenu: [
       { id: 'about-us', label: 'About Us', href: '/about' },
-      { id: 'features', label: 'Features', href: '/features' },
       { id: 'why-choose-us', label: 'Why Choose Us (Coming soon)', href: '/why-choose-us' },
       { id: 'blog', label: 'News & Updates (Coming soon)', href: '/blog' },
       { id: 'contact', label: 'Contact', href: '/contact' },

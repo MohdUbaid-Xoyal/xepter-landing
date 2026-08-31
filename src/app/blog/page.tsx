@@ -3,9 +3,22 @@ import { generateMetadata as buildMetadata } from '@/src/utils/generateMetaData'
 import { Metadata } from 'next';
 
 export const metadata: Metadata = buildMetadata(
-  'News & Updates | Coming Soon | Xepter',
-  'Our news and updates page is coming soon. Subscribe to be the first to know when it goes live.',
-  '/blog'
+  'Xepter News & Updates | Messaging & Communications',
+  'Get the latest Xepter news, product updates, messaging technology developments, platform improvements and business communication insights.',
+  '/blog',
+  undefined,
+  undefined,
+  undefined,
+  [
+    'Xepter news',
+    'Xepter updates',
+    'SMS industry news',
+    'messaging technology',
+    'business messaging news',
+    'CPaaS news',
+    'SMS technology updates',
+    'communications technology',
+  ]
 );
 
 const Page = () => <ComingSoonContent productName="News & Updates" />;

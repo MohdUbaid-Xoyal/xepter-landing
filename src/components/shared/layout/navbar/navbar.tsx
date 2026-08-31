@@ -85,7 +85,6 @@ const Navbar = () => {
                     alt="Xepter Logo"
                     width={140}
                     height={42}
-                    unoptimized
                     priority
                     className="h-auto w-[110px] min-[425px]:w-[120px] sm:w-[130px] md:w-[140px] lg:w-[150px]"
                   />

@@ -1,9 +1,3 @@
-export interface MarkdownData {
-  slug: string;
-  content: string;
-  [key: string]: unknown;
-}
-
 export interface MobileMenuSubItem {
   id: string;
   label: string;
@@ -15,30 +9,4 @@ export interface MobileMenuData {
   title: string;
   href?: string;
   submenu: MobileMenuSubItem[];
-}
-
-export interface ServiceData extends MarkdownData {
-  slug: string;
-  title: string;
-  description: string;
-  iconClass: string;
-}
-
-export interface BlogPost extends MarkdownData {
-  slug: string;
-  title: string;
-  image: string;
-  heroImageLeft: string;
-  heroImageRight: string;
-  publishedAt: string;
-  dateTime: string;
-  readTime: string;
-  authorName: string;
-  authorImage: string;
-  footerAuthorName: string;
-  footerAuthorImage: string;
-  footerPublishedAt: string;
-  footerReadTime: string;
-  imageHeight: string;
-  order: number;
 }

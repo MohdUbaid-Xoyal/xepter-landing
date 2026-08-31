@@ -2,9 +2,23 @@ import { generateMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = generateMetadata(
-  'About | Xepter',
-  'Xepter was built to bring SMS, MMS, voice, and WhatsApp into one number and one platform, wired directly into the CRM you already use.',
-  '/about'
+  'About Xepter | Business Communications & Messaging Platform',
+  'Learn about Xepter, a communications platform helping businesses connect with customers through SMS, MMS, Voice, RCS and WhatsApp APIs.',
+  '/about',
+  undefined,
+  undefined,
+  undefined,
+  [
+    'Xepter',
+    'Xepter LLC',
+    'Xepter communications',
+    'business communications platform',
+    'messaging platform',
+    'CPaaS provider',
+    'communication API provider',
+    'business messaging company',
+    'SMS API provider',
+  ]
 );
 
 import AboutHero from '@/src/components/about/hero';

@@ -18,13 +18,7 @@ const Footer = () => {
                 <Link href="/">
                   <span className="sr-only">Xepter</span>
                   <figure>
-                    <Image
-                      src={mainLogo}
-                      alt="Xepter Logo"
-                      width={132}
-                      height={40}
-                      unoptimized
-                    />
+                    <Image src={mainLogo} alt="Xepter Logo" width={132} height={40} />
                   </figure>
                 </Link>
                 <p className="text-background-14/60 text-tagline-2 mt-4 mb-4 flex items-start gap-x-2">

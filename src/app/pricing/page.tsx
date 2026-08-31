@@ -5,9 +5,25 @@ import { generateMetadata } from '@/src/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = generateMetadata(
-  'Transparent Pricing, Always | Xepter',
-  'Clear, transparent, volume-based pricing for 10DLC SMS and MMS. Number pricing, messaging rates, and carrier pass-through fees on one panel.',
-  '/pricing'
+  'SMS API Pricing | Transparent & Competitive Messaging Rates | Xepter',
+  'Get transparent, volume-based pricing for SMS, MMS, Voice and business messaging. Start using Xepter with rates from $0.0065 per SMS segment, based on usage.',
+  '/pricing',
+  undefined,
+  undefined,
+  undefined,
+  [
+    'SMS API pricing',
+    'SMS pricing',
+    'SMS API cost',
+    'SMS messaging pricing',
+    'business SMS pricing',
+    'MMS API pricing',
+    'Voice API pricing',
+    'SMS rates',
+    'SMS cost per message',
+    'affordable SMS API',
+    'SMS API pricing USA',
+  ]
 );
 
 const PricingPage = () => {

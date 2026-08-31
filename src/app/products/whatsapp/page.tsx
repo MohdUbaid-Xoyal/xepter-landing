@@ -3,9 +3,24 @@ import { generateMetadata as buildMetadata } from '@/src/utils/generateMetaData'
 import { Metadata } from 'next';
 
 export const metadata: Metadata = buildMetadata(
-  'WhatsApp | Coming Soon | Xepter',
-  'Xepter WhatsApp is coming soon. Subscribe to be the first to know when it goes live.',
-  '/products/whatsapp'
+  'WhatsApp Business API | Business Messaging | Xepter',
+  'Connect with customers through WhatsApp Business messaging with Xepter. Build automated customer conversations, notifications and business messaging into your workflows.',
+  '/products/whatsapp',
+  undefined,
+  undefined,
+  undefined,
+  [
+    'WhatsApp Business API',
+    'WhatsApp API',
+    'WhatsApp messaging API',
+    'WhatsApp for business',
+    'business WhatsApp API',
+    'WhatsApp messaging platform',
+    'WhatsApp business messaging',
+    'WhatsApp API provider',
+    'WhatsApp automation',
+    'WhatsApp customer communication',
+  ]
 );
 
 const WhatsAppPage = () => <ComingSoonContent productName="WhatsApp" />;

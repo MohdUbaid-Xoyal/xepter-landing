@@ -5,8 +5,12 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = generateMetadata(
   'Privacy Policy | Xepter',
-  'How Xepter LLC collects, uses, discloses, retains, and protects personal information across our websites, applications, APIs, and communications services.',
-  '/privacy-policy'
+  "Read Xepter's Privacy Policy to understand how we collect, use, protect and manage information when you use our website and communication services.",
+  '/privacy-policy',
+  undefined,
+  undefined,
+  undefined,
+  ['Xepter privacy policy', 'Xepter data privacy', 'Xepter privacy']
 );
 
 const PrivacyPolicyPage = () => {

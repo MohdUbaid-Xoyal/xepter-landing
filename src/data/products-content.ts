@@ -28,6 +28,7 @@ export interface ProductPageContent {
   subtitle: string;
   metaTitle: string;
   metaDescription: string;
+  metaKeywords?: string[];
   capabilitiesTitle: string;
   capabilitiesSubtitle: string;
   capabilities: ProductCapability[];
@@ -43,9 +44,21 @@ export const productsContent: Record<ProductPageContent['slug'], ProductPageCont
     title: 'Two-way SMS your customers actually reply to',
     subtitle:
       'Send and receive SMS from a single number your team already uses inside GoHighLevel or HubSpot — campaigns, templates, and real conversations, not just blasts.',
-    metaTitle: 'SMS | Xepter',
+    metaTitle: 'SMS API for Business | Reliable SMS Messaging | Xepter',
     metaDescription:
-      'Two-way SMS messaging with campaigns, templates, delivery tracking, and built-in 10DLC compliance — synced into your CRM.',
+      "Send and receive business SMS with Xepter's powerful SMS API. Build messaging into your applications with reliable delivery, real-time tracking and scalable US messaging.",
+    metaKeywords: [
+      'SMS API',
+      'business SMS API',
+      'SMS messaging API',
+      'send SMS API',
+      'SMS service for business',
+      'US SMS API',
+      'SMS platform',
+      'business texting API',
+      'SMS gateway API',
+      'programmable SMS',
+    ],
     capabilitiesTitle: 'Everything you need to text at scale',
     capabilitiesSubtitle:
       'One number, one conversation thread, and a delivery pipeline built to stay compliant as you grow.',
@@ -99,9 +112,21 @@ export const productsContent: Record<ProductPageContent['slug'], ProductPageCont
     title: 'Rich media messaging that gets noticed',
     subtitle:
       'Send images, PDFs, and short video alongside your text — the same number, the same conversation thread, more ways to get a response.',
-    metaTitle: 'MMS | Xepter',
+    metaTitle: 'MMS API for Business | Send & Receive MMS | Xepter',
     metaDescription:
-      'Send images, PDFs, and video over MMS from the same numbers and workflows as SMS, with automatic fallback and delivery tracking.',
+      "Send and receive images, videos and rich media messages with Xepter's MMS API. Build scalable MMS messaging into your applications with reliable delivery tracking.",
+    metaKeywords: [
+      'MMS API',
+      'MMS messaging API',
+      'send MMS API',
+      'MMS service',
+      'business MMS',
+      'MMS gateway',
+      'MMS API USA',
+      'programmable MMS',
+      'multimedia messaging API',
+      'MMS platform',
+    ],
     capabilitiesTitle: 'Say more than text allows',
     capabilitiesSubtitle: 'Media-rich messages that run on the same infrastructure as your SMS.',
     capabilities: [

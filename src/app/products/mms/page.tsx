@@ -8,7 +8,11 @@ const content = productsContent.mms;
 export const metadata: Metadata = buildMetadata(
   content.metaTitle,
   content.metaDescription,
-  '/products/mms'
+  '/products/mms',
+  undefined,
+  undefined,
+  undefined,
+  content.metaKeywords
 );
 
 const MmsPage = () => <MmsPageContent />;

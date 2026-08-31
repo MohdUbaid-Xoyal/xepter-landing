@@ -8,7 +8,11 @@ const content = productsContent.sms;
 export const metadata: Metadata = buildMetadata(
   content.metaTitle,
   content.metaDescription,
-  '/products/sms'
+  '/products/sms',
+  undefined,
+  undefined,
+  undefined,
+  content.metaKeywords
 );
 
 const SmsPage = () => <SmsPageContent />;

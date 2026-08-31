@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-export const DEFAULT_URL = 'https://xepter.com/';
+export const DEFAULT_URL = 'https://xepter.io/';
 export const DEFAULT_TITLE = 'Xepter – Powerful SMS, MMS & Voice APIs at Competitive Rates';
 export const DEFAULT_DESCRIPTION =
   'Connect with customers through SMS, MMS, Voice and messaging APIs with Xepter. Scale your communications with reliable APIs, transparent pricing and volume-based rates.';
@@ -57,12 +57,14 @@ const generateMetadata = (
   canonicaUrl?: string,
   imageUrl?: string,
   ogTitle?: string,
-  ogDescription?: string
+  ogDescription?: string,
+  keywords?: string[]
 ): Metadata => {
   return {
     ...defaultMetadata,
     title: title ?? defaultMetadata.title,
     description: description ?? defaultMetadata.description,
+    keywords: keywords ?? defaultMetadata.keywords,
     alternates: {
       canonical: canonicaUrl,
     },
